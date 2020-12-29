@@ -1,0 +1,171 @@
+header {
+    position: fixed;
+    top: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: #edf2f4;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 8vh 2vw;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+/* Heading  classes */
+
+.title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 9vh;
+    font-weight: 600px;
+    color: #126782;
+}
+
+/* Box classes */
+
+.box-model {
+    display: flex;
+    flex-direction: row;
+    height: 23em;
+    width: 34em;
+    margin: 3rem 0;
+    transition: 1s;
+    animation: fadein 0.6s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main-panel {
+    height: 100%;
+    width: 80%;
+}
+
+.car-image {
+    height: 70%;
+    width: 100%;
+    border: 2px solid #457b9d;
+    background-color: #edf2f4;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    height: 16%;
+    width: 100%;
+    border: 2px solid #457b9d;
+    border-top: none;
+    border-bottom: none;
+    background-color: white;
+    color: #264653;
+}
+
+.car-name {
+    height: 100%;
+    width: 60%;
+    border-right: 2px solid #457b9d;
+    background-color: white;
+}
+
+.car-price {
+    height: 100%;
+    width: 40%;
+    background-color: white;
+}
+
+.book-now {
+    height: 13%;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    border: 2px solid #126782;
+    border-top: none;
+}
+
+.side-panel {
+    height: 71%;
+    width: 23%;
+    background-color: rgba(67, 170, 139, 0.35);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    align-self: flex-start;
+    margin-left: 4px;
+    animation: fadein 1s ease-in;
+}
+
+.additional-info {
+    margin-bottom: 12px;
+    margin-left: 5px;
+    color: #024773;
+    font-size: 14px;
+}
+
+/* General classes */
+
+.flex-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Child classes*/
+
+.book-now > a {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #126782;
+    color: #edf2fb;
+    font-size: 25px;
+}
+
+
+
+.car-price p {
+    padding-top: 6px;
+    font-size: 1em;
+}
+
+
+
+
+/* Pseudo classes */
+
+.book-now a:active {
+    background-color: #07526d;
+}
+
+.book-now:hover {
+    border: 2px solid #07526d;
+    cursor: pointer;
+}

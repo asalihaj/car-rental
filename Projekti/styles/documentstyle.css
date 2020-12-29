@@ -1,0 +1,29 @@
+header {
+    position: fixed;
+    top: 0;
+}
+
+main {
+    margin: 0 auto;
+    margin: 15vh auto;
+    text-align: justify;
+    width: 73%;
+}
+
+article {
+    width: 65%;
+    
+    line-height: 1.6;
+}
+
+article p {
+    padding: 10px 0;
+}
+
+article h3 {
+    margin-top: 8px;
+}
+
+article ul > li {
+    margin-left: 21px;
+}

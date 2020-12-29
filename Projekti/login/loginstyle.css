@@ -1,0 +1,116 @@
+main {
+    display: flex;
+    background: no-repeat center url("../imgs/3075569.jpg");
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 78.8vh;
+}
+
+.panel {
+    width: 487px;
+    height: 467px;
+    padding: 5px 10px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    align-content: center;
+    border-radius: 21px;
+    border: 2px solid #f1faee;
+    animation: fadein 0.4s;
+}
+
+
+@keyframes fadein {
+    from { 
+        opacity: 0;
+        transform: translateX(-100px); 
+    }
+    to   { 
+        opacity: 1; 
+        transform: translateX(0px); 
+    }
+}
+
+.login-form {
+    color: #126782;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.login-component {
+    height: 3rem;
+    width: 22rem;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.input-area {
+    color: #f1faee;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 4px;
+    padding-left: 10px;
+    caret-color: #f1faee;
+}
+
+.input-area::placeholder {
+    color: white;
+    opacity: 0.4;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.user-input img {
+    padding-right: 1px;
+    margin-bottom: 2px;
+}
+
+#login-label {
+    font-size: 37px;
+    font-weight: 600;
+}
+
+#login-button {
+    height: 52px;
+    color: #f1faee;
+    background-color: #126782;
+    margin-left: 41px;
+    border: 2px solid #07526d;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.login-links {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-links a {
+    text-decoration: none;
+    color: #f1faee;
+    margin-right: 14px;
+    margin-left: 55px;
+}
+
+#login-button:active {
+    background-color: #07526d;
+}
+

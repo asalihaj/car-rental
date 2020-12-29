@@ -1,0 +1,89 @@
+main {
+    height: 78.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 68vh;
+    border-radius: 14px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateX(-40px) translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.user-info {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.input {
+    height: 40%;
+    width: 100%;
+    font-size: 20px;
+    padding: 9px 9px;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+}
+
+#message {
+    width: 100%;
+    height: 35%;
+    padding: 13px 13px;
+    box-sizing: border-box;
+    font-size: 21px;
+    border: 1px solid #e5e5e5;
+}
+
+#submit {
+    width: 100%;
+    height: 10%;
+    background-color: #126782;
+    border: 1px solid #07526d;
+    font-size: 4vh;
+    color: #f1faee;
+    text-align: center;
+    padding-top: 8px;
+    text-decoration: none;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.contact-form:nth-of-type(1) {
+    font-size: 7vh;
+    font-weight: 600;
+    color: #126782;
+}
+
+#submit:active {
+    background-color: #07526d;
+}

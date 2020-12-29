@@ -1,0 +1,317 @@
+div.center{
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div.inside{
+    margin: 58.5px;
+    margin-left: 150px;
+    border: 2px solid #032035;
+    background-color: #013a63;
+    height: 500px;
+    width: 400px;
+    padding: 0px 20px;
+    color: white;
+    border-radius: 14px;
+    animation: insideleft 0.6s;
+}
+
+@keyframes insideleft {
+    from {
+        opacity: 0.3;
+        transform: translateX(-30px) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+.select-car{
+    margin-top:15px;
+}
+.select-car > select{
+    width: 350px;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #073442;
+}
+.select-car >select > option{
+    color: black;
+    cursor: pointer;
+}
+.pu-location{
+ 
+  
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.pick-up >input{
+    width: 75%;
+    margin-left: 10px;
+    font-size: 14px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    border: none;
+    color: #073442;
+}
+.pick-up{
+    
+    margin-top: 20px;
+    background-color: #07526d;
+    display: inline-flex;
+    position: relative;
+    width: 350px;
+    height: 40px;
+    border-radius: 12px;
+    margin-left:26px ;
+}
+.pick-up-logo{
+    margin-top: 10px;
+}
+.pick-up > span{
+    display: flex;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.drop-off{
+    margin-top: 20px;
+    background-color: #07526d;
+    display: inline-flex;
+    position: relative;
+    width: 350px;
+    height: 40px;
+    border-radius: 12px;
+    margin-left:26px ;
+}
+.drop-off >input{
+    width: 75%;
+    margin-left: 8px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    font-size: 14px;
+    border: none;
+    color: #073442;
+    
+}
+.drop-off > span{
+    font-size: 15px;
+    line-height: 2.3;
+}
+.date-reservation{
+    
+    display: inline-flex;
+    justify-content: center;
+}
+.pu-date{
+    margin-top: 30px;
+    /* margin-left: 15px; */
+    display: inline-flex;
+    width: 225px;
+    height: 40px;
+    background-color: #07526d;
+     border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.pu-date > input{
+    width: 60.5%;
+    margin-left: 5px;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+.pu-date > span {
+   
+    font-size: 16px;
+    margin-left: 5px;
+    line-height: 2.5;
+  
+}
+.pu-date >img{
+    margin-left: 5px;
+}
+
+.pu-time > select{
+   margin-top: 30px;
+    width: 114px;
+    height: 40px;
+   color: black;
+    margin-left: 10px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    cursor: pointer;
+}
+.do-date{
+    margin-top: 20px;
+    /* margin-left: 15px; */
+    display: inline-flex;
+    width: 225px;
+    height: 40px;
+    background-color: #07526d;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    
+}
+.do-date > input{
+    width: 60.5%;
+    margin-left: 5px;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+.do-date > span {
+    font-size: 15px;
+    margin-left: 5px;
+    line-height: 2.5;
+}
+.do-date >img{
+    margin-left: 5px;
+}
+.do-time > select{
+    margin-top: 20px;
+     width: 114px;
+     height: 40px;
+    cursor: pointer;
+     margin-left: 10px;
+     border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    color: black;
+ }
+ .reservation-button{
+     width: 100%;
+     height: 100px;
+     margin-left: 10px;
+     /* margin-top: 20px; */
+   
+     display: flex;
+ }
+ .reservation-button >input{
+    margin-top: 40px;
+    width: 87.5%;
+    color: white;
+    margin-left: 20px;
+    border-radius: 14px;
+    font-size: 20px;
+    background-color: #126782;
+    cursor: pointer;
+    border: 2px solid #07526d;
+ }
+
+.inside-content{
+    display: block;
+     margin-left: 100px;
+     margin-top: 50px;
+     /* color: white; */
+}
+div.image{
+    width: 100px;
+}
+.titulli {
+   margin-bottom: 10px;
+   line-height: 0.5;
+    
+}
+.cars-title{
+    margin-top: 100px;
+    margin-left: 75px;
+}
+
+.cover-img img {
+    width: 800px;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+            transform: translateX(-4px) translateY(-58px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+    }
+}
+/* .slider{
+    max-width: 700px;
+    height: 500px;
+    margin-left: 180px;
+    margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider .left-slide,.slider .right-slide{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #444444;
+  border-radius: 50%;
+  /* color:#ffffff; */
+  /* font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+  
+}
+.slider .left-slide:hover,.slider .right-slide:hover{
+ box-shadow: 0px 0px 10px black;
+ background-color: #29a8e2;
+}
+
+.slider .left-slide{
+	left: 30px;
+}
+.slider .right-slide{
+	right: 30px;
+}
+.slider .slider-items .item img{
+	max-width: 100%;
+	display: block;
+	animation:zoom 1s ease;
+}
+
+@keyframes zoom {
+	0%{transform: scale(2);opacity: 0}
+	10%{transform: scale(2);}
+	50%{transform: scale(1);opacity:1}
+}
+.slider .slider-items .item{
+	display: none;
+	position: relative;
+}
+.slider .slider-items .item .caption {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0px;
+    left: 0px;
+    line-height: 60px;
+    text-align: center;
+font-size: 30px;
+}
+
+.slider .slider-items .item.active{
+	display: block;
+}  */
+
+.reservation-button >input:active {
+    background-color: #07526d;
+ }

@@ -1,0 +1,44 @@
+footer {
+    height:  11.6vh;
+    background-color: #02223a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 2px solid #012a4a;
+}
+
+footer a {
+    text-decoration: none;
+    color: #f1faee;
+}
+
+.social-media-section {
+    margin-right: 16px;
+    margin-top: 10px
+}
+
+.social-media-link {
+    height: 2em;
+    margin-left: 15px;
+}
+
+.company-policy {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #f1faee;
+}
+
+.copyright-footer {
+    color: #f1faee;
+    width: 60%;
+    margin-bottom: 2px;
+    padding-top: 2px;
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,63 @@
+.box-model img {
+    height: 70%;
+    width: 90%;
+}
+
+.box-model img:hover {
+    height: 80%;
+    width: 100%;
+    transition: 0.3s ease-in;
+}
+
+
+#audi-a7 {
+    height: 110%;
+    width: 100%;
+}
+
+#audi-a7:hover {
+    height: 128%;
+    width: 115%;
+}
+
+#audi-a4 {
+    height: 100%;
+    width: 90%;
+}
+
+#audi-a4:hover {
+    height: 115%;
+    width: 100%;
+}
+
+#bmw-m5 {
+    height: 90%;
+    width: 90%;
+    
+}
+
+#bmw-m5:hover {
+    height: 106%;
+    width: 104%;
+}
+
+#mercedes-c300 {
+    height: 90%;
+    width: 100%;
+}
+
+#mercedes-c300:hover {
+    height: 110%;
+    width: 120%;
+}
+
+#golf-6 {
+    height: 80%;
+    width: 100%;
+}
+
+#golf-6:hover {
+    height: 95%;
+    width: 115%;
+}
+    
