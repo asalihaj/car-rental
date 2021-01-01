@@ -6,6 +6,8 @@ icons:
 	Përmban ikonat e përdorura në faqe të ndryshme
 imgs:
 	Përmban fotot e përdorura në faqe të ndryshme
+header/footer:
+	Përmban header-in/footer-in e të gjithë faqeve të website-it
 
-Të gjithë folderet tjerë, përmbajn file të HTML, 1/disa file të CSS dhe mund të përmbajnë file të Javascript për faqen në fjalë.
-Folderi main paraqet faqen kryesore të website-it(Home page).
+Të gjithë folderet tjerë, përmbajn file specifike për faqen në fjalë.
+Në folderin main gjendet faqja kryesore e website-it(Home page).

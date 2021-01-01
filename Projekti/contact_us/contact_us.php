@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../styles/generic.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="contactstyle.css">
+</head>
+
+<body>
+    <?php
+        include("../header/header.html");
+    ?>
+    <main>
+        <div class="contact-panel">
+            <form class="contact-form">
+                <label for="message">Contact Us</label>
+                <div class="user-info">
+                    <input type="text" class="input" placeholder="Full Name">
+                    <input type="text" class="input" placeholder="Email*">
+                </div>
+                <textarea name="message" id="message" maxlength="300" placeholder="Message*"></textarea>
+                <a href="#" id="submit" onclick="validateContact()">Submit</a>
+            </form>
+        </div>
+    </main>
+    <?php
+        include("../footer/footer.html");
+    ?>
+    <script src="contactvalidator.js"></script>
+</body>
+
+</html>

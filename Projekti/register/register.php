@@ -12,38 +12,6 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="logo">
-            <a href="../main/index.html">
-                <img id="main-logo" src="../icons/site_icon2.png" alt="Icon">
-                <div class="business-name">
-                    <h1>Drist</h1>
-                    <h2>Rent a Car</h2>
-                </div>
-            </a>
-        </div>
-        <div class="nav-menu">
-            <nav class="header-nav header-flex-end">
-                <ul>
-                    <li class="header-nav-item">
-                        <a href="../main/index.html">Home</a>
-                    </li>
-                    <li class="header-nav-item">
-                        <a href="../services/services.html">Services</a>
-                    </li>
-                    <li class="header-nav-item">
-                        <a href="../car_models/models.html">Car Models</a>
-                    </li>
-                    <li class="header-nav-item">
-                        <a href="../contact_us/contact_us.html">Contact Us</a>
-                    </li>
-                    <li class="header-nav-item">
-                        <a href="../login/login.html">Login</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
     <?php
         include("../header/header.html");
     ?>
@@ -84,41 +52,21 @@
                 <div class=" register-event">
                     <div class="terms-and-services">
                         <input type="checkbox" name="tos-checkbox" id="tos-checkbox">
-                        <label for="tos-checkbox">I agree to the <a href="../terms_of_use/terms_of_use.html">Terms
+                        <label for="tos-checkbox">I agree to the <a href="../terms_of_use/terms_of_use.php">Terms
                                 and
-                                Conditions</a> and the <a href="../privacy_policy/privacy_policy.html">Privacy
+                                Conditions</a> and the <a href="../privacy_policy/privacy_policy.php">Privacy
                                 Policy</a></label>
                     </div>
                     <input class="register-component" id="register-button" type="button" value="REGISTER" disabled>
                 </div>
                 <div class="register-links">
-                    <a href="../Login/login.html">Login</a>
+                    <a href="../Login/login.php">Login</a>
                 </div>
 
             </form>
         </div>
 
     </main>
-    <!-- <footer>
-        <div class="social-media-section">
-            <a href="https://www.facebook.com/Enterprise" target="_blank">
-                <img class="social-media-link" src="../icons/footer/facebook.png" alt="Facebook Link">
-            </a>
-            <a href="https://www.instagram.com/enterprise" target="_blank">
-                <img class="social-media-link" src="../icons/footer/instagram.png" alt="Instagram Link">
-            </a>
-            <a href="https://twitter.com/Enterprise" target="_blank">
-                <img class="social-media-link" src="../icons/footer/twitter.png" alt="Twitter Link">
-            </a>
-        </div>
-        <div class="company-policy">
-            <h6><a href="../terms_of_use/terms_of_use.html">Terms of Use</a></h6>
-            <h6><a href="../privacy_policy/privacy_policy.html">Privacy Policy</a></h6>
-        </div>
-        <div class="copyright-footer">
-            <h6>All Rights Reserved &#169;</h6>
-        </div>
-    </footer> -->
     <?php
         include("../footer/footer.html");
     ?>
