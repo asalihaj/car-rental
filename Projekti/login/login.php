@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/generic.css">
-    <link rel="stylesheet" href="../Styles/header.css">
-    <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="loginstyle.css?any">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 
 <body>
-    <?php
-        include("../header/header.html");
-    ?>
+    <header>
+        <?php
+            include("../header/header.html");
+        ?>
+    </header>
     <main>
         <div class="panel">
             <form class="login-form" action="">
@@ -39,9 +39,11 @@
             </form>
         </div>
     </main>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
     <script src="validation.js"></script>
 </body>
 

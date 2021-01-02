@@ -1,7 +1,6 @@
 main {
     display: flex;
     background: no-repeat center url("../imgs/3075569.jpg");
-    background-size: 100%;
     justify-content: center;
     align-items: center;
     min-height: 78.8vh;
@@ -112,5 +111,54 @@ main {
 
 #login-button:active {
     background-color: #07526d;
+}
+
+@media only screen 
+	and (max-device-width: 414px){
+	
+	body {
+		width: 100vw;
+	}
+	
+	main {
+		align-items: flex-start;
+		background: no-repeat center url("../imgs/331.jpg");
+	}
+	.panel {
+		width: 90vw;
+		height: 60vh;
+		margin: 50px 0;
+		backdrop-filter: blur(6px);
+	}
+	
+	.login-form {
+		width: 100%;
+	}
+	
+	.user-input {
+		width: 75vw;
+	}
+	
+	.user-input img {
+		margin: 10px 0;
+		width: 35px;
+		height: 35px;
+	}
+	
+	#login-button {
+		width: 66vw;
+		margin-left: 28px;
+	}
+	
+	.login-links {
+		width: 100%;
+	}
+	
+	.login-links a {
+		margin-right: 0;
+		margin-left: 34px;
+		height: 9%;
+		align-items: center;
+	}
 }
 

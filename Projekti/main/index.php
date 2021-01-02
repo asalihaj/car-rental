@@ -12,9 +12,11 @@
 </head>
 
 <body>
+    <header>
     <?php
         include("../header/header.html");
     ?>
+    </header>
     <div class="center">
 
         <div class="inside">
