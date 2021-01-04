@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-    <link rel="stylesheet" href="style.css?s">
+    <link rel="stylesheet" href="style.css?">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/generic.css">
@@ -65,7 +65,8 @@
                         <input type="date">
                     </div>
                     <div class="pu-time" id="time-res">
-                        <select name="pick-up-time" id="pick-up-time">
+                        <input type="time" class="pick-up-time">
+                        <!-- <select name="pick-up-time" id="pick-up-time">
                             <option value="12:00 AM">12:00 AM</option>
                             <option value="12:30 AM">12:30 AM</option>
                             <option value="01:00 AM">01:00 AM</option>
@@ -114,7 +115,7 @@
                             <option value="10:30 PM">10:30 PM</option>
                             <option value="11:00 PM">11:00 PM</option>
                             <option value="11:30 PM">11:30 PM</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
                 <div class="date-reservation">
@@ -125,7 +126,8 @@
                         <input type="date">
                     </div>
                     <div class="do-time" id="time-res">
-                        <select name="pick-up-time" id="pick-up-time">
+                        <input type="time" class="drop-off-time">
+                        <!-- <select name="pick-up-time" id="pick-up-time">
                             <option value="12:00 AM">12:00 AM</option>
                             <option value="12:30 AM">12:30 AM</option>
                             <option value="01:00 AM">01:00 AM</option>
@@ -174,7 +176,7 @@
                             <option value="10:30 PM">10:30 PM</option>
                             <option value="11:00 PM">11:00 PM</option>
                             <option value="11:30 PM">11:30 PM</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
 

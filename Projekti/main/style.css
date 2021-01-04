@@ -41,8 +41,8 @@
     margin-top:15px;
 }
 .select-car > select{
-    width: 350px;
-    height: 50px;
+    width: 330px;
+    height: 45px;
     margin-top: 25px;
     border-radius: 12px;
     cursor: pointer;
@@ -55,14 +55,16 @@
     cursor: pointer;
 }
 .pu-location{
- 
-  
-  margin-top: 20px;
-  justify-content: center;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .pick-up >input{
-    width: 75%;
+    width: 74%;
     margin-left: 10px;
     font-size: 14px;
     border-bottom-right-radius: 12px;
@@ -71,22 +73,20 @@
     color: #073442;
 }
 .pick-up{
-    
     margin-top: 20px;
     background-color: #07526d;
     display: inline-flex;
     position: relative;
-    width: 350px;
+    width: 328px;
     height: 40px;
     border-radius: 12px;
-    margin-left:26px ;
 }
 .pick-up-logo{
     margin-top: 10px;
 }
 .pick-up > span{
     display: flex;
-    margin-top: 10px;
+    padding-top: 10px;
     font-size: 15px;
 }
 .drop-off{
@@ -94,14 +94,13 @@
     background-color: #07526d;
     display: inline-flex;
     position: relative;
-    width: 350px;
+    width: 328px;
     height: 40px;
     border-radius: 12px;
-    margin-left:26px ;
 }
 .drop-off >input{
-    width: 75%;
-    margin-left: 8px;
+    width: 74%;
+    margin-left: 9px;
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
     font-size: 14px;
@@ -110,13 +109,14 @@
     
 }
 .drop-off > span{
-    font-size: 15px;
-    line-height: 2.3;
+    font-size: 14px;
+    padding-top: 12px;
 }
 .date-reservation{
     
-    display: inline-flex;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 .pu-date{
     margin-top: 30px;
@@ -232,10 +232,26 @@ div.image{
     margin-left: 75px;
 }
 
+.cover-img {
+    display: flex;
+    justify-content: center;
+}
+
 .cover-img img {
-    width: 100%;
+    width: 85%;
     animation: fadein 1s;
 }
+
+.pick-up-time {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.drop-off-time {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
 
 @keyframes fadein {
     from {
