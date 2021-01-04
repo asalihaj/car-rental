@@ -1,4 +1,4 @@
-div.center{
+.center{
    
     width: 100%;
     height: 100%;
@@ -14,9 +14,9 @@ div.center{
     justify-content: space-evenly;
     align-items: center;
 }
-div.inside{
+
+.inside{
     margin: 58.5px;
-    margin-left: 150px;
     border: 2px solid #032035;
     background-color: #013a63;
     height: 500px;
@@ -233,7 +233,7 @@ div.image{
 }
 
 .cover-img img {
-    width: 800px;
+    width: 100%;
     animation: fadein 1s;
 }
 
@@ -247,71 +247,111 @@ div.image{
         transform: translateX(0px) translateY(0px);
     }
 }
-/* .slider{
-    max-width: 700px;
-    height: 500px;
-    margin-left: 180px;
-    margin-top: 50px;
-	position: relative;
-	overflow: hidden;
-}
-
-.slider .left-slide,.slider .right-slide{
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background-color: #444444;
-  border-radius: 50%;
-  /* color:#ffffff; */
-  /* font-size: 20px;
-  top:50%;
-  cursor: pointer;
-  margin-top: -20px;
-  text-align: center;
-  line-height: 40px;
-  
-}
-.slider .left-slide:hover,.slider .right-slide:hover{
- box-shadow: 0px 0px 10px black;
- background-color: #29a8e2;
-}
-
-.slider .left-slide{
-	left: 30px;
-}
-.slider .right-slide{
-	right: 30px;
-}
-.slider .slider-items .item img{
-	max-width: 100%;
-	display: block;
-	animation:zoom 1s ease;
-}
-
-@keyframes zoom {
-	0%{transform: scale(2);opacity: 0}
-	10%{transform: scale(2);}
-	50%{transform: scale(1);opacity:1}
-}
-.slider .slider-items .item{
-	display: none;
-	position: relative;
-}
-.slider .slider-items .item .caption {
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    bottom: 0px;
-    left: 0px;
-    line-height: 60px;
-    text-align: center;
-font-size: 30px;
-}
-
-.slider .slider-items .item.active{
-	display: block;
-}  */
 
 .reservation-button >input:active {
     background-color: #07526d;
  }
+
+ @media only screen
+    and (max-width: 1270px) {
+        .center {
+            flex-direction: column;
+            transition: 1s;
+        }
+
+        .cover-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cover-img img {
+            width: 90vw;
+        }
+    }
+
+@media only screen
+    and (max-device-width: 414px) {
+        
+        .select-car > select {
+            width: 87vw;
+        }
+        .inside {
+            width: 87vw;
+        }
+
+        .pu-location {
+            margin-right: 10px;
+        }
+
+        .pick-up {
+            margin-left: 15px;
+            width: 90vw;
+        }
+
+        .pick-up > span {
+            font-size: 12px;
+            margin-top: 0;
+            padding-top: 6px;
+        }
+
+        .pick-up input {
+            width: 72vw;
+        }
+
+        .drop-off {
+            width: 90vw;
+            margin-left: 15px;
+        }
+
+        .drop-off input {
+            width: 72vw;
+        }
+
+        .date-reservation {
+            width: 90vw;
+        }
+
+        .pu-date {
+            margin-left: 0;
+            width: 70vw;
+        }
+
+        .pu-date span {
+            font-size: 12px;
+            line-height: inherit;
+            padding-top: 6px;
+        }
+
+        .pu-date select {
+            width: 35vw;
+        }
+
+        .pu-date > input {
+            width: 42vw;
+        }
+
+        .do-date {
+            width: 70vw;
+        }
+
+        .do-date span {
+            font-size: 12px;
+            line-height: inherit;
+            padding-top: 6px;
+        }
+
+        .do-date input {
+            width: 42vw;
+        }
+
+        #input-res {
+            font-size: 12px;
+            line-height: inherit;
+            padding-top: 6px;
+        }
+
+        .cover-img img {
+            width: 100vw;
+        }
+    }

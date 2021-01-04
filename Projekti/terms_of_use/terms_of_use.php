@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="../Styles/generic.css">
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="stylesheet" href="../Styles/documentstyle.css">
+    <link rel="stylesheet" href="../Styles/documentstyle.css?a">
 </head>
 
 <body>
-    <?php
-        include("../header/header.html");
-    ?>
+    <header>
+        <?php
+            include("../header/header.html");
+        ?>
+    </header>
     <main>
         <article>
             <h1>Terms and Conditions</h1>
@@ -201,12 +203,13 @@
                 not be
                 liable for any loss or damage of any nature.
             </p>
-            <i>*** Terms and Conditions taken from: https://www.termsandconditionsgenerator.com/ ***</i>
         </article>
     </main>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
 </body>
 
 </html>

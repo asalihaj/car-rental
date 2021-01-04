@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
-    <link rel="stylesheet" href="../Styles/documentstyle.css">
+    <link rel="stylesheet" href="../Styles/documentstyle.css?a">
     <link rel="stylesheet" href="../Styles/generic.css">
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
 </head>
 
 <body>
-    <?php
-        include("../header/header.html");
-    ?>
+    <header>
+        <?php
+            include("../header/header.html");
+        ?>
+    </header>
     <main>
         <article>
             <h1>Privacy Policy for Company Name</h1>
@@ -135,12 +137,13 @@
                 hyperlinked to
                 their Privacy Policies below.
             </p>
-            <i>*** Privacy Policy agreement taken from: https://www.privacypolicygenerator.info/ ***</i>
         </article>
     </main>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
 </body>
 
 </html>

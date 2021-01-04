@@ -12,7 +12,6 @@ main {
 
 article {
     width: 65%;
-    
     line-height: 1.6;
 }
 
@@ -26,4 +25,32 @@ article h3 {
 
 article ul > li {
     margin-left: 21px;
+}
+
+@media only screen
+    and (max-width: 1124px) {
+        main {
+            margin: 17vh auto;
+        }
+
+        article {
+            width: 100%;
+            transition: 0.2s;
+        }
+}
+
+@media only screen
+    and (max-width: 650px) {
+        main {
+            width: 90%;
+            transition: 0.2s;
+        }
+}
+
+@media only screen
+    and (max-width: 414px) {
+        article {
+            line-height: 1.4;
+        }
+    }
 }
