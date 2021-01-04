@@ -5,7 +5,6 @@ main {
     align-items: center;
 }
 
-
 .contact-panel {
     display: flex;
     flex-direction: column;
@@ -87,3 +86,25 @@ main {
 #submit:active {
     background-color: #07526d;
 }
+
+@media only screen
+    and (max-device-width: 1124px) {
+        .contact-panel {
+            width: 70vw;
+            height: 56vh;
+        }
+}
+
+
+@media only screen
+    and (max-device-width: 414px) {
+        .contact-panel {
+            width: 100vw;
+            height: 70vh;
+        }
+
+        .contact-form {
+            width: 90vw;
+        }
+}
+

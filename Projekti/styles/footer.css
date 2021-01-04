@@ -1,4 +1,5 @@
 footer {
+    width: 100%;
     height:  11.6vh;
     background-color: #02223a;
     display: flex;
@@ -6,6 +7,10 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     border-top: 2px solid #012a4a;
+}
+
+footer h6 {
+    font-weight: 400;
 }
 
 footer a {
@@ -24,7 +29,7 @@ footer a {
 }
 
 .company-policy {
-    width: 100%;
+    width: 13%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +39,7 @@ footer a {
 
 .copyright-footer {
     color: #f1faee;
-    width: 100%;
+    width: 60%;
     margin-bottom: 2px;
     padding-top: 2px;
     border-top: 2px solid rgba(255, 255, 255, 0.8);
@@ -44,8 +49,46 @@ footer a {
 }
 
 @media only screen 
-	and (max-device-width: 411px) {
+    and (device-width: 1024px) {
+        footer {
+            height: 12.1vh;
+            width: 100vw;
+            font-size: 20px;
+        }
+
+        .company-policy {
+            width: 30%;
+            font-size: 26px;
+        }
+
+        .copyright-footer {
+            font-size: 30px;
+        }
+}
+
+@media only screen 
+    and (max-device-width: 768px) {
+        
+        footer {
+            width: 100vw;
+        }
+
+        .company-policy {
+            width: 30%;
+        }
+}
+
+@media only screen 
+	and (max-device-width: 414px) {
 		footer {
 			height: 15vh;
-		}
-	}
+        }
+        
+        .company-policy {
+            width: 50%;
+        }
+
+        .copyright-footer {
+            width: 75%;
+        }
+}

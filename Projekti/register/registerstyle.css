@@ -1,7 +1,6 @@
 main {
     display: flex;
     background: no-repeat center url("../imgs/3075569.jpg");
-    background-size: 100%;
     justify-content: center;
     align-items: center;
     min-height: 78.8vh;
@@ -178,3 +177,54 @@ input {
     color: white;
     margin-left: 56px;
 }
+
+@media only screen
+    and (max-device-width: 414px) {
+        body {
+            width: 100vw;
+        }
+
+        main {
+            background: url("../imgs/331.jpg");
+        }
+
+        .panel {
+            width: 90vw;
+        } 
+
+        #register-label {
+            font-size: 1.5em;
+        }
+
+        .user-input {
+            width: 86vw;
+            overflow: hidden;
+        }
+
+        .user-input img {
+            margin-top: 15px;
+            width: 35px;
+            height: 35px;
+        }
+
+        .register-event {
+            margin-left: 0;
+        }
+
+        #password-strength {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+
+        .terms-and-services {
+            margin-left: 0;
+        }
+
+        #register-button {
+            width: 80vw;
+        }
+
+        .register-links a {
+            margin-left: 0;
+        }
+    }

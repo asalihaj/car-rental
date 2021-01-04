@@ -12,9 +12,11 @@
 </head>
 
 <body>
-    <?php
-        include("../header/header.html");
-    ?>
+    <header>
+        <?php
+            include("../header/header.html");
+        ?>
+    </header>
     <main>
         <div class="contact-panel">
             <form class="contact-form">
@@ -28,9 +30,11 @@
             </form>
         </div>
     </main>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
     <script src="contactvalidator.js"></script>
 </body>
 

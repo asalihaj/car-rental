@@ -112,7 +112,7 @@ a {
     border-top-right-radius: 20px;
     align-self: flex-start;
     margin-left: 4px;
-    animation: fadein 1s ease-in;
+    animation: fadein 0.4s ease-in;
 }
 
 .additional-info {
@@ -168,4 +168,63 @@ a {
 .book-now:hover {
     border: 2px solid #07526d;
     cursor: pointer;
+}
+
+
+/* Responsivity */
+
+@media only screen
+    and (max-width: 1124px) {
+         .title {
+            margin-top: 4vh;
+            transition: 0.3s;
+        }
+    }
+
+@media only screen
+    and (max-device-width: 1024px)
+    and (max-device-height: 1366px) {
+        
+        .box-model {
+            width: 30em;
+        }
+
+        .title {
+            font-size: 6vh;
+        }
+
+        .additional-info {
+            font-size: 13px;
+        }
+}
+
+@media only screen
+    and (max-device-width: 414px) {
+
+        body {
+            width: 100vw;
+        }
+
+        .models {
+            margin: 8vh 0;
+            width: 100vw;
+        }
+
+        .title {
+            font-size: 5vh;
+        }
+
+        .box-model {
+            width: 98vw;
+            height: 50vh;
+            animation: fadein 0.2s;
+        }
+
+        .column {
+            justify-content: space-between;
+        }
+
+        .side-panel {
+            overflow: hidden;
+        }
 }

@@ -79,7 +79,8 @@ header {
 
 @media (max-width: 1124px) {
 	header {
-		height: 7.5rem;
+        height: 7.5rem;
+        width: 100vw;
 		transition: height 0.3s;
 	}	
 }

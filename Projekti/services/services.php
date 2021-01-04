@@ -5,22 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?">
     <link rel="stylesheet" href="../styles/generic.css">
 </head>
 
 <body>
-    <?php
-        include("../header/header.html");
-    ?>
-    <div class="blank"></div>
-    <section class="services">
-        <div class="title">
-            <h1>Customer Services</h1>
+    <header>
+        <?php
+            include("../header/header.html");
+        ?>
+    </header>
+    <main>
+        <h1 class="services-heading">Customer Services</h1>
+        <section class="services-container">
+            <article class="services-box">
+                <div class="box-header">
+                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
+                    <h2 class="services-title">Special rates on car booking</h2>
+                </div>
+                <div class="box-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni, 
+                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid. 
+                        Aspernatur, voluptas.
+                    </p>
+                </div>
+            </article>
+            <article class="services-box">
+                <div class="box-header">
+                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
+                    <h2 class="services-title">Mobile Phone Reservation</h2>
+                </div>
+                <div class="box-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni, 
+                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid. 
+                        Aspernatur, voluptas.
+                    </p>
+                </div>
+            </article>
+            <article class="services-box">
+                <div class="box-header">
+                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
+                    <h2 class="services-title">Unlimited Miles Car Rental</h2>
+                </div>
+                <div class="box-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni, 
+                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid. 
+                        Aspernatur, voluptas.
+                    </p>
+                </div>
+            </article>
+            <article class="services-box">
+                <div class="box-header">
+                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
+                    <h2 class="services-title">One Way Car Rentals</h2>
+                </div>
+                <div class="box-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni, 
+                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid. 
+                        Aspernatur, voluptas.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
 
-        </div>
-        <span class="line">&nbsp;</span>
-        <div class="top-box">
+        <!-- <div class="top-box">
             <div class="box1">
                 <div class="inner-title">
                     <div class="image1">
@@ -67,12 +120,13 @@
                     consequatur ad? At nesciunt, nihil facilis exercitationem, magnam officia dolores placeat nisi ab id
                     repudiandae. Nemo esse fuga iure.</p>
             </div>
-        </div>
+        </div> -->
 
-    </section>
-    <div class="blank"></div>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
 </body>
 </html>

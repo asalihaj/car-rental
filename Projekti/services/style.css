@@ -1,149 +1,89 @@
-.services{
-    display: block;
-    width: auto;
-    margin: 60px;
+main {
     height: auto;
-}
-.title{
-    display: inline-flex;
-    justify-content: center;
-
-
-}
-
-.title > h1{
-    margin-left: 525px;
-    color: #126782;
-    font-size: 50px;
-    line-height: 0.1;
-    animation: titleleft 1s;
-}
-
-@keyframes titleleft {
-    from {
-        opacity: 0;
-        transform: translateX(-60px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.top-box{
-    display: inline-flex;
-    margin: 50px 200px 30px 200px ;
-}
-.box1{
-    width: 525px;
-    height: 250px;
-    background-color:#ededed;
-    animation: topleft 1s;
-}
-
-@keyframes topleft {
-    from {
-        opacity: 0;
-        transform: translateX(-40px) translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px) translateY(0px);
-    }
-}
-
-
-.box-title{
-    margin-top: 20px;
-    color: rgb(102, 88, 88);
-    font-size: 25px;
-    margin-left: 10px;
-    font-family: arial;
-}
-
-.box2{
-    width: 525px;
-    height: 250px;
-    background-color: #ededed;
-    margin-left: 30px;
-    animation: topright 1s;
-}
-
-@keyframes topright {
-    from {
-        opacity: 0;
-        transform: translateX(40px) translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
-    }
-}
-.bottom-box{
-    margin: 0px 200px 0px 200px;
-    display: inline-flex;
-    /* width: 100%; */
-   
-}
-.box3{
-    width: 525px;
-    height: 250px;
-    background-color: #ededed;
-    animation: bottomleft 1s;
-}
-
-@keyframes bottomleft {
-    from {
-        opacity: 0;
-        transform: translateX(-40px) translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
-    }
-}
-
-
-.box4{
-    width: 525px;
-    height: 250px;
-    background-color: #ededed;
-    margin-left: 30px;
-    animation: bottomright 1s;
-}
-
-@keyframes bottomright {
-    from {
-        opacity: 0;
-        transform: translateX(40px) translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
-    }
-}
-.inner-title{
-    display: inline-flex;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-.image1{
-    margin-top: 10px;
-    margin-left:5px;
-}
-.line{
-    margin-top: 30px;
-    height: 4px;
-    width: 135px;
-    display: block;
-    background-color: #003049;
-    margin-left: 672px;
-}
-.paragraph{
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 0px 20px 20px 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    margin: 5vh 0;
 }
+
+.services-heading {
+    font-size: 3rem;
+    color: #126782;
+    margin-bottom: 7vh;
+}
+
+.services-container {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+    margin-bottom: 30px;
+    padding: 20px 30px 40px 20px;
+    background-color: #e5e5e5;
+}
+
+.box-header {
+    color: #264653;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.services-icon {
+    width: 50px;
+}
+
+.services-title {
+    margin-left: 10px;
+}
+
+.box-text {
+    color: #1b3a4b;
+    margin-top: 15px;
+}
+
+@media only screen
+    and (max-device-width: 1124px) {
+
+        .services-container {
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .services-box {
+            width: inherit;
+        }
+    }
+
+
+
+@media only screen
+    and (max-width: 414px) {
+
+        main {
+            width: 100vw;
+        }
+
+        .services-heading {
+            text-align: center;
+        }
+
+        .services-container {
+            width: 100vw;
+        }
+
+        .services-box {
+            width: 80vw;
+        }
+    }

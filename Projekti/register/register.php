@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="../Styles/generic.css">
     <!-- <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css"> -->
-    <link rel="stylesheet" href="registerstyle.css">
+    <link rel="stylesheet" href="registerstyle.css?a">
     <title>Register</title>
 </head>
 
 <body>
-    <?php
-        include("../header/header.html");
-    ?>
+    <header>
+        <?php
+            include("../header/header.html");
+        ?>
+    </header>
     <main>
         <div class="panel">
             <form class="register-form" action="#">
@@ -67,9 +69,11 @@
         </div>
 
     </main>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
     <script src="usernamevalidator.js"></script>
     <script src="emailvalidator.js"></script>
     <script src="passwordvalidator.js"></script>

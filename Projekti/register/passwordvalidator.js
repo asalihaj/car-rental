@@ -5,7 +5,6 @@ let passwordStrength = document.getElementById("password-strength");
 
 password.addEventListener("focusin", () => {
     passwordStrength.removeAttribute("hidden");
-    passwordTimeout(3000);
 });
 
 password.addEventListener("focusout", () => {

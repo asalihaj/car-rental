@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="../Styles/generic.css">
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="stylesheet" href="modelstyle.css">
+    <link rel="stylesheet" href="modelstyle.css?a">
     <link rel="stylesheet" href="carstyle.css">
     <title>Models</title>
 </head>
 
 <body>
-    <?php
-        include("../header/header.html");
-    ?>
+    <header>
+        <?php
+            include("../header/header.html");
+        ?>
+    </header>
     <main class="models">
         <div class="title">
             <h1>OUR MODELS</h1>
@@ -357,9 +359,11 @@
             </div>
         </div>
     </main>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
     <script src="addmodel.js"></script>
 </body>
 
