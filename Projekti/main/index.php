@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?s">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/generic.css">
@@ -190,9 +190,11 @@
             <img src="../imgs/models/audi_a7_white.png" alt="Audi A7">
         </div>
     </div>
-    <?php
-        include("../footer/footer.html");
-    ?>
+    <footer>
+        <?php
+            include("../footer/footer.html");
+        ?>
+    </footer>
     <script src="main.js"></script>
 </body>
 

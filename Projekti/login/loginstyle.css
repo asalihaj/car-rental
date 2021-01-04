@@ -114,10 +114,10 @@ main {
 }
 
 @media only screen 
-	and (max-device-width: 414px){
+	and (max-device-width: 414px) {
 	
 	body {
-		width: 100vw;
+        width: 100vw;
 	}
 	
 	main {
@@ -137,12 +137,14 @@ main {
 	
 	.user-input {
 		width: 75vw;
-	}
+    }
+    
+    .input-area {
+        padding: 0;
+    }
 	
 	.user-input img {
-		margin: 10px 0;
-		width: 35px;
-		height: 35px;
+		display: none;
 	}
 	
 	#login-button {
