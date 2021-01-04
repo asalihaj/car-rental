@@ -274,10 +274,11 @@ div.image{
     and (max-device-width: 414px) {
         
         .select-car > select {
+            height: 45px;
             width: 87vw;
         }
         .inside {
-            width: 87vw;
+            width: 85vw;
         }
 
         .pu-location {
@@ -287,40 +288,51 @@ div.image{
         .pick-up {
             margin-left: 15px;
             width: 90vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .pick-up > span {
             font-size: 12px;
             margin-top: 0;
-            padding-top: 6px;
         }
 
         .pick-up input {
-            width: 72vw;
+            height: 100%;
+            width: 65vw;
         }
 
         .drop-off {
             width: 90vw;
             margin-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .drop-off input {
-            width: 72vw;
+            width: 65vw;
+            height: 100%;
         }
 
         .date-reservation {
             width: 90vw;
+            display: flex;
+            justify-content: space-between;
         }
 
         .pu-date {
             margin-left: 0;
             width: 70vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .pu-date span {
             font-size: 12px;
             line-height: inherit;
-            padding-top: 6px;
         }
 
         .pu-date select {
@@ -328,30 +340,50 @@ div.image{
         }
 
         .pu-date > input {
+            height: 100%;
             width: 42vw;
+        }
+
+        .pu-time select {
+            width: 25vw;
         }
 
         .do-date {
             width: 70vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .do-date span {
             font-size: 12px;
             line-height: inherit;
-            padding-top: 6px;
         }
 
         .do-date input {
+            height: 100%;
             width: 42vw;
+        }
+
+        .do-time select {
+            width: 25vw;
         }
 
         #input-res {
             font-size: 12px;
             line-height: inherit;
-            padding-top: 6px;
         }
 
         .cover-img img {
             width: 100vw;
+        }
+
+        .pick-up-logo {
+            margin-top: 0;
+        }
+
+        .reservation-button input {
+            font-size: 14px;
+            height: 50px;
         }
     }
