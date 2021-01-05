@@ -403,3 +403,24 @@ div.image{
             height: 50px;
         }
     }
+
+@media only screen
+    and (max-device-width: 280px) {
+
+        .date-reservation {
+            width: 95vw;
+        }
+        .drop-off-time {
+            margin-top: 20px;
+            margin-left: 5px;
+            width: 24vw;
+            font-size: 9px;
+        }
+
+        .pick-up-time {
+            margin-top: 20px;
+            margin-left: 5px;
+            width: 24vw;
+            font-size: 9px;
+        }
+    }

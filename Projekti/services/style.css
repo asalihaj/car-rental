@@ -30,6 +30,7 @@ main {
     margin-bottom: 30px;
     padding: 20px 30px 40px 20px;
     background-color: #e5e5e5;
+    animation: fromleft 0.3s, fadein 0.3s;
 }
 
 .box-header {
@@ -50,6 +51,24 @@ main {
 .box-text {
     color: #1b3a4b;
     margin-top: 15px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fromleft {
+    from {
+        transform: translateX(-40px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 @media only screen
