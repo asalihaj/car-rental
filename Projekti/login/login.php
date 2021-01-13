@@ -14,7 +14,7 @@
 <body>
     <header>
         <?php
-            include("../header/header.html");
+        include("../header/header.html");
         ?>
     </header>
     <main>
@@ -23,13 +23,11 @@
                 <label id="login-label">Member Login</label>
                 <div class="user-input">
                     <img src="../icons/login/321.png" alt="User Icon">
-                    <input class="login-component input-area" type="text" name="username" id="email"
-                        placeholder="Email">
+                    <input class="login-component input-area" type="text" name="username" id="email" placeholder="Email">
                 </div>
                 <div class="user-input">
                     <img src="../icons/login/123.png" alt="Password Icon">
-                    <input class="login-component input-area " type="password" name="password" id="password"
-                        placeholder="*******">
+                    <input class="login-component input-area " type="password" name="password" id="password" placeholder="*******">
                 </div>
                 <input class="login-component" id="login-button" type="button" value="LOGIN">
                 <div class="login-links">
@@ -41,7 +39,7 @@
     </main>
     <footer>
         <?php
-            include("../footer/footer.html");
+        include("../footer/footer.html");
         ?>
     </footer>
     <script src="validation.js"></script>

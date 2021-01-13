@@ -76,6 +76,7 @@ header {
 
 .collapsed-navbar {
     position: absolute;
+    display: none;
     top: 4.5rem;
     width: 100vw;
     height: 40vh;
@@ -142,6 +143,10 @@ header {
         margin-right: 25px;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    .collapsed-navbar {
+        display: flex;
     }
 
     .line {
