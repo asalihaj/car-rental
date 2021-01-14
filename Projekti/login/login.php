@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/generic.css?a">
-    <link rel="stylesheet" href="loginstyle.css?a">
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Login</title>
@@ -14,7 +16,7 @@
 <body>
     <header>
         <?php
-        include("../header/header.html");
+        include("../header/header.php");
         ?>
     </header>
     <main>
@@ -39,7 +41,7 @@
     </main>
     <footer>
         <?php
-        include("../footer/footer.html");
+        include("../footer/footer.php");
         ?>
     </footer>
     <script src="validation.js"></script>

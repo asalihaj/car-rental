@@ -1,27 +1,32 @@
 .center{
    
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  
+width: 95%;
+   
+height: 100%;
+   
+display: flex;
+   
+flex-direction: row;
+   
+justify-content: space-between;
+   
+align-items: center;
 }
 .reservation-form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    height: 100%;
 }
 
 .inside{
-    margin: 58.5px;
+    display: flex;
+    justify-content: center;
     border: 2px solid #032035;
     background-color: #013a63;
     height: 500px;
     width: 400px;
-    padding: 0px 20px;
     color: white;
     border-radius: 14px;
     animation: insideleft 0.6s;
@@ -37,9 +42,7 @@
         transform: translateX(0) translateY(0);
     }
 }
-.select-car{
-    margin-top:15px;
-}
+
 .select-car > select{
     width: 330px;
     height: 45px;
@@ -55,8 +58,6 @@
     cursor: pointer;
 }
 .pu-location{
-    margin-top: 20px;
-    justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +65,7 @@
 }
 
 .pick-up >input{
-    width: 74%;
+    width: 72%;
     margin-left: 10px;
     font-size: 14px;
     border-bottom-right-radius: 12px;
@@ -75,8 +76,8 @@
 .pick-up{
     margin-top: 20px;
     background-color: #07526d;
-    display: inline-flex;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
     width: 328px;
     height: 40px;
     border-radius: 12px;
@@ -92,21 +93,20 @@
 .drop-off{
     margin-top: 20px;
     background-color: #07526d;
-    display: inline-flex;
-    position: relative;
-    width: 328px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     height: 40px;
     border-radius: 12px;
 }
 .drop-off >input{
-    width: 74%;
-    margin-left: 9px;
+    width: 72%;
+    margin-left: 6px;
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
     font-size: 14px;
     border: none;
     color: #073442;
-    
 }
 .drop-off > span{
     font-size: 14px;
@@ -114,22 +114,28 @@
 }
 .date-reservation{
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
+display: flex;
+    
+flex-direction: column;
+    
+justify-content: center;
+    
+align-items: flex-end;
+    
+width: 100%;
 }
 .pu-date{
-    margin-top: 30px;
-    /* margin-left: 15px; */
-    display: inline-flex;
-    width: 225px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     height: 40px;
     background-color: #07526d;
-     border-bottom-left-radius: 12px;
-    border-top-left-radius: 12px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 .pu-date > input{
-    width: 60.5%;
+    width: 72%;
     margin-left: 5px;
     color: black;
     cursor: pointer;
@@ -137,10 +143,11 @@
 }
 .pu-date > span {
    
-    font-size: 16px;
-    margin-left: 5px;
-    line-height: 2.5;
-  
+font-size: 15px;
+   
+margin-left: 5px;
+   
+line-height: 2.5;
 }
 .pu-date >img{
     margin-left: 5px;
@@ -158,17 +165,16 @@
 }
 .do-date{
     margin-top: 20px;
-    /* margin-left: 15px; */
-    display: inline-flex;
-    width: 225px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     height: 40px;
     background-color: #07526d;
-    border-bottom-left-radius: 12px;
-    border-top-left-radius: 12px;
-    
+    border-radius: 12px;
+    overflow: hidden;
 }
 .do-date > input{
-    width: 60.5%;
+    width: 72%;
     margin-left: 5px;
     color: black;
     cursor: pointer;
@@ -181,7 +187,7 @@
     line-height: 2.5;
 }
 .do-date >img{
-    margin-left: 5px;
+    margin-left: 3px;
 }
 .do-time > select{
     margin-top: 20px;
@@ -196,21 +202,19 @@
  .reservation-button{
      width: 100%;
      height: 100px;
-     margin-left: 10px;
-     /* margin-top: 20px; */
-   
      display: flex;
+     justify-content: center;
  }
  .reservation-button >input{
-    margin-top: 40px;
     width: 87.5%;
+    height: 50px;
     color: white;
-    margin-left: 20px;
     border-radius: 14px;
-    font-size: 20px;
+    font-size: 15px;
     background-color: #126782;
     cursor: pointer;
-    border: 2px solid #07526d;
+    border: 1px solid #07526d;
+    margin-top: 20px;
  }
 
 .inside-content{
@@ -234,23 +238,24 @@ div.image{
 
 .cover-img {
     display: flex;
+    width: 61%;
     justify-content: center;
 }
 
 .cover-img img {
-    width: 85%;
+    width: 100%;
     animation: fadein 1s;
 }
 
 .pick-up-time {
-    margin-top: 30px;
-    margin-left: 10px;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 12px;
 }
 
-.drop-off-time {
-    margin-top: 20px;
-    margin-left: 10px;
-}
+.drop-off-time {margin-top: 10px;height: 30px;width: 100px;border: none;border-radius: 12px;}
 
 
 @keyframes fadein {
@@ -270,9 +275,16 @@ div.image{
 
  @media only screen
     and (max-width: 1270px) {
+
+        main {
+            height: inherit;
+        }
+
         .center {
             flex-direction: column;
             transition: 1s;
+            width: 100%;
+            margin-top: 2rem;
         }
 
         .cover-img {
@@ -288,22 +300,21 @@ div.image{
 
 @media only screen
     and (max-device-width: 414px) {
-        
+
         .select-car > select {
             height: 45px;
-            width: 87vw;
+            width: 80vw;
         }
         .inside {
-            width: 85vw;
+            width: 95vw;
         }
 
         .pu-location {
-            margin-right: 10px;
+        width: 80vw;
         }
 
         .pick-up {
-            margin-left: 15px;
-            width: 90vw;
+            width: 80vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -312,35 +323,36 @@ div.image{
         .pick-up > span {
             font-size: 12px;
             margin-top: 0;
+            padding: 0;
         }
 
         .pick-up input {
             height: 100%;
-            width: 65vw;
+            width: 53vw;
+            margin-left: 5px;
         }
 
         .drop-off {
-            width: 90vw;
-            margin-left: 15px;
+            width: 80vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .drop-off input {
-            width: 65vw;
+            width: 53vw;
             height: 100%;
+            margin-left: 5px;
         }
 
         .date-reservation {
-            width: 90vw;
+            width: 80vw;
             display: flex;
             justify-content: space-between;
         }
 
         .pu-date {
             margin-left: 0;
-            width: 70vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -349,6 +361,7 @@ div.image{
         .pu-date span {
             font-size: 12px;
             line-height: inherit;
+            margin: 0;
         }
 
         .pu-date select {
@@ -357,7 +370,7 @@ div.image{
 
         .pu-date > input {
             height: 100%;
-            width: 42vw;
+            width: 54vw;
         }
 
         .pu-time select {
@@ -365,7 +378,6 @@ div.image{
         }
 
         .do-date {
-            width: 70vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -378,7 +390,8 @@ div.image{
 
         .do-date input {
             height: 100%;
-            width: 42vw;
+            width: 53vw;
+            margin-left: 4px;
         }
 
         .do-time select {
@@ -388,6 +401,7 @@ div.image{
         #input-res {
             font-size: 12px;
             line-height: inherit;
+            padding: 0;
         }
 
         .cover-img img {
@@ -400,26 +414,22 @@ div.image{
 
         .reservation-button input {
             font-size: 14px;
-            height: 50px;
+            width: 100%;
+            height: 45px;
         }
     }
 
 @media only screen
     and (max-device-width: 280px) {
 
-        .date-reservation {
-            width: 95vw;
-        }
         .drop-off-time {
-            margin-top: 20px;
-            margin-left: 5px;
+            margin-top: 10px;
             width: 24vw;
             font-size: 9px;
         }
 
         .pick-up-time {
-            margin-top: 20px;
-            margin-left: 5px;
+            margin-top: 10px;
             width: 24vw;
             font-size: 9px;
         }

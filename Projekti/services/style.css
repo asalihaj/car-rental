@@ -1,17 +1,14 @@
 main {
-    height: auto;
-    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    margin: 5vh 0;
 }
 
 .services-heading {
     font-size: 3rem;
     color: #126782;
-    margin-bottom: 7vh;
+    margin: 7vh 0;
 }
 
 .services-container {
@@ -31,6 +28,10 @@ main {
     padding: 20px 30px 40px 20px;
     background-color: #e5e5e5;
     animation: fromleft 0.3s, fadein 0.3s;
+}
+
+.services-box:nth-of-type(2n) {
+    margin-left: 10px;
 }
 
 .box-header {
@@ -86,12 +87,31 @@ main {
     }
 
 
+@media only screen
+    and (max-width: 1110px) {
+        .services-container {
+            width: 75vw;
+        }
+    }
+
+@media only screen
+    and (max-width: 733px) {
+        .services-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .services-box {
+            width: 50vw;
+        }
+    }
 
 @media only screen
     and (max-width: 414px) {
 
         main {
             width: 100vw;
+            height: inherit;
         }
 
         .services-heading {
@@ -104,5 +124,6 @@ main {
 
         .services-box {
             width: 80vw;
+            padding: 15px 20px 30px 20px;
         }
     }

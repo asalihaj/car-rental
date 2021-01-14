@@ -14,7 +14,7 @@
 <body>
     <header>
         <?php
-            include("../header/header.html");
+        include("../header/header.php");
         ?>
     </header>
     <main>
@@ -207,7 +207,7 @@
     </main>
     <footer>
         <?php
-            include("../footer/footer.html");
+        include("../footer/footer.php");
         ?>
     </footer>
 </body>

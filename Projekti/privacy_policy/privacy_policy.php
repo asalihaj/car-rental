@@ -14,7 +14,7 @@
 <body>
     <header>
         <?php
-            include("../header/header.html");
+        include("../header/header.php");
         ?>
     </header>
     <main>
@@ -127,8 +127,7 @@
                 decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the
                 following URL –
             </p>
-            <a href="https://policies.google.com/technologies/ads"
-                target="_blank">https://policies.google.com/technologies/ads.</a>
+            <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads.</a>
             <p>
                 Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed
                 below.
@@ -141,7 +140,7 @@
     </main>
     <footer>
         <?php
-            include("../footer/footer.html");
+        include("../footer/footer.php");
         ?>
     </footer>
 </body>

@@ -1,5 +1,4 @@
 main {
-    height: 78.8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +87,24 @@ main {
 }
 
 @media only screen
+    and (max-width: 1124px) {
+        .contact-panel {
+            width: 70vw;
+        }
+    }
+
+@media only screen
+    and (max-width: 650px) {
+        .contact-panel {
+            width: 100vw;
+        }
+
+        .contact-form {
+            width: 90%;
+        }
+    }
+
+@media only screen
     and (max-device-width: 1124px) {
         .contact-panel {
             width: 70vw;
@@ -104,7 +121,7 @@ main {
         }
 
         .contact-form {
-            width: 90vw;
+            width: 95vw;
         }
 }
 

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/generic.css">
-    <!-- <link rel="stylesheet" href="../Styles/header.css">
-    <link rel="stylesheet" href="../Styles/footer.css"> -->
+    <link rel="stylesheet" href="../Styles/generic.css?a">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/footer.css">
     <link rel="stylesheet" href="registerstyle.css?a">
     <title>Register</title>
 </head>
@@ -14,7 +14,7 @@
 <body>
     <header>
         <?php
-            include("../header/header.html");
+        include("../header/header.php");
         ?>
     </header>
     <main>
@@ -24,23 +24,19 @@
                     <label id="register-label">REGISTRATION FORM</label>
                     <div class="user-input">
                         <img id="user-logo" src="../icons/registration/red_user.png" alt="User Icon">
-                        <input class="register-component input-area" type="text" name="username" id="username"
-                            placeholder="Username" required>
+                        <input class="register-component input-area" type="text" name="username" id="username" placeholder="Username" required>
                     </div>
                     <div class="user-input">
                         <img id="email-logo" src="../icons/registration/red_email.png" alt="Mail Icon">
-                        <input class="register-component input-area" type="text" name="email" id="email"
-                            placeholder="Email" required>
+                        <input class="register-component input-area" type="text" name="email" id="email" placeholder="Email" required>
                     </div>
                     <div class="user-input">
                         <img id="pw-logo" src="../icons/registration/red_lock.png" alt="Lock Icon">
-                        <input class="register-component input-area" type="password" name="password" id="password"
-                            placeholder="Password" required>
+                        <input class="register-component input-area" type="password" name="password" id="password" placeholder="Password" required>
                     </div>
                     <div class="user-input">
                         <img id="pw-confirm-logo" src="../icons/registration/red_lock.png" alt="Opened Lock">
-                        <input class="register-component input-area" type="password" name="password"
-                            id="confirm-password" placeholder="Confirm Password" required>
+                        <input class="register-component input-area" type="password" name="password" id="confirm-password" placeholder="Confirm Password" required>
                     </div>
                     <ul id="password-strength" hidden>
                         <p>Passwords are case sensitive and must contain:</p>
@@ -71,7 +67,7 @@
     </main>
     <footer>
         <?php
-            include("../footer/footer.html");
+        include("../footer/footer.php");
         ?>
     </footer>
     <script src="usernamevalidator.js"></script>

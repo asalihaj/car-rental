@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sliderstyle.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/footer.css?aaa">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/generic.css?">
+    <link rel="stylesheet" href="../styles/generic.css?a">
+    <link rel="stylesheet" href="style.css?up">
+    <link rel="stylesheet" href="sliderstyle.css">
 </head>
 
 <body>
     <header>
-    <?php
-        include("../header/header.html");
-    ?>
+        <?php
+        include("../header/header.php");
+        ?>
     </header>
     <main>
         <div class="center">
@@ -41,8 +41,7 @@
 
 
                     <div class="pu-location">
-                        <div class="pick-up" id="iput-res"><img src="../icons/reservation_tab/logo2.png" alt="pick-up"
-                                height="20px" class="pick-up-logo" class="pick-up-logo">
+                        <div class="pick-up" id="iput-res"><img src="../icons/reservation_tab/logo2.png" alt="pick-up" height="20px" class="pick-up-logo" class="pick-up-logo">
                             <span>Pick-up </span>
 
                             <input type="text" id="pu-place" placeholder="Enter city or airport: ">
@@ -50,8 +49,7 @@
 
                         </div>
 
-                        <div class="drop-off"><img src="../icons/reservation_tab/logo2.png" alt="pick-up" height="20px"
-                                class="pick-up-logo" class="pick-up-logo">
+                        <div class="drop-off"><img src="../icons/reservation_tab/logo2.png" alt="pick-up" height="20px" class="pick-up-logo" class="pick-up-logo">
                             <span id="input-res">Drop-off</span>
 
                             <input type="text" id="do-place" placeholder="Enter city or airport: ">
@@ -61,8 +59,7 @@
 
                     <div class="date-reservation">
                         <div class="pu-date">
-                            <img src="../icons/reservation_tab/calendar.png" alt="pick-up" height="20px"
-                                class="pick-up-logo" class="pick-up-logo">
+                            <img src="../icons/reservation_tab/calendar.png" alt="pick-up" height="20px" class="pick-up-logo" class="pick-up-logo">
                             <span>Pick-up </span>
                             <input type="date">
                         </div>
@@ -72,8 +69,7 @@
                     </div>
                     <div class="date-reservation">
                         <div class="do-date">
-                            <img src="../icons/reservation_tab/calendar.png" alt="pick-up" height="20px"
-                                class="pick-up-logo" class="pick-up-logo">
+                            <img src="../icons/reservation_tab/calendar.png" alt="pick-up" height="20px" class="pick-up-logo" class="pick-up-logo">
                             <span>Drop-off</span>
                             <input type="date">
                         </div>
@@ -83,8 +79,7 @@
                     </div>
 
                     <div class="reservation-button">
-                        <input type="button" id="submit" onclick="myfunction()" class="submit"
-                            value="CONTINUE CAR RESERVATION">
+                        <input type="button" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
                     </div>
             </div>
 
@@ -99,7 +94,7 @@
     </main>
     <footer>
         <?php
-            include("../footer/footer.html");
+        include("../footer/footer.php");
         ?>
     </footer>
     <script src="main.js"></script>

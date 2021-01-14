@@ -5,6 +5,12 @@
     outline: none;
 }
 
+main {
+    height: 79vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
 body {
     background-color: #edf2f4;
 }

@@ -15,7 +15,7 @@
 <body>
     <header>
         <?php
-            include("../header/header.html");
+        include("../header/header.php");
         ?>
     </header>
     <main class="models">
@@ -361,7 +361,7 @@
     </main>
     <footer>
         <?php
-            include("../footer/footer.html");
+        include("../footer/footer.php");
         ?>
     </footer>
     <script src="addmodel.js"></script>

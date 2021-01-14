@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="../styles/generic.css">
+    <link rel="stylesheet" href="../styles/generic.css?a">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="stylesheet" href="contactstyle.css?a">
 </head>
 
 <body>
     <header>
         <?php
-            include("../header/header.html");
+        include("../header/header.php");
         ?>
     </header>
     <main>
@@ -32,7 +32,7 @@
     </main>
     <footer>
         <?php
-            include("../footer/footer.html");
+        include("../footer/footer.php");
         ?>
     </footer>
     <script src="contactvalidator.js"></script>
