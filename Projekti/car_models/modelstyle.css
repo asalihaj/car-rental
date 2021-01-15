@@ -1,23 +1,9 @@
-header {
-    position: fixed;
-    top: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    background-color: #edf2f4;
-}
-
 main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin: 8vh 2vw;
 }
 
 a {
@@ -32,7 +18,7 @@ a {
     display: block;
     width: 100%;
     text-align: center;
-    font-size: 9vh;
+    font-size: 4rem;
     font-weight: 600px;
     color: #126782;
 }
@@ -176,7 +162,7 @@ a {
 @media only screen
     and (max-width: 1124px) {
          .title {
-            margin-top: 4vh;
+            margin-top: 30px;
             transition: 0.3s;
         }
     }

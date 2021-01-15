@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/generic.css?a">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="contactstyle.css?a">
+    <link rel="stylesheet" href="contactstyle.css?as">
 </head>
 
 <body>

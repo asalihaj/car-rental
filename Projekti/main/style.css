@@ -276,6 +276,10 @@ div.image{
  @media only screen
     and (max-width: 1270px) {
 
+        body {
+            height: inherit;
+        }
+
         main {
             height: inherit;
         }
