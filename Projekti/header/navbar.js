@@ -1,12 +1,11 @@
 let nav = document.querySelector('.collapsed');
-let navList = document.querySelector('.collapsed-navbar');
+let navBar = document.querySelector('.collapsed-navbar');
+let navList = document.querySelectorAll('.collapsed-nav-item a');
 
 nav.addEventListener('click', () => {
-    navList.classList.toggle('nav-active');
+    navBar.classList.toggle('nav-active');
 
-    if (navList.style.animation) {
-        navList.style.animation = '';
-    } else {
-        navList.style.animation = 'fadein 0.4s';
+    for (let i = 0; i < navList.length; i++) {
+        navList[i].classList.toggle('nav-font');
     }
 });

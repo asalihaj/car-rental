@@ -1,8 +1,13 @@
+body {
+    height: 100vh;
+}
+
 main {
     display: flex;
     background: no-repeat center url("../imgs/3075569.jpg");
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 a {
@@ -181,14 +186,16 @@ input {
     and (max-device-width: 414px) {
         body {
             width: 100vw;
+            height: 100vh;
         }
 
         main {
             background: url("../imgs/331.jpg");
+            height: 100%;
         }
 
         .panel {
-            width: 90vw;
+            width: 97vw;
         } 
 
         #register-label {
@@ -221,9 +228,22 @@ input {
 
         #register-button {
             width: 80vw;
+            height: 45px;
         }
 
         .register-links a {
             margin-left: 0;
         }
+    }
+
+@media only screen
+    and (max-device-width: 1024px) {
+        body {
+            height: 100vh;
+        }
+
+        main {
+            height: 100%;
+        }
+
     }

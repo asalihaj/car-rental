@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/generic.css?a">
-    <link rel="stylesheet" href="loginstyle.css">
-    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="loginstyle.css?a">
+    <link rel="stylesheet" href="../styles/header.css?a">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
                 </div>
                 <input class="login-component" id="login-button" type="button" value="LOGIN">
                 <div class="login-links">
-                    <a href="../Register/register.php">Not a member yet?Register</a>
+                    <a href="../Register/register.php">Not a member yet?</br>Register</a>
                     <a href="#">Forgot password</a>
                 </div>
             </form>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/generic.css">
-    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/header.css?a">
     <link rel="stylesheet" href="../Styles/footer.css">
     <link rel="stylesheet" href="modelstyle.css?a">
     <link rel="stylesheet" href="carstyle.css">

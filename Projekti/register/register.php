@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../Styles/generic.css?a">
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="stylesheet" href="registerstyle.css?a">
+    <link rel="stylesheet" href="registerstyle.css?as">
     <title>Register</title>
 </head>
 

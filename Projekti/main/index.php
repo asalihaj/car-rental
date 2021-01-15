@@ -7,8 +7,8 @@
     <title>Car Rental</title>
     <link rel="stylesheet" href="../styles/footer.css?aaa">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/generic.css?a">
-    <link rel="stylesheet" href="style.css?up">
+    <link rel="stylesheet" href="../styles/generic.css">
+    <link rel="stylesheet" href="style.css?u">
     <link rel="stylesheet" href="sliderstyle.css">
 </head>
 

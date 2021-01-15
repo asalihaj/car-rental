@@ -1,9 +1,13 @@
+body {
+    height: 100vh;
+}
+
 main {
     display: flex;
     background: no-repeat center url("../imgs/3075569.jpg");
     justify-content: center;
     align-items: center;
-    min-height: 78.8vh;
+    height: 100%;
 }
 
 .panel {
@@ -125,7 +129,7 @@ main {
 		background: no-repeat center url("../imgs/331.jpg");
 	}
 	.panel {
-		width: 90vw;
+		width: 95vw;
 		height: 60vh;
 		margin: 50px 0;
 		backdrop-filter: blur(6px);
@@ -133,10 +137,15 @@ main {
 	
 	.login-form {
 		width: 100%;
-	}
+    }
+    
+    #login-label {
+        font-size: 30px;
+    }
 	
 	.user-input {
-		width: 75vw;
+        width: 75vw;
+        overflow: hidden;
     }
     
     .input-area {
@@ -149,17 +158,19 @@ main {
 	
 	#login-button {
 		width: 66vw;
-		margin-left: 28px;
+        margin-left: 0;
+        height: 45px;
 	}
 	
 	.login-links {
-		width: 100%;
+        width: 100%;
+        justify-content: space-around;
 	}
 	
 	.login-links a {
 		margin-right: 0;
-		margin-left: 34px;
-		height: 9%;
+        margin-left: 10px;
+        font-size: 13px;
 		align-items: center;
 	}
 }
