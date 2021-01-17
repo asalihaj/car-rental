@@ -56,6 +56,10 @@ a {
     background-color: #edf2f4;
 }
 
+.box-model img {
+    width: 90%;
+}
+
 .info {
     display: flex;
     flex-direction: row;
@@ -97,7 +101,6 @@ a {
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     align-self: flex-start;
-    margin-left: 4px;
     animation: fadein 0.4s ease-in;
 }
 
@@ -164,6 +167,7 @@ a {
          .title {
             margin-top: 30px;
             transition: 0.3s;
+            font-size: 3rem;
         }
     }
 
@@ -192,7 +196,6 @@ a {
         }
 
         .models {
-            margin: 8vh 0;
             width: 100vw;
         }
 
@@ -202,8 +205,13 @@ a {
 
         .box-model {
             width: 98vw;
+            justify-content: center;
             height: 50vh;
             animation: fadein 0.2s;
+        }
+
+        .side-panel {
+            display: none;
         }
 
         .column {

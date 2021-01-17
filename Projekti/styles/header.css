@@ -15,6 +15,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2px;
 }
 
 .header-nav {
@@ -84,7 +85,7 @@ header {
 
 .collapsed-navbar {
     position: absolute;
-    top: 4rem;
+    /* top: 4.2rem; */
     width: 100vw;
     height: 0;
     background-color: #013a63;
@@ -92,7 +93,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: height 1s;
+    transition: height 0.7s;
     overflow: hidden;
 }
 
@@ -120,18 +121,29 @@ header {
 }
 
 .collapsed-nav-item {
+    width: 100%;
+    border-left: 0;
     list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.collapsed-nav-item:hover {
+    background-color: #01497c;
 }
 
 .nav-link {
     text-decoration: none;
     color: white;
     font-size: 0;
-    transition: 0.4s;
+    transition: 0.6s;
 }
 
 .nav-font {
     font-size: 25px;
+    border-left: 2px solid white;
+    padding-left: 5px;
+    margin-bottom: 3px;
 }
 
 @media (min-width: 1124px) {
@@ -162,11 +174,10 @@ header {
 
 	header {
 		height: 4.5rem;
-		transition: height 0.3s;
 	}
 }
 
-@media (max-width: 411px) {
+@media (max-device-width: 414px) {
 	#main-logo {
 		width: 27vw;
 		height: 8vh;
@@ -175,16 +186,13 @@ header {
 	
 	.collapsed {
 		margin-right: 10px;
-	}
+    }
+    
+    .nav-active {
+        height: 50vh;
+    }
 	
 	.business-name {
 		font-size: 12px;
 	}
 }
-
-@media only screen
-    and (max-device-width: 414px) {
-        .collapsed-navbar {
-            top: 3.5rem;
-        }
-    }

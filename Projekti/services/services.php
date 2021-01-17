@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    <link rel="stylesheet" href="../styles/generic.css?a">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="style.css?as">
+    <?php
+    include("../styles/styles.php");
+    ?>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

@@ -92,6 +92,10 @@ main {
         .services-container {
             width: 75vw;
         }
+
+        .services-box {
+            width: 35vw;
+        }
     }
 
 @media only screen

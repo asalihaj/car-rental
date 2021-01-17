@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
-    <link rel="stylesheet" href="../Styles/documentstyle.css?a">
-    <link rel="stylesheet" href="../Styles/generic.css">
-    <link rel="stylesheet" href="../Styles/header.css">
-    <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="../Styles/documentstyle.css">
+    <?php
+    include("../styles/styles.php");
+    ?>
 </head>
 
 <body>
