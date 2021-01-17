@@ -52,4 +52,4 @@
         </li>
     </ul>
 </nav>
-<script src="../header/navbar.js"></script>
+<script src="../header/navbar.js?a"></script>

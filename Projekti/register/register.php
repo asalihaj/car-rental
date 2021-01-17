@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/generic.css?a">
-    <link rel="stylesheet" href="../Styles/header.css">
-    <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="stylesheet" href="registerstyle.css?as">
+    <?php
+    include("../styles/styles.php");
+    ?>
+    <link rel="stylesheet" href="registerstyle.css?a">
     <title>Register</title>
 </head>
 
@@ -72,7 +72,7 @@
     </footer>
     <script src="usernamevalidator.js"></script>
     <script src="emailvalidator.js"></script>
-    <script src="passwordvalidator.js"></script>
+    <script src="passwordvalidator.js?as"></script>
     <script src="registervalidator.js"></script>
 </body>
 

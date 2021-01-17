@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/generic.css?a">
-    <link rel="stylesheet" href="loginstyle.css?a">
-    <link rel="stylesheet" href="../styles/header.css?a">
-    <link rel="stylesheet" href="../styles/footer.css">
+    <?php
+    include("../styles/styles.php");
+    ?>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="loginstyle.css?a">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>

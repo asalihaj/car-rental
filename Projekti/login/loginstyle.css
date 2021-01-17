@@ -14,7 +14,7 @@ main {
     width: 487px;
     height: 467px;
     padding: 5px 10px;
-    margin: 0 auto;
+    margin: auto 0;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(12px);
     align-content: center;
@@ -111,6 +111,10 @@ main {
     color: #f1faee;
     margin-right: 14px;
     margin-left: 55px;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
 }
 
 #login-button:active {

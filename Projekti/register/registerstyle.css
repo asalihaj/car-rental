@@ -22,7 +22,7 @@ input {
     width: 510px;
     height: auto;
     padding: 5px 10px;
-    margin: 15px auto;
+    margin: auto 0;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(12px);
     align-content: center;
@@ -182,6 +182,22 @@ input {
     margin-left: 56px;
 }
 
+.register-links a:hover {
+    text-decoration: underline;
+}
+
+@media only screen
+    and (max-device-width: 1024px) {
+        body {
+            height: 100vh;
+        }
+
+        main {
+            height: 100%;
+        }
+
+    }
+
 @media only screen
     and (max-device-width: 414px) {
         body {
@@ -196,6 +212,7 @@ input {
 
         .panel {
             width: 97vw;
+            margin: 10px 0;
         } 
 
         #register-label {
@@ -234,16 +251,4 @@ input {
         .register-links a {
             margin-left: 0;
         }
-    }
-
-@media only screen
-    and (max-device-width: 1024px) {
-        body {
-            height: 100vh;
-        }
-
-        main {
-            height: 100%;
-        }
-
     }
