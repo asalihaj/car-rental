@@ -43,6 +43,13 @@ align-items: center;
     }
 }
 
+.select-car {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 .select-car > select{
     width: 330px;
     height: 45px;
@@ -54,9 +61,15 @@ align-items: center;
     color: #073442;
 }
 .select-car >select > option{
-    color: black;
+    color: #073442;
     cursor: pointer;
 }
+
+.select-car a {
+    text-decoration: none;
+    color: white;
+}
+
 .pu-location{
     display: flex;
     flex-direction: column;
@@ -239,11 +252,12 @@ div.image{
 .cover-img {
     display: flex;
     width: 61%;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .cover-img img {
-    width: 100%;
+    width: 80%;
     animation: fadein 1s;
 }
 

@@ -83,46 +83,74 @@
             <section class="data-container">
                 <div class="table-statistics">
                     <div class="data-info">
-
+                        <h3>Users</h3>
+                    </div>
+                    <div class="data-search">
+                        <input class="search-bar" type="text" placeholder="Search">
+                        <button class="search-button">
+                            <div class="search-icon">&#9906;</div>
+                        </button>
                     </div>
                     <div class="data-display">
                         <table class="data">
-                            <tr class="data-header">
-                                <th>Username</th>
-                                <th>Name</th>
-                                <th>Age</th>
-                            </tr>
-                            <tr class="data-row">
-                                <td>riick</td>
-                                <td>Rick</td>
-                                <td>20</td>
-                            </tr>
-                            <tr class="data-row">
-                                <td>riick</td>
-                                <td>Rick</td>
-                                <td>20</td>
-                            </tr>
-                            <tr class="data-row">
-                                <td>riick</td>
-                                <td>Rick</td>
-                                <td>20</td>
-                            </tr>
-                            <tr class="data-row">
-                                <td>riick</td>
-                                <td>Rick</td>
-                                <td>20</td>
-                            </tr>
+                            <thead>
+                                <tr class="data-header">
+                                    <th>Username</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="data-row">
+                                    <td>riick</td>
+                                    <td>Rick</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr class="data-row">
+                                    <td>riick</td>
+                                    <td>Rick</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr class="data-row">
+                                    <td>riick</td>
+                                    <td>Rick</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr class="data-row">
+                                    <td>riick</td>
+                                    <td>Rick</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr class="data-row">
+                                    <td>riick</td>
+                                    <td>Rick</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
                         </table>
+                        <div class="table-pages">
+                            <span class="previous-arrow">&#129120;</span>
+                            <div class="page-numbers">
+                                <h4>1</h4>
+                                <h4>2</h4>
+                                <h4>3</h4>
+                                <h4>4</h4>
+                                <h4>5</h4>
+                                <h4>...</h4>
+                            </div>
+                            <span class="next-arrow">&#129122;</span>
+                        </div>
                     </div>
                 </div>
             </section>
         </section>
     </main>
-    <footer>
-        <?php
-        include("../footer/footer.php");
-        ?>
-    </footer>
 </body>
 
 </html>

@@ -1,8 +1,11 @@
-let slider = document.querySelector(".cover-img");
+const next = document.querySelector(".slider-next");
+const back = document.querySelector(".slider-back");
 let cars = document.querySelectorAll(".slider-img");
 let index = 0;
 
-slider.addEventListener("click", () => {
+
+
+next.addEventListener("click", () => {
     cars[index].classList.add("hidden");
     index++;
 
@@ -10,3 +13,15 @@ slider.addEventListener("click", () => {
 
     cars[index].classList.remove("hidden");
 });
+
+
+
+back.addEventListener("click", () => {
+    cars[index].classList.add("hidden");
+    index--;
+
+    index = index < 0 ? cars.length - 1 : index;
+
+    cars[index].classList.remove("hidden");
+});
+

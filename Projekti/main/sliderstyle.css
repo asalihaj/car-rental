@@ -5,3 +5,18 @@
 .show {
     display: inherit;
 }
+
+.slider-back, .slider-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.slider-imgs {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}

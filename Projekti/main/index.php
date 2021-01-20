@@ -8,7 +8,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?a">
     <link rel="stylesheet" href="sliderstyle.css">
 </head>
 
@@ -22,7 +22,7 @@
         <div class="center">
 
             <div class="inside">
-                <form class="reservation-form" action="#" method="post" name="car-select-form" id="car-select">
+                <form class="reservation-form" action="../car_models/models.php" name="car-select-form" id="car-select">
                     <!-- Car select start -->
                     <div class="select-car">
                         <select name="car-select" id="car-select">
@@ -36,6 +36,7 @@
                             <option value="golf6">Audi Q8</option>
                             <option value="golf6">VW Golf 6</option>
                         </select>
+                        <span><a href="../car_models/models.php">View all models</a></span>
                     </div>
                     <!-- Car select end -->
 
@@ -79,16 +80,25 @@
                     </div>
 
                     <div class="reservation-button">
-                        <input type="button" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
+                        <input type="submit" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
                     </div>
             </div>
 
             </form>
 
             <div class="cover-img">
-                <img src="../imgs/models/audi_a7_white.png" class="slider-img" alt="Audi A7">
-                <img src="../imgs/models/audi_a4_2019_navy.png" class="slider-img hidden" alt="Audi A4">
-                <img src="../imgs/models/audi_q8_white.png" class="slider-img hidden" alt="Audi Q8">
+                <span class="slider-back"><img src=" icons/arrow-left.png" alt="Left Arrow"></span>
+                <div class="slider-imgs">
+                    <img src="../imgs/models/audi_a7_white.png" class="slider-img" alt="Audi A7">
+                    <img src="../imgs/models/audi_a4_2019_navy.png" class="slider-img hidden" alt="Audi A4">
+                    <img src="../imgs/models/audi_q8_white.png" class="slider-img hidden" alt="Audi Q8">
+                    <img src="../imgs/models/bmw_m5_white.png" class="slider-img hidden" alt="BMW M5">
+                    <img src="../imgs/models/golf_6_dark_grey.png" class="slider-img hidden" alt="Golf 6">
+                    <img src="../imgs/models/golf_7_white.png" class="slider-img hidden" alt="Golf 7">
+                    <img src="../imgs/models/mercedes_c300_gray.png" class="slider-img hidden" alt="Mercedes C300">
+                    <img src="../imgs/models/mercedes_s550_black.png" class="slider-img hidden" alt="Mercedes S550">
+                </div>
+                <span class="slider-next"><img src="icons/arrow-right.png" alt="Right Arrow"></span>
             </div>
         </div>
     </main>
@@ -97,8 +107,8 @@
         include("../footer/footer.php");
         ?>
     </footer>
-    <script src="main.js"></script>
-    <script src="slider.js"></script>
+    <script src="main.js?a"></script>
+    <script src="slider.js?a"></script>
 </body>
 
 </html>

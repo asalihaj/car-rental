@@ -67,6 +67,12 @@ input {
     margin-top: 20px;
 }
 
+.full-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .user-input {
     display: flex;
     flex-direction: row;
