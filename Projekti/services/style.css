@@ -2,7 +2,6 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
 }
 
 .services-heading {
@@ -28,6 +27,11 @@ main {
     padding: 20px 30px 40px 20px;
     background-color: #e5e5e5;
     animation: fromleft 0.3s, fadein 0.3s;
+}
+
+.services-box:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 .services-box:nth-of-type(2n) {

@@ -8,11 +8,7 @@ function validateRegister() {
             if (passwordValidator()) {
                 if (confirmPasswordMatch()) {
                     alert("You successfully created an account. You can login now.");
-
-                    setTimeout(() => {
-                        window.location.href = "../login/login.html";
-                        emptyAll();
-                    }, 1000);
+                    window.location.href = "../login/login.php";
                 } else {
                     if (emptyField(confirmPassword)) {
                         alert("Please confirm your password");

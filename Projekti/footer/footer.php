@@ -15,4 +15,5 @@
 </div>
 <div class="copyright-footer">
     <h6>All Rights Reserved &#169;</h6>
+    <?php echo '<h6>' . date('Y') . '</h6>'; ?>
 </div>

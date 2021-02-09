@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="registerstyle.css">
+    <link rel="stylesheet" href="registerstyle.css?a">
     <title>Register</title>
 </head>
 
@@ -22,21 +22,33 @@
             <form class="register-form" action="#">
                 <div class="user-data">
                     <label id="register-label">REGISTRATION FORM</label>
-                    <div class="user-input">
-                        <img id="user-logo" src="../icons/registration/red_user.png" alt="User Icon">
-                        <input class="register-component input-area" type="text" name="username" id="username" placeholder="Username" required>
+                    <div class="data-input-container">
+                        <div class="user-input">
+                            <img id="user-logo" src="../icons/registration/red_user.png" alt="User Icon">
+                            <input class="register-component input-area" type="text" name="username" id="username" placeholder="Username" required>
+                        </div>
+                        <span class="valid-info">Test Test Test</span>
                     </div>
-                    <div class="user-input">
-                        <img id="email-logo" src="../icons/registration/red_email.png" alt="Mail Icon">
-                        <input class="register-component input-area" type="text" name="email" id="email" placeholder="Email" required>
+                    <div class="data-input-container">
+                        <div class="user-input">
+                            <img id="email-logo" src="../icons/registration/red_email.png" alt="Mail Icon">
+                            <input class="register-component input-area" type="text" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <span class="valid-info">Test Test Test</span>
                     </div>
-                    <div class="user-input">
-                        <img id="pw-logo" src="../icons/registration/red_lock.png" alt="Lock Icon">
-                        <input class="register-component input-area" type="password" name="password" id="password" placeholder="Password" required>
+                    <div class="data-input-container">
+                        <div class="user-input">
+                            <img id="pw-logo" src="../icons/registration/red_lock.png" alt="Lock Icon">
+                            <input class="register-component input-area" type="password" name="password" id="password" placeholder="Password" required>
+                        </div>
+                        <span class="valid-info">Test Test Test</span>
                     </div>
-                    <div class="user-input">
-                        <img id="pw-confirm-logo" src="../icons/registration/red_lock.png" alt="Opened Lock">
-                        <input class="register-component input-area" type="password" name="password" id="confirm-password" placeholder="Confirm Password" required>
+                    <div class="data-input-container">
+                        <div class="user-input">
+                            <img id="pw-confirm-logo" src="../icons/registration/red_lock.png" alt="Opened Lock">
+                            <input class="register-component input-area" type="password" name="password-confirm" id="confirm-password" placeholder="Confirm Password" required>
+                        </div>
+                        <span class="valid-info">Test Test Test</span>
                     </div>
                     <ul id="password-strength" hidden>
                         <p>Passwords are case sensitive and must contain:</p>
@@ -72,7 +84,7 @@
     </footer>
     <script src="usernamevalidator.js"></script>
     <script src="emailvalidator.js"></script>
-    <script src="passwordvalidator.js?as"></script>
+    <script src="passwordvalidator.js?a"></script>
     <script src="registervalidator.js"></script>
 </body>
 

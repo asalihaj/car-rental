@@ -8,7 +8,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="style.css?a">
+    <link rel="stylesheet" href="style.css?as">
     <link rel="stylesheet" href="sliderstyle.css">
 </head>
 

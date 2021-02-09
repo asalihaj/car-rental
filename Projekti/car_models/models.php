@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="modelstyle.css?a">
+    <link rel="stylesheet" href="modelstyle.css?">
     <!-- <link rel="stylesheet" href="carstyle.css"> -->
     <title>Models</title>
 </head>
@@ -25,6 +25,9 @@
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
+                    <div class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </div>
                     <img id="audi-a7" class="flex-mid" src="../imgs/models/audi_a7_white.png" alt="">
                 </div>
                 <div class="info">
@@ -67,6 +70,9 @@
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
+                    <span class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </span>
                     <img id="mercedes-s550" class="flex-mid" src="../imgs/models/mercedes_s550_black.png" alt="">
                 </div>
                 <div class="info">
@@ -108,7 +114,11 @@
         </div>
         <div class="box-model">
             <div class="main-panel">
+
                 <div class="car-image flex-mid">
+                    <span class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </span>
                     <img id="audi-a4" class="flex-mid" src="../imgs/models/audi_a4_2019_navy.png" alt="">
                 </div>
                 <div class="info">
@@ -151,6 +161,9 @@
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
+                    <span class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </span>
                     <img id="golf-7" class="flex-mid" src="../imgs/models/golf_7_white.png" alt="">
                 </div>
                 <div class="info">
@@ -193,6 +206,9 @@
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
+                    <span class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </span>
                     <img id="bmw-m5" class="flex-mid" src="../imgs/models/bmw_m5_white.png" alt="">
                 </div>
                 <div class="info">
@@ -235,6 +251,9 @@
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
+                    <span class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </span>
                     <img id="mercedes-c300" class="flex-mid" src="../imgs/models/mercedes_c300_gray.png" alt="">
                 </div>
                 <div class="info">
@@ -277,6 +296,9 @@
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
+                    <span class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </span>
                     <img id="audi-q8" class="flex-mid" src="../imgs/models/audi_q8_white.png" alt="Audi Q8">
                 </div>
                 <div class="info">
@@ -319,6 +341,9 @@
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
+                    <span class="car-info-shrink">
+                        <img src="../icons/car-models/info.png" alt="Info">
+                    </span>
                     <img id="golf-6" class="flex-mid" src="../imgs/models/golf_6_dark_grey.png" alt="">
                 </div>
                 <div class="info">

@@ -73,17 +73,34 @@ input {
     justify-content: space-between;
 }
 
-.user-input {
+.data-input-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     margin-top: 20px;
     margin-right: 10px;
 }
 
-.user-input img {
+.data-input-container img {
     padding-right: 1px;
     margin-bottom: 2px;
+}
+
+.user-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.valid-info {
+    margin-left: 50px;
+    color: #d62323;
+    font-size: 12px;
+}
+
+#email-logo {
+    width: 50px;
+    height: 40px;
 }
 
 .input-area {
@@ -202,6 +219,10 @@ input {
             height: 100%;
         }
 
+        .panel {
+            margin: 50px 0;
+        }
+
     }
 
 @media only screen
@@ -225,12 +246,12 @@ input {
             font-size: 1.5em;
         }
 
-        .user-input {
+        .data-input-container {
             width: 86vw;
             overflow: hidden;
         }
 
-        .user-input img {
+        .data-input-container img {
             margin-top: 15px;
             width: 35px;
             height: 35px;
