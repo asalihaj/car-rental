@@ -93,6 +93,7 @@ input {
 }
 
 .valid-info {
+    display: none;
     margin-left: 50px;
     color: #d62323;
     font-size: 12px;
@@ -252,9 +253,11 @@ input {
         }
 
         .data-input-container img {
-            margin-top: 15px;
-            width: 35px;
-            height: 35px;
+            display: none;
+        }
+
+        .valid-info {
+            margin-left: 5px;
         }
 
         .register-event {
@@ -277,5 +280,9 @@ input {
 
         .register-links a {
             margin-left: 0;
+        }
+
+        .input-area:focus {
+            border-color: red;
         }
     }

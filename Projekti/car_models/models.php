@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="modelstyle.css?">
+    <link rel="stylesheet" href="modelstyle.css?dd">
     <!-- <link rel="stylesheet" href="carstyle.css"> -->
     <title>Models</title>
 </head>
@@ -26,7 +26,26 @@
             <div class="main-panel">
                 <div class="car-image flex-mid">
                     <div class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(0)">
+                    </div>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
                     </div>
                     <img id="audi-a7" class="flex-mid" src="../imgs/models/audi_a7_white.png" alt="">
                 </div>
@@ -71,8 +90,27 @@
             <div class="main-panel">
                 <div class="car-image flex-mid">
                     <span class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(1)">
                     </span>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2019</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
+                    </div>
                     <img id="mercedes-s550" class="flex-mid" src="../imgs/models/mercedes_s550_black.png" alt="">
                 </div>
                 <div class="info">
@@ -117,8 +155,27 @@
 
                 <div class="car-image flex-mid">
                     <span class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(2)">
                     </span>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2018</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
+                    </div>
                     <img id="audi-a4" class="flex-mid" src="../imgs/models/audi_a4_2019_navy.png" alt="">
                 </div>
                 <div class="info">
@@ -162,8 +219,27 @@
             <div class="main-panel">
                 <div class="car-image flex-mid">
                     <span class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(3)">
                     </span>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2017</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
+                    </div>
                     <img id="golf-7" class="flex-mid" src="../imgs/models/golf_7_white.png" alt="">
                 </div>
                 <div class="info">
@@ -207,8 +283,27 @@
             <div class="main-panel">
                 <div class="car-image flex-mid">
                     <span class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(4)">
                     </span>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2016</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
+                    </div>
                     <img id="bmw-m5" class="flex-mid" src="../imgs/models/bmw_m5_white.png" alt="">
                 </div>
                 <div class="info">
@@ -252,8 +347,27 @@
             <div class="main-panel">
                 <div class="car-image flex-mid">
                     <span class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(5)">
                     </span>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2015</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
+                    </div>
                     <img id="mercedes-c300" class="flex-mid" src="../imgs/models/mercedes_c300_gray.png" alt="">
                 </div>
                 <div class="info">
@@ -297,8 +411,27 @@
             <div class="main-panel">
                 <div class="car-image flex-mid">
                     <span class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(6)">
                     </span>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2014</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
+                    </div>
                     <img id="audi-q8" class="flex-mid" src="../imgs/models/audi_q8_white.png" alt="Audi Q8">
                 </div>
                 <div class="info">
@@ -342,8 +475,27 @@
             <div class="main-panel">
                 <div class="car-image flex-mid">
                     <span class="car-info-shrink">
-                        <img src="../icons/car-models/info.png" alt="Info">
+                        <img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(7)">
                     </span>
+                    <div class="car-info-tab">
+                        <ul class="car-info-list">
+                            <li class="car-info-item">
+                                <h3>Year: 2013</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Color: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Seats: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Type: 2020</h3>
+                            </li>
+                            <li class="car-info-item">
+                                <h3>Transmission: 2020</h3>
+                            </li>
+                        </ul>
+                    </div>
                     <img id="golf-6" class="flex-mid" src="../imgs/models/golf_6_dark_grey.png" alt="">
                 </div>
                 <div class="info">
@@ -389,7 +541,7 @@
         include("../footer/footer.php");
         ?>
     </footer>
-    <script src="addmodel.js"></script>
+    <script src="addmodel.js?s"></script>
 </body>
 
 </html>

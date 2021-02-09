@@ -1,7 +1,7 @@
 const password = document.getElementById("password");
+const passwordStrength = document.getElementById("password-strength");
 
 password.addEventListener('input', passwordValidator);
-let passwordStrength = document.getElementById("password-strength");
 
 password.addEventListener("focusin", () => {
     passwordStrength.removeAttribute("hidden");
