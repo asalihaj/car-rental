@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="dashboard.css?a">
+    <link rel="stylesheet" href="dashboard.css?">
     <title>Dashboard</title>
 </head>
 
@@ -19,7 +19,7 @@
     </header>
     <main>
         <section class="dashboard-container flex-center">
-            <div class="dashboard-panel">
+            <!-- <div class="dashboard-panel">
                 <div class="dashboard-title">
                     <h2>Dashboard</h2>
                 </div>
@@ -31,66 +31,34 @@
                         <li>Media</li>
                     </ul>
                 </div>
+            </div> -->
+            <div class="tables">
+                <select class="table-value" name="data" id="data">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
             </div>
         </section>
         <section class="content-container">
-            <section class="statistics-container">
-                <div class="overview">
-                    <div class="statistics-header">
-                        <h2>Overview</h2>
-                    </div>
-                    <div class="statistics-content">
-                        <article class="page-statistics">
-                            <div class="sector-info">
-                                <img src="../icons/login/321.png" alt="User Icon">
-                                <span>200</span>
-                            </div>
-                            <div class="sector-name flex-center">
-                                <h3>Users</h3>
-                            </div>
-                        </article>
-                        <article class="page-statistics">
-                            <div class="sector-info">
-                                <img src="../icons/login/321.png" alt="User Icon">
-                                <span>200</span>
-                            </div>
-                            <div class="sector-name flex-center">
-                                <h3>Users</h3>
-                            </div>
-                        </article>
-                        <article class="page-statistics">
-                            <div class="sector-info">
-                                <img src="../icons/login/321.png" alt="User Icon">
-                                <span>200</span>
-                            </div>
-                            <div class="sector-name flex-center">
-                                <h3>Users</h3>
-                            </div>
-                        </article>
-                        <article class="page-statistics">
-                            <div class="sector-info">
-                                <img src="../icons/login/321.png" alt="User Icon">
-                                <span>200</span>
-                            </div>
-                            <div class="sector-name flex-center">
-                                <h3>Users</h3>
-                            </div>
-                        </article>
-                        </article>
+            <section class="data-container">
+                <div class="tool-holder flex-center">
+                    <div class="data-tool">
+                        <div class="data-info">
+                            <h3>Control Panel -&#160</h3>
+                            <h3>Users List</h3>
+                        </div>
+                        <div class="data-search">
+                            <input class="search-bar" type="text" placeholder="Search">
+                            <button class="search-button">
+                                <div class="search-icon">&#9906;</div>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <section class="data-container">
                 <div class="table-statistics">
-                    <div class="data-info">
-                        <h3>Users</h3>
-                    </div>
-                    <div class="data-search">
-                        <input class="search-bar" type="text" placeholder="Search">
-                        <button class="search-button">
-                            <div class="search-icon">&#9906;</div>
-                        </button>
-                    </div>
+
                     <div class="data-display">
                         <table class="data">
                             <thead>
@@ -134,6 +102,8 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="table-footer flex-center">
                         <div class="table-pages">
                             <span class="previous-arrow">&#129120;</span>
                             <div class="page-numbers">

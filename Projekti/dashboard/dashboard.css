@@ -3,10 +3,11 @@ body {
 }
 
 main {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+    overflow: hidden;
 }
 
 .flex-center {
@@ -17,46 +18,27 @@ main {
 }
 
 .dashboard-container {
-    height: 100%;
-    width: 20%;
-}
-
-.dashboard-panel h2 {
-    padding: 5px;
-}
-
-.dashboard-panel {
-    width: 200px;
-    height: 15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 80px;
-    border: 2px solid #003049;
-    color: white;
-}
-
-.dashboard-title {
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    background-color: #023e7d;
+    align-items: flex-end;
 }
 
-.dashboard-data {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.tables {
+    margin: 10px 8px 0 0;
+}
+
+.table-value {
+    width: 150px;
+    height: 30px;
+    border-radius: 0;
+    border: 1px solid #c4b8b8;
+    padding-left: 5px;
 }
 
 .dashboard-data ul {
     height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
@@ -66,6 +48,7 @@ main {
 
 .dashboard-data li {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -77,7 +60,7 @@ main {
 }
 
 .content-container {
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -148,49 +131,59 @@ main {
 }
 
 .data-container {
-    width: 100%;
+    width: 99%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     margin: 20px 0;
+    border-top: 3px solid #013a63;
 }
 
 .table-statistics {
-    width: 80%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid #c1b4b4;
-    padding-bottom: 10px;
     background-color: #d9d9d9;
 }
 
-.data-info {
+.tool-holder {
+    background-color: #d9d9d9;
     width: 100%;
+}
+
+.data-tool {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.data-info {
     height: 35px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #095fbf;
-    color: white;
-    padding-left: 10px;
-    /* border-top: 1px solid #c1b4b4; */
+    color: #003049;
 }
 
 .data-search {
-    width: 96%;
-    margin: 25px 0 10px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .data-display {
-    width: 96%;
+    width: 98%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -260,14 +253,20 @@ main {
     background-color: rgb(21 74 111 / 69%);
 }
 
+.table-footer {
+    width: 100%;
+    background-color: #c1c1c1;
+}
+
 .table-pages {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 9rem;
-    margin-top: 10px;
+    padding: 5px 0;
     color: #013a63;
 }
+
 
 .page-numbers {
     display: flex;
@@ -285,49 +284,16 @@ main {
     cursor: pointer;
 }
 
-@media (max-width: 1060px) {
-    main {
-        height: fit-content;
-    }
+@media only screen
+    and (max-device-width: 414px) {
+        .data-info h3:nth-of-type(1){
+            display: none;
+        }
+        .data-info {
+            font-size: 14px;
+        }
 
-    .dashboard-panel {
-        margin-left: 20px;
+        .search-bar {
+            width: 90px;
+        }
     }
-
-    .dashboard-container {
-        width: auto;
-    }
-}
-
-@media (max-width: 660px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dashboard-panel {
-        width: 70vw;
-        margin-left: 0;
-        margin-top: 30px;
-    }
-
-    .content-container {
-        width: 100%;
-    }
-
-    .overview {
-        width: 90%;
-    }
-
-    .statistics-content {
-        display: none;
-    }
-
-    .data-container {
-        margin: 10px 0 40px 0px;
-    }
-
-    .table-statistics {
-        width: 90%;
-    }
-}

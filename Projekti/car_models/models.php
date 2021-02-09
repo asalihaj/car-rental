@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="modelstyle.css?dd">
+    <link rel="stylesheet" href="modelstyle.css?d">
     <!-- <link rel="stylesheet" href="carstyle.css"> -->
     <title>Models</title>
 </head>
