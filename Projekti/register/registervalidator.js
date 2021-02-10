@@ -2,41 +2,61 @@ let registerButton = document.getElementById("register-button");
 
 registerButton.addEventListener('click', validateRegister);
 
+const usernameError = document.querySelector('#username').parentElement
+    .parentElement.querySelector('span');
+const emailError = document.querySelector('#email').parentElement
+    .parentElement.querySelector('span');
+const passwordError = document.querySelector('#password').parentElement
+    .parentElement.querySelector('span');
+const passwordConfirmationError = document.querySelector('#confirm-password').parentElement
+    .parentElement.querySelector('span');
+
 function validateRegister() {
     if (validateEmail()) {
+        usernameError.style.display = 'none';
         if (validateUser()) {
+            usernameError.style.display = 'none';
             if (passwordValidator()) {
+                passwordError.style.display = 'none';
                 if (confirmPasswordMatch()) {
-                    alert("You successfully created an account. You can login now.");
-                    window.location.href = "../login/login.php";
+                    passwordConfirmationError.style.display = 'none';
+                    alert("You successfully created an account.");
+                    return true;
                 } else {
+
+                    passwordConfirmationError.style.display = 'block';
                     if (emptyField(confirmPassword)) {
-                        alert("Please confirm your password");
+                        passwordConfirmationError.innerText = "Please confirm your password";
                     } else {
-                        alert("Password does not match");
+                        passwordConfirmationError.innerText = "Password does not match";
                     }
                 }
             } else {
+
+                passwordError.style.display = 'lock';
                 if (emptyField(password)) {
-                    alert("Password can't be empty");
+                    passwordError.innerText = "Password can't be empty";
                 } else {
-                    alert("Password does not meet criteria");
+                    passwordError.innerText = "Password does not meet criteria";
                 }
             }
         } else {
+            usernameError.style.display = 'block';
             if (emptyField(username)) {
-                alert("Username can't be empty");
+                usernameError.innerText = "Username can't be empty";
             } else {
-                alert("Username must be between 4 and 25 characters (and should countain only letters and numbers)");
+                usernameError.innerText = "Username must be between 4 and 25 characters (and should countain only letters and numbers)";
             }
         }
     } else {
+        emailError.style.display = 'block';
         if (emptyField(email)) {
-            alert("Email can't be empty");
+            emailError.innerText = "Email can't be empty";
         } else {
-            alert("Email format is not correct");
+            emailError.innerText = "Email format is not correct";
         }
     }
+    return false;
 }
 
 function emptyField(e) {
