@@ -19,6 +19,7 @@ input {
 }
 
 .panel {
+    position: relative;
     width: 510px;
     height: auto;
     padding: 5px 10px;
@@ -30,6 +31,10 @@ input {
     border: 2px solid #f1faee;
     padding-bottom: 24px;
     animation: fadein  0.5s;
+}
+
+.panel:nth-of-type(2) {
+    margin: 15px 0;
 }
 
 @keyframes fadein {
@@ -73,7 +78,11 @@ input {
     justify-content: space-between;
 }
 
+
+
 .data-input-container {
+    width: 81%;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -84,6 +93,7 @@ input {
 .data-input-container img {
     padding-right: 1px;
     margin-bottom: 2px;
+    margin-right: 5px;
 }
 
 .user-input {
@@ -94,14 +104,14 @@ input {
 
 .valid-info {
     display: none;
-    margin-left: 50px;
+    margin-left: 55px;
     color: #d62323;
     font-size: 12px;
 }
 
 #email-logo {
     width: 50px;
-    height: 40px;
+    height: 50px;
 }
 
 .input-area {
@@ -111,7 +121,6 @@ input {
     font-size: 20px;
     font-weight: 400;
     padding-top: 4px;
-    padding-left: 10px;
     caret-color: #f1faee;
 }
 
@@ -145,13 +154,13 @@ input {
     margin-left: 33px;
 }
 
-#register-label {
+.register-label {
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
-#register-button {
+#register-button, #continue-button {
     height: 52px;
     width: 360px;
     color: #f1faee;
@@ -162,7 +171,7 @@ input {
     opacity: 0.7;
 }
 
-#register-button:active {
+#register-button, #continue-button:active {
     background-color: #07526d;
 }
 
@@ -210,6 +219,110 @@ input {
     text-decoration: underline;
 }
 
+.back {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: #126782;
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+
+.back:hover {
+    background-color: #0d485b54;
+}
+
+.pick-option {
+    height: 60px;
+}
+
+.hidden {
+    display: none;
+}
+
+.bday-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bday {
+    height: 30px;
+    width: 32%;
+    border: none;
+    border-radius: 5px;
+    padding-left: 3px;
+}
+
+.bday-date {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.gender-container {
+    padding: 7px;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.gender {
+    padding-right: 30px;
+}
+
+.gender-info {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gender-pick {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.location-container {
+    height: 55px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.country-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.country-container:nth-of-type(2) {
+    margin-left: 5px;
+}
+
+.country {
+    height: 30px;
+    width: 140px;
+    padding-left: 3px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.city {
+    width: 150px;
+    height: 30px;
+    margin-top: 5px;
+    border: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+}
+
 @media only screen
     and (max-device-width: 1024px) {
         body {
@@ -223,7 +336,6 @@ input {
         .panel {
             margin: 50px 0;
         }
-
     }
 
 @media only screen
@@ -235,7 +347,7 @@ input {
 
         main {
             background: url("../imgs/331.jpg");
-            height: 100%;
+            height: auto;
         }
 
         .panel {
@@ -243,8 +355,10 @@ input {
             margin: 10px 0;
         } 
 
-        #register-label {
+        .register-label {
             font-size: 1.5em;
+            margin-top: 15px;
+            margin-bottom: 0;
         }
 
         .data-input-container {
@@ -273,7 +387,7 @@ input {
             margin-left: 0;
         }
 
-        #register-button {
+        #register-button, #continue-button {
             width: 80vw;
             height: 45px;
         }
@@ -284,5 +398,21 @@ input {
 
         .input-area:focus {
             border-color: red;
+        }
+
+        .back {
+            top: 4px;
+            left: 4px;
+        }
+    }
+
+@media only screen
+    and (max-device-width: 325px) {
+        .country {
+            width: 95px;
+        }
+
+        .city {
+            width: 110px;
         }
     }
