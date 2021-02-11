@@ -1,27 +1,68 @@
+body {
+    height: auto;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .title{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .title h1{
-    color: rgb(165, 151, 151);;
+    color: #252525;
 }
-.profile{
+
+.type {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+    cursor: pointer;
+    color: #5d5d5d;
+    margin-top: 50px;
+}
+
+.type h2:hover {
+    color: #252525;
+}
+
+
+.user-data{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: auto;
-    margin-top: 100px;
+    width: 75%;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 .top{
+    width: 85%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
 }
+
+.textarea-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .left{
     display: flex;
     flex-direction: column;
@@ -34,20 +75,21 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
- 
+    align-items: center;
 }
 .change-pw{
     display: flex;
     flex-direction: row;
 }
-input{
+input, select {
     width: 350px;
     height: 45px;
     margin-bottom: 40px;
-    margin-left: 50px;
+    margin-right: 10px;
+    padding-left: 5px;
+    font-size: 18px;
 }
 label{
-   padding-left: 50px;
    padding-bottom: 10px;
    color: rgb(165, 151, 151);
 }
@@ -55,12 +97,11 @@ label{
 .current{
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     margin-top: 40px;
 }
-.current input{
-    width: 750px;
- 
-}
+
+
 
 .change-pw{
     display: flex;
@@ -74,7 +115,6 @@ span{
     color: red;
 }
 h3{
-    padding-left: 50px;
     padding-top: 50px;
     color: rgb(165, 151, 151);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -89,83 +129,91 @@ h3{
 }
 .button{
     width: 120px;
-    height: 30px;
-    background-color:#f0f1f3  ;
-    text-align: center;
-    text-decoration: none;
-    line-height: 1.8;
-    color: rgba(162,184,207,255);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 1px solid rgb(71, 68, 68);
-    transition-duration: 0.4s;
-    cursor: pointer;
-    transition: width 0.2s, height 0.2s;
-    
-}
-.button:hover {
-    width: 125px;
     height: 35px;
-  }
-@media (max-width: 1030px){
-    .title{
-        padding-left:55px ;
-    }
-   .top{
-       display: flex;
-       flex-direction: column;
-   }
-   .change-pw{
-       display: flex;
-       flex-direction: column;
-   }
-    input{
-        width: 200px;
-        height: 35px;
-    }
-    .current input{
-        width: 200px;
-     
-    }
-    .button-div{
-        display: flex;
-        justify-content: center;
-    }
-    .button{
-        width: 100px;
-        height: 30px;
-        font-size: 12px;
-        margin-left: 40px;
-        text-align: center;
-        line-height: 2.5;
-        font-weight: 800;
-        font-size: 13px;
-    }
+    background-color: #013a63;
+    text-align: center;
+    color: white;
+    border: 1px solid rgb(71, 68, 68);
+    cursor: pointer;
 }
-@media (max-width: 414px){
-    .profile{
-        margin-right: 50px;
-    }
-    .top{
-        display: flex;
-        flex-direction: column;
+
+.reservations {
+    width: 70%;
+}
+
+.reservations table {
+    width: 100%;
+}
+
+.reservations th, td {
+    text-align: start;
+    width: auto;
+    padding: 13px 30px;
+}
+
+.pw-change {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
+    color: blue;
+}
+
+.pw-change:hover {
+    border-bottom: 1px solid blue;
+}
+
+@media (max-width: 1085px){
+
+    .current input {
+        width: 350px;
     }
 
-    .change-pw{
-        display: flex;
+    .change-pw {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
-     input{
-         width: 130px;
-         height: 20px;
-     }
-     .current input{
-         width: 130px;
-         margin-top: 2px;
-      
-     }
-     #name, #phone, #password{
-         margin-top: 3px;
-     }
-    
+
+    input {
+        margin-right: 0;
+    }
+
+}
+@media (max-width: 414px){
+    .type{
+        display: block;
+    }
+    .reservations-label{
+        margin-top: 20px;
+    }
+    .user-data {
+        width: 100%;
+    }
+
+    input {
+        margin-left: 0;
+        width: 250px;
+    }
+
+    .current input {
+        width: 250px;
+    }
+
+    label {
+        padding-left: 0;
+    }
+
+    .textarea-container {
+        align-items: flex-start;
+    }
+
+    h3 {
+        padding-left: 0;
+    }
  }
  
+ .hidden {
+    display: none;
+}
