@@ -7,12 +7,14 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="modelstyle.css">
     <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="modelstyle.css?fa">
+
     <title>Models</title>
 </head>
 
 <body>
+
     <header>
         <?php
         include("../header/header.php");
@@ -54,7 +56,7 @@
                 </div>
                 <div class="info">
                     <div class="car-name flex-mid">
-                        <h2>Audi A7</h2>
+                        <h2>Audi A7d</h2>
                     </div>
                     <div class="car-price flex-mid">
                         <h2>$150</h2>
@@ -62,7 +64,7 @@
                     </div>
                 </div>
                 <div class="book-now flex-mid">
-                    <a class="flex-mid" href="../reservation/reservation.php">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -126,7 +128,7 @@
                 </div>
                 <div class="book-now flex-mid">
                     <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -191,7 +193,7 @@
                 </div>
                 <div class="book-now flex-mid">
                     <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -255,7 +257,7 @@
                 </div>
                 <div class="book-now flex-mid">
                     <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -319,7 +321,7 @@
                 </div>
                 <div class="book-now flex-mid">
                     <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -383,7 +385,7 @@
                 </div>
                 <div class="book-now flex-mid">
                     <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -447,7 +449,7 @@
                 </div>
                 <div class="book-now flex-mid">
                     <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -510,8 +512,7 @@
                     </div>
                 </div>
                 <div class="book-now flex-mid">
-                    <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <input type="button" name="book-now" value="BOOK NOW">
                 </div>
             </div>
             <div class="side-panel flex-mid column">
@@ -543,7 +544,8 @@
         include("../footer/footer.php");
         ?>
     </footer>
-    <script src="addmodel.js?s"></script>
+    <script src="carinfo.js"></script>
+    <script src="bookingtab.js?s"></script>
 </body>
 
 </html>

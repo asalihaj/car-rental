@@ -108,7 +108,9 @@
                 <div class="car-model">
                     <div class="car-info">
                         <div class="car-name">
-                            <h3>Audi A7</h3>
+                            <h3><?php
+                                echo $_GET['car-name'];
+                                ?></h3>
                         </div>
                         <div class="rental-rate">
                             <h3>$150</h3>
