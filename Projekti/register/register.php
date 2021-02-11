@@ -18,7 +18,7 @@
         ?>
     </header>
     <main>
-        <div class="panel hidden">
+        <div class="panel">
             <form class="register-form" action="#">
                 <div class="user-data">
                     <label class="register-label">Sign Up</label>
@@ -75,7 +75,7 @@
 
             </form>
         </div>
-        <div class="panel">
+        <div class="panel hidden">
             <form class="register-form" action="">
                 <div class="user-data">
                     <span class="back">Go back</span>

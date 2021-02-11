@@ -20,7 +20,6 @@ function validateRegister() {
                 passwordError.style.display = 'none';
                 if (confirmPasswordMatch()) {
                     passwordConfirmationError.style.display = 'none';
-                    alert("You successfully created an account.");
                     return true;
                 } else {
 
