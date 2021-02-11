@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="registerstyle.css?a">
+    <link rel="stylesheet" href="registerstyle.css?">
     <title>Register</title>
 </head>
 
@@ -50,15 +50,15 @@
                         </div>
                         <span class="valid-info">Test Test Test</span>
                     </div>
-                    <ul id="password-strength" hidden>
-                        <p>Passwords are case sensitive and must contain:</p>
-                        <li id="pw-length">At least 8 charactes</li>
-                        <li id="pw-upper">At least 1 upper case letter</li>
-                        <li id="pw-lower">At least 1 lower case letter</li>
-                        <li id="pw-number">At least 1 number</li>
-                        <li id="pw-special">At least 1 special character</li>
-                    </ul>
                 </div>
+                <ul id="password-strength" hidden>
+                    <p>Password is case sensitive and should have at least:</p>
+                    <li id="pw-length">8 charactes</li>
+                    <li id="pw-upper">1 upper case letter</li>
+                    <li id="pw-lower">1 lower case letter</li>
+                    <li id="pw-number">1 number</li>
+                    <li id="pw-special">1 special character</li>
+                </ul>
                 <div class=" register-event">
                     <div class="terms-and-services">
                         <input type="checkbox" name="tos-checkbox" id="tos-checkbox">

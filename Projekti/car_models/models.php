@@ -7,8 +7,8 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="modelstyle.css?d">
-    <!-- <link rel="stylesheet" href="carstyle.css"> -->
+    <link rel="stylesheet" href="modelstyle.css">
+    <link rel="stylesheet" href="../main/style.css">
     <title>Models</title>
 </head>
 
@@ -19,6 +19,9 @@
         ?>
     </header>
     <main class="models">
+        <?php
+        include('reservationtab.php');
+        ?>
         <div class="title">
             <h1>OUR MODELS</h1>
         </div>
@@ -59,8 +62,7 @@
                     </div>
                 </div>
                 <div class="book-now flex-mid">
-                    <!-- To be implemented on phase 2 -->
-                    <a class="flex-mid" href="#">BOOK NOW</a>
+                    <a class="flex-mid" href="../reservation/reservation.php">BOOK NOW</a>
                 </div>
             </div>
             <div class="side-panel flex-mid column">

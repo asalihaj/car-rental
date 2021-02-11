@@ -1,16 +1,10 @@
 .center{
-   
-width: 95%;
-   
-height: 100%;
-   
-display: flex;
-   
-flex-direction: row;
-   
-justify-content: space-between;
-   
-align-items: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .reservation-form {
     display: flex;
@@ -23,13 +17,12 @@ align-items: center;
 .inside{
     display: flex;
     justify-content: center;
-    border: 2px solid #032035;
     background-color: #013a63;
     height: 500px;
     width: 400px;
     color: white;
-    border-radius: 14px;
     animation: insideleft 0.6s;
+    box-shadow: 9px 11px 20px 0px #03203594;
 }
 
 @keyframes insideleft {
@@ -53,8 +46,7 @@ align-items: center;
 .select-car > select{
     width: 330px;
     height: 45px;
-    margin-top: 25px;
-    border-radius: 12px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     padding-left: 10px;
@@ -81,19 +73,18 @@ align-items: center;
     width: 72%;
     margin-left: 10px;
     font-size: 14px;
-    border-bottom-right-radius: 12px;
-    border-top-right-radius: 12px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
     border: none;
     color: #073442;
 }
 .pick-up{
-    margin-top: 20px;
     background-color: #07526d;
     display: flex;
     justify-content: space-between;
     width: 328px;
     height: 40px;
-    border-radius: 12px;
+    border-radius: 5px;
 }
 .pick-up-logo{
     margin-top: 10px;
@@ -104,7 +95,6 @@ align-items: center;
     font-size: 15px;
 }
 .drop-off{
-    margin-top: 20px;
     background-color: #07526d;
     display: flex;
     justify-content: space-between;
@@ -126,68 +116,60 @@ align-items: center;
     padding-top: 12px;
 }
 .date-reservation{
-    
-display: flex;
-    
-flex-direction: column;
-    
-justify-content: center;
-    
-align-items: flex-end;
-    
-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;   
+    width: 100%;
 }
 .pu-date{
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 65%;
     height: 40px;
     background-color: #07526d;
-    border-radius: 12px;
+    border-radius: 5px;
     overflow: hidden;
 }
 .pu-date > input{
-    width: 72%;
+    width: 58%;
     margin-left: 5px;
     color: black;
     cursor: pointer;
     border: none;
 }
 .pu-date > span {
-   
-font-size: 15px;
-   
-margin-left: 5px;
-   
-line-height: 2.5;
+    display: flex;
+    font-size: 14px;
+    margin-left: 5px;
+    justify-content: center; 
+    align-items: center;
 }
 .pu-date >img{
     margin-left: 5px;
 }
 
 .pu-time > select{
-   margin-top: 30px;
+    margin-top: 30px;
     width: 114px;
     height: 40px;
-   color: black;
+    color: black;
     margin-left: 10px;
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
     cursor: pointer;
 }
 .do-date{
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 65%;
     height: 40px;
     background-color: #07526d;
-    border-radius: 12px;
+    border-radius: 5px;
     overflow: hidden;
 }
 .do-date > input{
-    width: 72%;
+    width: 58%;
     margin-left: 5px;
     color: black;
     cursor: pointer;
@@ -195,9 +177,11 @@ line-height: 2.5;
 }
 
 .do-date > span {
+    display: flex;
     font-size: 15px;
     margin-left: 5px;
-    line-height: 2.5;
+    justify-content: center;
+    align-items: center;
 }
 .do-date >img{
     margin-left: 3px;
@@ -222,19 +206,17 @@ line-height: 2.5;
     width: 87.5%;
     height: 50px;
     color: white;
-    border-radius: 14px;
-    font-size: 15px;
+    border-radius: 5px;
+    font-size: 18px;
     background-color: #126782;
     cursor: pointer;
     border: 1px solid #07526d;
-    margin-top: 20px;
  }
 
 .inside-content{
     display: block;
      margin-left: 100px;
      margin-top: 50px;
-     /* color: white; */
 }
 div.image{
     width: 100px;
@@ -250,8 +232,10 @@ div.image{
 }
 
 .cover-img {
+    position: relative;
     display: flex;
     width: 61%;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -262,20 +246,22 @@ div.image{
 }
 
 .pick-up-time {
-    margin-top: 10px;
     height: 30px;
     width: 100px;
     border: none;
-    border-radius: 12px;
-}
+    border-radius: 2px;}
 
-.drop-off-time {margin-top: 10px;height: 30px;width: 100px;border: none;border-radius: 12px;}
+.drop-off-time {
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 2px;}
 
 
 @keyframes fadein {
     from {
         opacity: 0;
-            transform: translateX(-4px) translateY(-58px);
+        transform: translateX(-4px) translateY(-58px);
     }
     to {
         opacity: 1;
@@ -310,6 +296,7 @@ div.image{
             display: flex;
             align-items: center;
             margin: 50px 0;
+            padding: 50px 0;
         }
 
         .cover-img img {
@@ -319,6 +306,10 @@ div.image{
 
 @media only screen
     and (max-device-width: 414px) {
+
+        body {
+            height: inherit;    
+        }
 
         .select-car > select {
             height: 45px;
@@ -347,7 +338,7 @@ div.image{
 
         .pick-up input {
             height: 100%;
-            width: 53vw;
+            width: 73%;
             margin-left: 5px;
         }
 
@@ -372,6 +363,7 @@ div.image{
 
         .pu-date {
             margin-left: 0;
+            width: 59%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -380,7 +372,6 @@ div.image{
         .pu-date span {
             font-size: 12px;
             line-height: inherit;
-            margin: 0;
         }
 
         .pu-date select {
@@ -389,7 +380,7 @@ div.image{
 
         .pu-date > input {
             height: 100%;
-            width: 54vw;
+            width: 58%;
         }
 
         .pu-time select {
@@ -398,18 +389,18 @@ div.image{
 
         .do-date {
             display: flex;
+            width: 59%;
             justify-content: space-between;
             align-items: center;
         }
 
         .do-date span {
             font-size: 12px;
-            line-height: inherit;
         }
 
         .do-date input {
             height: 100%;
-            width: 53vw;
+            width: 58%;
             margin-left: 4px;
         }
 
@@ -432,7 +423,7 @@ div.image{
         }
 
         .reservation-button input {
-            font-size: 14px;
+            font-size: 17px;
             width: 100%;
             height: 45px;
         }
@@ -451,5 +442,12 @@ div.image{
             margin-top: 10px;
             width: 24vw;
             font-size: 9px;
+        }
+
+        .reservation-button {
+            width: 80vw;
+        }
+        .reservation-button input {
+            font-size: 13px;
         }
     }

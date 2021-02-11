@@ -1,6 +1,6 @@
 let registerButton = document.getElementById("register-button");
 
-registerButton.addEventListener('click', validateRegister);
+registerButton.addEventListener('click', a);
 
 const usernameError = document.querySelector('#username').parentElement
     .parentElement.querySelector('span');
@@ -55,8 +55,58 @@ function validateRegister() {
         } else {
             emailError.innerText = "Email format is not correct";
         }
+
+        if (validateUser()) {
+            usernameError.style.display = 'none';
+        }
     }
     return false;
+}
+
+function a() {
+    if (validateEmail()) {
+        emailError.style.display = 'none';
+    } else {
+        emailError.style.display = 'block';
+        if (emptyField(email)) {
+            emailError.innerText = "Email can't be empty";
+        } else {
+            emailError.innerText = "Email format is not correct";
+        }
+    }
+
+    if (validateUser()) {
+        usernameError.style.display = 'none';
+    } else {
+        usernameError.style.display = 'block';
+        if (emptyField(username)) {
+            usernameError.innerText = "Username can't be empty";
+        } else {
+            usernameError.innerText = "Username must be between 4 and 25 characters (and should countain only letters and numbers)";
+        }
+    }
+
+    if (passwordValidator()) {
+        passwordError.style.display = 'none';
+    } else {
+        passwordError.style.display = 'block';
+        if (emptyField(password)) {
+            passwordError.innerText = "Password can't be empty";
+        } else {
+            passwordError.innerText = "Password does not meet criteria";
+        }
+    }
+
+    if (confirmPasswordMatch()) {
+        passwordConfirmationError.style.display = 'none';
+    } else {
+        passwordConfirmationError.style.display = 'block';
+        if (emptyField(confirmPassword)) {
+            passwordConfirmationError.innerText = "Please confirm your password";
+        } else {
+            passwordConfirmationError.innerText = "Password does not match";
+        }
+    }
 }
 
 function emptyField(e) {

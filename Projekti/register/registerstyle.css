@@ -130,10 +130,10 @@ input {
 }
 
 #password-strength {
+    width: 64%;
     font-weight: 400;
-    margin-top: 5px;
+    margin-top: 27px;
     margin-left: 6em;
-    width: 90%;
     color: #f1faee;
     animation: sidein 0.4s;
 }
@@ -177,7 +177,6 @@ input {
 
 .register-event {
     margin-top: 25px;
-    margin-left: 34px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -379,6 +378,7 @@ input {
         }
 
         #password-strength {
+            width: 90%;
             margin-top: 10px;
             margin-left: 0;
         }

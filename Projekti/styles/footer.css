@@ -65,7 +65,7 @@ footer a {
 @media only screen 
     and (device-width: 1024px) {
         footer {
-            height: 12.1vh;
+            height: 8rem;
             width: 100vw;
             font-size: 20px;
         }
@@ -94,9 +94,6 @@ footer a {
 
 @media only screen 
 	and (max-device-width: 414px) {
-		footer {
-			height: 15vh;
-        }
         
         .company-policy {
             width: 50%;

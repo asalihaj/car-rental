@@ -20,3 +20,21 @@
     display: flex;
     justify-content: center;
 }
+
+.slider-car-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#car-name {
+    color: #02223a;
+}
+
+@media only screen
+    and (max-width: 1270px) {
+        .slider-car-name {
+            top: 0;
+            left: 30px;
+        }
+    }

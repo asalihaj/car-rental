@@ -1,0 +1,421 @@
+body {
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 90%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.booking-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-container {
+    width: 80%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid #979dac;
+}
+
+.location-date-info {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-address-container {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.location-address {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.location-address h2, .date h2, .time h2 {
+    color: #172235;
+}
+
+.address-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.address-info h3, .date-info h3, 
+    .time-info h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.date-time-info {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.date {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.date-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.time-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.time {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.time-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rental-price {
+    width: 80%;
+    height: 33%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid #979dac;
+}
+
+.price-info {
+    width: 50%;
+    height: 70%;
+}
+
+.price-info tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.pricing-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pricing-data th {
+    width: 55%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+}
+
+.pricing-data td {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+}
+
+.booking-confirm {
+    width: 80%;
+    height: 33%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.pricing-container h3 {
+    font-size: 25px;
+}
+
+.pricing-container h3:nth-of-type(1) {
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+}
+
+.booking-checkout {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#checkout {
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #0a1128;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+}
+
+#checkout:active {
+    background-color: #1d2950;
+}
+
+.car-container {
+    width: 25%;
+    /* height: 250px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #001845;
+}
+
+.car-model {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-info {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: none;
+    background-color: #013a63;
+    color: white;
+}
+
+.car-name {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rental-rate {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #001845;
+}
+
+.car-img {
+    width: 100%;
+    height: 80%;
+    border-top: none;
+    border-bottom: none;
+}
+
+.car-img img {
+    width: 100%;
+}
+
+.car-stats {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    background-color: #014f86;
+    color: white;
+}
+
+.car-specs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.car-specs li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #001845;
+}
+
+.car-specs li:last-of-type {
+    border-right: none;
+}
+
+@media only screen
+    and (max-width: 1240px) {
+
+        .container {
+            width: 97%;    
+        }
+
+        .time-container {
+            justify-content: center;
+        }
+
+        .price-info {
+            width: 75%;
+        }
+    }
+
+@media only screen
+    and (max-width: 940px) {
+
+        main {
+            height: auto;
+        }
+
+        .container {
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 50px 0;
+        }
+
+        .booking-container {
+            width: 95%;
+            height: 600px;
+            padding: 35px 0;
+        }
+
+        .location-container, .rental-price, 
+            .booking-confirm {
+                width:  90%;
+            }
+
+        .car-container {
+            width: 50%;
+        }
+
+    }
+
+@media only screen
+    and (max-width: 650px) {
+
+        .location-address-container {
+            margin-right: 10px;
+        }
+        .booking-container {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .booking-container h3 {
+            font-size: 14px;
+        }
+
+        .pricing-container h3 {
+            font-size: 20px;
+        }
+
+        .pricing-data th, .pricing-data td {
+            font-size: 15px;
+        }
+
+        .car-container {
+            width: 70%;
+        }
+    }
+
+@media only screen 
+    and (max-device-width: 414px) {
+        
+        .booking-container {
+            font-size: 10px;
+        }
+
+        .booking-container h3 {
+            font-size: 11px;
+        }
+
+        .pricing-data th, .pricing-data td {
+            font-size: 14px;
+        }
+
+        .pricing-data th {
+            width: 75%;
+        }
+
+        .pricing-container h3 {
+            font-size: 20px;
+        }
+
+        #checkout {
+            font-size: 14px;
+        }
+
+        .car-container {
+            width: 90%;
+        }
+    }
