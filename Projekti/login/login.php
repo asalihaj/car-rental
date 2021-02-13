@@ -23,7 +23,7 @@
     </header>
     <main>
         <div class="panel">
-            <form class="login-form" action="../database/login/loginValidation.php" method="post">
+            <form class="login-form" action="../database/loginValidation.php" method="post">
                 <label id="login-label">Member Login</label>
                 <div class="user-input">
                     <img src="../icons/login/321.png" alt="User Icon">

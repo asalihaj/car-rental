@@ -11,9 +11,9 @@ if (isset($_POST['login-submit'])) {
 } else if (isset($_POST['register-submit'])) {
     $register = new RegisterValidation($_POST);
     $register->registerUser();
-    header("Location:../../login/login.php");
+    header("Location:../login/login.php");
 } else {
-    header("Location:../../main/index.php");
+    header("Location:../main/index.php");
 }
 
 
@@ -31,11 +31,11 @@ class LoginValidation
     public function verifyData()
     {
         if ($this->variablesNotDefinedWell($this->email, $this->password)) {
-            header("Location:../../login/login.php");
+            header("Location:../login/login.php");
         } else if ($this->emailAndPasswordCorrect($this->email, $this->password)) {
-            header('Location:../../main/index.php');
+            header('Location:../main/index.php');
         } else {
-            header("Location:../../login/login.php");
+            header("Location:../login/login.php");
         }
     }
 
