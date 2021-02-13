@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/generic.css">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="reservation.css?a">
+    <link rel="stylesheet" href="reservation.css?">
     <title>Reservation</title>
 </head>
 
@@ -15,12 +15,14 @@
     <header>
         <?php
         include('../header/header.php');
-        session_start();
+        if (!isset($_SESSION['userId'])) {
+            header('Location:../login/login.php');
+        }
         ?>
     </header>
     <main class="flex-center">
         <div class="container">
-            <form class="booking-container">
+            <form class="booking-container" action="../database/test.php" method="get">
                 <div class="location-container">
                     <div class="location-date-info">
                         <div class="location-address-container">
@@ -28,7 +30,8 @@
                                 <h2>Pick Up Location:</h2>
                                 <div class="address-info">
                                     <h3><?php
-                                        echo isset($_GET['pu-location']) ? $_GET['pu-location'] : 'Error';
+                                        $_SESSION['puLocation'] = isset($_GET['pu-location']) ? $_GET['pu-location'] : '';
+                                        echo $_SESSION['puLocation'];
                                         ?></h3>
                                 </div>
                             </div>
@@ -39,7 +42,8 @@
                                     <h2>Pick Up Date:</h2>
                                     <div class="date-info">
                                         <h3><?php
-                                            echo isset($_GET['pu-date']) ? $_GET['pu-date'] : 'Error';
+                                            $_SESSION['puDate'] = isset($_GET['pu-date']) ? $_GET['pu-date'] : '';
+                                            echo $_SESSION['puDate'];
                                             ?></h3>
                                     </div>
                                 </div>
@@ -49,7 +53,8 @@
                                     <h2>Time:</h2>
                                     <div class="time-info">
                                         <h3><?php
-                                            echo isset($_GET['pu-time']) ? $_GET['pu-time'] : 'Error';
+                                            $_SESSION['puTime'] = isset($_GET['pu-time']) ? $_GET['pu-time'] : '';
+                                            echo $_SESSION['puTime'];
                                             ?></h3>
                                     </div>
                                 </div>
@@ -62,7 +67,8 @@
                                 <h2>Drop Off Location:</h2>
                                 <div class="address-info">
                                     <h3><?php
-                                        echo isset($_GET['do-location']) ? $_GET['do-location'] : 'Error';
+                                        $_SESSION['doLocation'] = isset($_GET['do-location']) ? $_GET['do-location'] : '';
+                                        echo $_SESSION['doLocation'];
                                         ?></h3>
                                 </div>
                             </div>
@@ -73,7 +79,8 @@
                                     <h2>Drop Off Date:</h2>
                                     <div class="date-info">
                                         <h3><?php
-                                            echo isset($_GET['do-date']) ? $_GET['do-date'] : 'Error';
+                                            $_SESSION['doDate'] = isset($_GET['do-date']) ? $_GET['do-date'] : 'Error';
+                                            echo $_SESSION['doDate'];
                                             ?></h3>
                                     </div>
                                 </div>
@@ -83,8 +90,8 @@
                                     <h2>Time:</h2>
                                     <div class="time-info">
                                         <h3><?php
-                                            echo isset($_GET['do-time']) ? $_GET['do-time'] : 'Error';
-
+                                            $_SESSION['doTime'] = isset($_GET['do-time']) ? $_GET['do-time'] : '';
+                                            echo $_SESSION['doTime'];
                                             ?></h3>
                                     </div>
                                 </div>

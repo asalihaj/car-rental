@@ -81,7 +81,7 @@ abstract class User
             && $this->validatePassword();
     }
 
-    abstract protected function setSession();
+    abstract protected function setSession($email);
 
     abstract protected function setCookie();
 }

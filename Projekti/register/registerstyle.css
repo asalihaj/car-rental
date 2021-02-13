@@ -169,7 +169,7 @@ input {
     margin-bottom: 30px;
 }
 
-#register-button, #continue-button {
+#register-button{
     height: 52px;
     width: 360px;
     color: #f1faee;
@@ -180,9 +180,9 @@ input {
     opacity: 0.7;
 }
 
-#register-button, #continue-button:active {
+/* #register-button:active {
     background-color: #07526d;
-}
+} */
 
 .register-event {
     margin-top: 25px;

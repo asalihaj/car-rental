@@ -16,19 +16,19 @@ function validateUser() {
 
 }
 
-const tos = document.getElementById("tos-checkbox");
+// const tos = document.getElementById("tos-checkbox");
 
-tos.addEventListener('click', termsOfService);
+// tos.addEventListener('click', termsOfService);
 
-function termsOfService() {
-    let button = document.getElementById("register-button")
-    if (tos.checked === true) {
-        button.disabled = false;
-        button.style.opacity = "1";
-        button.style.cursor = "pointer";
-    } else {
-        button.disabled = true;
-        button.style.opacity = "0.7";
-        button.style.cursor = "auto";
-    }
-}
+// function termsOfService() {
+//     let button = document.getElementById("register-button")
+//     if (tos.checked === true) {
+//         button.disabled = false;
+//         button.style.opacity = "1";
+//         button.style.cursor = "pointer";
+//     } else {
+//         button.disabled = true;
+//         button.style.opacity = "0.7";
+//         button.style.cursor = "auto";
+//     }
+// }

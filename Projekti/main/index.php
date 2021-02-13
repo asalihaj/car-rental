@@ -23,7 +23,6 @@
 
             <div class="inside">
                 <form class="reservation-form" action="../reservation/reservation.php" name="car-select-form" id="car-select" method="get">
-                    <!-- Car select start -->
                     <div class="select-car">
                         <select name="car-select" id="car-select" required>
                             <option value="">Select your car type</option>
@@ -75,7 +74,7 @@
                     </div>
 
                     <div class="reservation-button">
-                        <input type="submit" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION" required>
+                        <input type="submit" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
                     </div>
             </div>
 

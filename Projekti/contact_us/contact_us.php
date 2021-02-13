@@ -23,10 +23,19 @@
                 <label for="message">Contact Us</label>
                 <div class="user-info">
                     <input type="text" class="input" placeholder="Full Name">
-                    <input type="text" class="input" placeholder="Email*">
+                    <input type="text" class="input" <?php
+                                                        if (isset($_SESSION['userId'])) {
+                                                            include_once('../database/userMapper.php');
+                                                            $mapper = new UserMapper();
+                                                            $user = $mapper->getUserByID($_SESSION['userId'])['email'];
+                                                            echo "value=\"$user\" disabled";
+                                                        } else {
+                                                            echo 'placeholder="Email*"';
+                                                        }
+                                                        ?>>
                 </div>
-                <textarea name="message" id="message" maxlength="300" placeholder="Message*"></textarea>
-                <a href="#" id="submit" onclick="validateContact()">Submit</a>
+                <textarea name="message" id="message" maxlength="255" placeholder="Message*"></textarea>
+                <input href="#" id="submit" name="contact-submit" onclick="validateContact()" value="Submit">
             </form>
         </div>
     </main>

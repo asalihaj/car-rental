@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="registerstyle.css?s">
+    <link rel="stylesheet" href="registerstyle.css?">
     <title>Register</title>
 </head>
 
@@ -15,38 +15,41 @@
     <header>
         <?php
         include("../header/header.php");
+        if (isset($_SESSION['userId'])) {
+            header("Location:../main/index.php");
+        }
         ?>
     </header>
     <main>
-        <form class="register-form" action="../database/loginValidation.php" method="post">
+        <form class="register-form" action="../database/login/loginValidation.php" method="post">
             <div class="panel">
                 <div class="user-data">
                     <label class="register-label">Sign Up</label>
                     <div class="data-input-container">
                         <div class="user-input">
                             <img id="user-logo" src="../icons/registration/red_user.png" alt="User Icon">
-                            <input class="register-component input-area" type="text" name="username" id="username" placeholder="Username" required>
+                            <input class="register-component input-area" type="text" name="username" id="username" placeholder="Username">
                         </div>
                         <span class="valid-info">Test Test Test</span>
                     </div>
                     <div class="data-input-container">
                         <div class="user-input">
                             <img id="email-logo" src="../icons/registration/red_email.png" alt="Mail Icon">
-                            <input class="register-component input-area" type="text" name="email" id="email" placeholder="Email" required>
+                            <input class="register-component input-area" type="text" name="email" id="email" placeholder="Email">
                         </div>
                         <span class="valid-info">Test Test Test</span>
                     </div>
                     <div class="data-input-container">
                         <div class="user-input">
                             <img id="pw-logo" src="../icons/registration/red_lock.png" alt="Lock Icon">
-                            <input class="register-component input-area" type="password" name="password" id="password" placeholder="Password" required>
+                            <input class="register-component input-area" type="password" name="password" id="password" placeholder="Password">
                         </div>
                         <span class="valid-info">Test Test Test</span>
                     </div>
                     <div class="data-input-container">
                         <div class="user-input">
                             <img id="pw-confirm-logo" src="../icons/registration/red_lock.png" alt="Opened Lock">
-                            <input class="register-component input-area" type="password" name="password-confirm" id="confirm-password" placeholder="Confirm Password" required>
+                            <input class="register-component input-area" type="password" name="password-confirm" id="confirm-password" placeholder="Confirm Password">
                         </div>
                         <span class="valid-info">Test Test Test</span>
                     </div>
@@ -67,7 +70,7 @@
                                 Conditions</a> and the <a href="../privacy_policy/privacy_policy.php">Privacy
                                 Policy</a></label>
                     </div>
-                    <input class="register-component" id="register-button" name="register-submit" type="submit" value="Continue" disabled>
+                    <input class="register-component" id="register-button" name="register-submit" type="submit" value="Continue">
                 </div>
                 <div class="register-links">
                     <a href="../Login/login.php">Login</a>
@@ -80,11 +83,10 @@
         include("../footer/footer.php");
         ?>
     </footer>
-    <script src="usernamevalidator.js?d"></script>
+    <script src="usernamevalidator.js?"></script>
     <script src="emailvalidator.js?d"></script>
     <script src="passwordvalidator.js?v"></script>
-    <script src="registervalidator.js"></script>
-    <script src="registerfunction.js"></script>
+    <script src="registervalidator.js?s"></script>
     <script src="personalinfo.js"></script>
 </body>
 

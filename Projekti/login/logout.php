@@ -1,5 +1,5 @@
 <?php
-unset($_SESSION["role"]);
-unset($_SESSION["roleName"]);
+session_start();
 session_destroy();
-header("Location:login.php");
+header('Location: login.php');
+exit;

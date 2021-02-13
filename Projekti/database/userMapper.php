@@ -12,7 +12,7 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function getUserByID($userId)
     {
-        $query = "SELECT * FROM user WHERE userid=:id";
+        $query = "SELECT * FROM user WHERE user_id=:id";
         $statement = $this->connection->prepare($query);
         $statement->bindParam(":id", $userId);
         $statement->execute();

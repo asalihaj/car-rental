@@ -29,22 +29,15 @@
                 <li class="header-nav-item">
                     <a href="../login/login.php">Login</a>
                 </li>
-                <?php
+            <?php
             } else if (isset($_SESSION['role'])) {
-                if ($_SESSION['role'] == 0) {
-                ?>
-                    <li class="header-nav-item">
-                        <a href="../login/login.php">Panel</a>
-                    </li>
-                <?php
-                }
-                ?>
-
+            ?>
                 <li class="header-nav-item">
                     <a href="../login/logout.php">Log out</a>
                 </li>
             <?php
             }
+
             ?>
         </ul>
     </nav>

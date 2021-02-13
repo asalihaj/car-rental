@@ -15,7 +15,11 @@
 <body>
     <header>
         <?php
-        include("../header/header.php");
+        include_once("../header/header.php");
+        include('../database/userMapper.php');
+        if (!isset($_SESSION['userId'])) {
+            header('Location:../main/index.php');
+        }
         ?>
     </header>
     <main>
@@ -32,11 +36,27 @@
             <div class="top">
                 <div class="textarea-container">
                     <label> Username<span>*</span> </label>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" value="<?php
+                                                                            $mapper = new UserMapper();
+                                                                            $username = '';
+                                                                            if (isset($_SESSION['userId'])) {
+                                                                                $username = $mapper->getUserByID($_SESSION['userId'])['username'];
+                                                                            }
+                                                                            echo $username . $_SESSION['userId'];
+                                                                            ?>">
+
                 </div>
+
                 <div class="textarea-container">
                     <label> Email address<span>*</span> </label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" value="<?php
+                                                                        $mapper = new UserMapper();
+                                                                        $email;
+                                                                        if (isset($_SESSION['userId'])) {
+                                                                            $email = $mapper->getUserByID($_SESSION['userId'])['email'];
+                                                                        }
+                                                                        echo $email;
+                                                                        ?>">
                 </div>
                 <div class="textarea-container">
                     <label> Password <span>*</span></label>

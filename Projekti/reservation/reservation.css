@@ -30,6 +30,17 @@ main {
     align-items: center;
 }
 
+.input-info {
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.time-info input {
+    width: 50px;
+}
+
 .location-container {
     width: 80%;
     height: 33%;

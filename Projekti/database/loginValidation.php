@@ -4,16 +4,16 @@ include_once('simpleUser.php');
 include_once('userMapper.php');
 session_start();
 
+
 if (isset($_POST['login-submit'])) {
     $login = new LoginValidation($_POST);
     $login->verifyData();
-    echo $login;
 } else if (isset($_POST['register-submit'])) {
     $register = new RegisterValidation($_POST);
     $register->registerUser();
-    header("Location:../main/index.php");
+    header("Location:../../login/login.php");
 } else {
-    header("Location:../main/index.php");
+    header("Location:../../main/index.php");
 }
 
 
@@ -31,11 +31,11 @@ class LoginValidation
     public function verifyData()
     {
         if ($this->variablesNotDefinedWell($this->email, $this->password)) {
-            header("Location:../register/register.php");
+            header("Location:../../login/login.php");
         } else if ($this->emailAndPasswordCorrect($this->email, $this->password)) {
-            header('Location:../main/index.php');
+            header('Location:../../main/index.php');
         } else {
-            header("Location:../database/loginValidation.php");
+            header("Location:../../login/login.php");
         }
     }
 
@@ -55,11 +55,11 @@ class LoginValidation
             return false;
         } else if (password_verify($password, $user['password'])) {
             if ($user['role'] == 0) {
-                $obj = new Admin($user['id'], $user['email'], $user['password'], $user['role']);
-                $obj->setSession();
+                $obj = new Admin($user['username'], $user['email'], $user['password']);
+                $obj->setSession($user['user_id']);
             } else {
-                $obj = new SimpleUser($user['id'], $user['email'], $user['password'], $user['role'], "");
-                $obj->setSession();
+                $obj = new SimpleUser($user['username'], $user['email'], $user['password']);
+                $obj->setSession($user['user_id']);
             }
             return true;
         } else return false;
@@ -81,15 +81,28 @@ class RegisterValidation
         $this->passwordConfirm = $formData['password-confirm'];
     }
 
+
+    //return -1 if there's a password missmatch
+    //return -2 if username/email already exists in database
     public function registerUser()
     {
         if (strcmp($this->password, $this->passwordConfirm) != 0) {
             return -1;
         } else {
-            $user = new SimpleUser($this->username, $this->email, $this->password, 0);
-            $mapper = new UserMapper();
-            $mapper->insertUser($user);
+            $user = new SimpleUser($this->username, $this->email, $this->password);
+            if ($user->validate()) {
+                $mapper = new UserMapper();
+                $users = $mapper->getAllUsers();
+                for ($i = 0; $i < count($users); $i++) {
+                    if (
+                        strcmp($users[$i]['email'], $this->email) == 0
+                        || strcmp($users[$i]['username'], $this->username) == 0
+                    ) {
+                        return -2;
+                    }
+                }
+                $mapper->insertUser($user);
+            }
         }
-        header("Location:../login/login.php");
     }
 }

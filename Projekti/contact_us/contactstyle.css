@@ -81,6 +81,7 @@ main {
     text-decoration: none;
     font-weight: 400;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .contact-form:nth-of-type(1) {

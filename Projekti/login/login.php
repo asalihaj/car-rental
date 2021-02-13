@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-if (isset($_SESSION['role'])) {
-    header("Location:../main/index.php");
-}
-?>
 
 <head>
     <meta charset="UTF-8">
@@ -21,11 +16,14 @@ if (isset($_SESSION['role'])) {
     <header>
         <?php
         include("../header/header.php");
+        if (isset($_SESSION['userId'])) {
+            header("Location:../main/index.php");
+        }
         ?>
     </header>
     <main>
         <div class="panel">
-            <form class="login-form" action="../database/loginValidation.php" method="post">
+            <form class="login-form" action="../database/login/loginValidation.php" method="post">
                 <label id="login-label">Member Login</label>
                 <div class="user-input">
                     <img src="../icons/login/321.png" alt="User Icon">
