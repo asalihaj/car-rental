@@ -83,6 +83,10 @@ header {
     border: 1px solid white;
 }
 
+.collapsed-active {
+    background-color: #012e4e;
+}
+
 .collapsed-navbar {
     position: absolute;
     /* top: 4.2rem; */

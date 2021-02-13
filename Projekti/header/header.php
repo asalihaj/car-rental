@@ -22,9 +22,30 @@
             <li class="header-nav-item">
                 <a href="../contact_us/contact_us.php">Contact Us</a>
             </li>
-            <li class="header-nav-item">
-                <a href="../login/login.php">Login</a>
-            </li>
+            <?php
+            session_start();
+            if (!isset($_SESSION['role'])) {
+            ?>
+                <li class="header-nav-item">
+                    <a href="../login/login.php">Login</a>
+                </li>
+                <?php
+            } else if (isset($_SESSION['role'])) {
+                if ($_SESSION['role'] == 0) {
+                ?>
+                    <li class="header-nav-item">
+                        <a href="../login/login.php">Panel</a>
+                    </li>
+                <?php
+                }
+                ?>
+
+                <li class="header-nav-item">
+                    <a href="../login/logout.php">Log out</a>
+                </li>
+            <?php
+            }
+            ?>
         </ul>
     </nav>
     <div class="collapsed">
@@ -52,4 +73,4 @@
         </li>
     </ul>
 </nav>
-<script src="../header/navbar.js?a"></script>
+<script src="../header/navbar.js?d"></script>

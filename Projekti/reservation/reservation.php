@@ -15,6 +15,7 @@
     <header>
         <?php
         include('../header/header.php');
+        session_start();
         ?>
     </header>
     <main class="flex-center">

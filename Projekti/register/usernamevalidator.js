@@ -11,6 +11,9 @@ function validateUser() {
         document.getElementById("user-logo").src = "../icons/registration/red_user.png";
         return false;
     }
+
+
+
 }
 
 const tos = document.getElementById("tos-checkbox");

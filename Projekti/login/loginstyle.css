@@ -72,6 +72,18 @@ main {
     opacity: 0.4;
 }
 
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.login-error {
+    color: red;
+    font-size: 12px;
+}
+
 .user-input {
     display: flex;
     flex-direction: row;
@@ -103,7 +115,7 @@ main {
 .login-links {
     width: 95%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .login-links a {
@@ -168,7 +180,6 @@ main {
 	
 	.login-links {
         width: 100%;
-        justify-content: space-around;
 	}
 	
 	.login-links a {

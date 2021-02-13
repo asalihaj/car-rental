@@ -6,7 +6,6 @@ password.addEventListener('input', passwordValidator);
 password.addEventListener("focusin", () => {
     passwordStrength.removeAttribute("hidden");
     if (screen.width <= 414) {
-        document.querySelector('main').style.height = 'auto';
         document.querySelector('.panel').style.margin = '10px 0';
     } else {
         document.querySelector('.panel').style.margin = '30px 0';
@@ -15,7 +14,6 @@ password.addEventListener("focusin", () => {
 
 password.addEventListener("focusout", () => {
     if (password.value === "") {
-        document.querySelector('main').style.height = '100%';
         document.querySelector('.panel').style.margin = screen.width <= 414 ? '10px 0' : 'auto 0';
         document.getElementById("password-strength").setAttribute("hidden", true);
     }

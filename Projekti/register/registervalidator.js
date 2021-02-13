@@ -22,7 +22,6 @@ function validateRegister() {
                     passwordConfirmationError.style.display = 'none';
                     return true;
                 } else {
-
                     passwordConfirmationError.style.display = 'block';
                     if (emptyField(confirmPassword)) {
                         passwordConfirmationError.innerText = "Please confirm your password";
