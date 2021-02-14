@@ -16,7 +16,7 @@
     <header>
         <?php
         include_once("../header/header.php");
-        include('../database/userMapper.php');
+        include('../database/mappers/userMapper.php');
         if (!isset($_SESSION['userId'])) {
             header('Location:../main/index.php');
         }
@@ -42,7 +42,7 @@
                                                                             if (isset($_SESSION['userId'])) {
                                                                                 $username = $mapper->getUserByID($_SESSION['userId'])['username'];
                                                                             }
-                                                                            echo $username . $_SESSION['userId'];
+                                                                            echo $username;
                                                                             ?>">
 
                 </div>

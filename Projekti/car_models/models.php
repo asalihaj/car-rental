@@ -8,7 +8,7 @@
     include("../styles/styles.php");
     ?>
     <link rel="stylesheet" href="../main/style.css">
-    <link rel="stylesheet" href="modelstyle.css?fa">
+    <link rel="stylesheet" href="modelstyle.css?">
 
     <title>Models</title>
 </head>

@@ -1,4 +1,5 @@
 <?php
+include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/checker.php');
 
 abstract class User
 {

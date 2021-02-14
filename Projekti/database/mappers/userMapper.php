@@ -1,5 +1,5 @@
 <?php
-include_once('databaseConnection.php');
+include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/databaseConnection.php');
 
 class UserMapper extends DatabasePDOConfiguration
 {
@@ -51,7 +51,7 @@ class UserMapper extends DatabasePDOConfiguration
 
         $statement = $this->connection->prepare($query);
         $statement->execute();
-        $result = $statement->fetchAll();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         return $result;
     }

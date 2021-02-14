@@ -1,7 +1,7 @@
 <?php
-include_once('admin.php');
-include_once('simpleUser.php');
-include_once('userMapper.php');
+include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/classes/user/admin.php');
+include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/classes/user/simpleUser.php');
+include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/userMapper.php');
 session_start();
 
 

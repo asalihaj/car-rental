@@ -3,70 +3,68 @@ const userData = document.getElementsByClassName("input");
 let userFullName = userData[0];
 let userEmail = userData[1];
 const message = document.getElementById("message");
+const submit = document.querySelector('#submit');
+const msgSent = document.querySelector('.msg-sent-info');
 
-function validateContact() {
-    switch (isNameValid(userFullName)) {
-        case 0:
-            switch (isEmailValid(userEmail)) {
-                case 0:
-                    switch (isMessageValid(message)) {
-                        case 0:
-                            alert("Message successfully send.");
-                            setTimeout(() => {
-                                window.location.href = "../main/index.html";
-                                emptyAll()
-                            }, 1000);
 
-                            break;
-                        case 1:
-                            alert("Message can't be empty!");
-                            break;
-                    }
-                    break;
-                case 1:
-                    alert("Email can't be empty!");
-                    break;
-                case 2:
-                    alert("Email format is not valid. Please enter a valid email.");
-                    break;
-            }
-            break;
-        case 1:
-            alert("Name can not be empty");
-            break;
-        case 2:
-            alert("Please enter your full name");
-            break;
+submit.addEventListener('click', validateContact);
+
+function validateContact(event) {
+    if (isNameValid(userFullName)) {
+        userFullName.style.border = '1px solid #e5e5e5';
+    } else {
+        userFullName.style.border = '1px solid red';
+        event.preventDefault();
     }
+
+    if (isEmailValid(userEmail)) {
+        userEmail.style.border = '1px solid #e5e5e5';
+    } else {
+        userEmail.style.border = '1px solid red';
+        event.preventDefault();
+    }
+
+    if (isMessageValid(message)) {
+        message.style.border = '1px solid #e5e5e5';
+    } else {
+        message.style.border = '1px solid red';
+        event.preventDefault();
+    }
+
+    if (allValid()) {
+        msgSent.style.display = 'flex';
+    }
+}
+
+
+const allValid = () => {
+    return isEmailValid(userEmail) &&
+        isNameValid(userFullName) && isMessageValid(message);
 }
 
 const isEmailValid = e => {
     const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
     if (emailRegex.test(e.value)) {
-        return 0;
+        return true;
     } else if (e.value === "" || emptyInput(e)) {
-        return 1;
-    } else {
-        return 2;
+        return false;
     }
 }
 
 const isNameValid = e => {
-    const nameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    const nameRegex = /^[a-zA-Z ]+$/;
     if (nameRegex.test(e.value)) {
-        return 0;
+        return true;
     } else if (e.value === "" || emptyInput(e)) {
-        return 1;
-    } else {
-        return 2;
+        return false;
     }
 }
 
 const isMessageValid = e => {
     if (e.value === "" || emptyInput(e)) {
-        return 1;
+        return false;
     } else {
-        return 0;
+        return true;
     }
 }
 

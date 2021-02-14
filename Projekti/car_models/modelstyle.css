@@ -4,7 +4,7 @@ main {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    z-index: 99;
+    z-index: 1;
 }
 
 a {
@@ -68,7 +68,7 @@ a {
     position: absolute;
     top: 2px;
     right: 2px;
-    z-index: 2;
+    z-index: 5;
 }
 
 .car-info-shrink img {
@@ -189,8 +189,8 @@ a {
 
 .close-tab {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -4px;
+    right: 3px;
     color: #aaaaaa;
     float: right;
     font-size: 28px;

@@ -20,6 +20,7 @@ main {
 }
 
 .contact-form {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -82,6 +83,15 @@ main {
     font-weight: 400;
     box-sizing: border-box;
     text-align: center;
+    cursor: pointer;
+}
+
+.msg-sent-info {
+    display: none;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0;
+    color: #29bf12;
 }
 
 .contact-form:nth-of-type(1) {
