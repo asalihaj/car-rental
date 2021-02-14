@@ -1,7 +1,7 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/databaseConnection.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/databaseConnection.php');
 
-class CarMapper  extends DatabasePDOConfiguration
+class CarMapper extends DatabasePDOConfiguration
 {
 
     private $connection;
@@ -13,7 +13,7 @@ class CarMapper  extends DatabasePDOConfiguration
 
     public function getCarById($carId)
     {
-        $query = $this->generalQuery . " WHERE car_id=:id";
+        $query = "SELECT * FROM car WHERE car_id = :id";
         $statement = $this->connection->prepare($query);
         $statement->bindParam(":id", $carId);
         $statement->execute();

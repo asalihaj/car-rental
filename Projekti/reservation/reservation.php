@@ -15,6 +15,7 @@
     <header>
         <?php
         include('../header/header.php');
+        include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
         if (!isset($_SESSION['userId'])) {
             header('Location:../login/login.php');
         }
@@ -22,7 +23,7 @@
     </header>
     <main class="flex-center">
         <div class="container">
-            <form class="booking-container" action="../database/test.php" method="get">
+            <form class="booking-container" action="../database/rentalValidation.php" method="post">
                 <div class="location-container">
                     <div class="location-date-info">
                         <div class="location-address-container">
@@ -79,7 +80,7 @@
                                     <h2>Drop Off Date:</h2>
                                     <div class="date-info">
                                         <h3><?php
-                                            $_SESSION['doDate'] = isset($_GET['do-date']) ? $_GET['do-date'] : 'Error';
+                                            $_SESSION['doDate'] = isset($_GET['do-date']) ? $_GET['do-date'] : '';
                                             echo $_SESSION['doDate'];
                                             ?></h3>
                                     </div>
@@ -106,23 +107,44 @@
                             <td><?php
                                 $rental_date = explode('-', isset($_GET['pu-date']) ? $_GET['pu-date'] : '-1');
                                 $return_date = explode('-', isset($_GET['do-date']) ? $_GET['do-date'] : '-1');
-                                echo isset($return_date[2]) && isset($rental_date[2]) ? $return_date[2] - $rental_date[2] : '-1';
+                                $totalDays = isset($return_date[2]) && isset($rental_date[2]) ? $return_date[2] - $rental_date[2] : '-1';
+                                echo $totalDays;
+                                $_SESSION['totalDays'] = $totalDays;
                                 ?></td>
                         </tr>
                         <tr class="pricing-data">
                             <th>Rental price:</th>
-                            <td>$400/day</td>
+                            <td><?php
+                                if (isset($_GET['car-select'])) {
+                                    $mapper = new CarMapper();
+                                    $car = $mapper->getCarById($_GET['car-select']);
+                                    echo $car['rental_rate'] . '/day';
+                                } else {
+                                    echo 'Null';
+                                }
+                                ?></td>
                         </tr>
                         <tr class="pricing-data">
                             <th>Subtotal:</th>
-                            <td>$4600</td>
+                            <td><?php
+                                $mapper = new CarMapper();
+                                $car = $mapper->getCarById($_GET['car-select']);
+                                $subTotal = $_SESSION['totalDays'] * $car['rental_rate'];
+                                echo '$' . $subTotal;
+                                $_SESSION['subTotal'] = $subTotal;
+                                ?></td>
                         </tr>
                     </table>
                 </div>
                 <div class="booking-confirm">
                     <div class="pricing-container">
-                        <h3>Tax: $440</h3>
-                        <h3>Total: $4140</h3>
+                        <h3><?php
+                            // echo 'Tax: ' . $_SESSION['subTotal'] * 0.1;
+                            echo 'Tax: --';
+                            ?></h3>
+                        <h3><?php
+                            echo 'Total: $' . $_SESSION['subTotal'];
+                            ?></h3>
                     </div>
                     <div class="booking-checkout">
                         <input type="submit" name="checkout" id="checkout" value="CONFIRM">
@@ -134,11 +156,28 @@
                     <div class="car-info">
                         <div class="car-name">
                             <h3><?php
-                                echo isset($_GET['car-select']) ? $_GET['car-select'] : 'Error';
+
+                                if (isset($_GET['submit'])) {
+                                    $mapper = new CarMapper();
+                                    $car = $mapper->getCarById($_GET['car-select']);
+                                    echo $car['manufacturer'] . ' ' . $car['model'];
+                                    $_SESSION['carId'] = $_GET['car-select'];
+                                } else {
+                                    echo '<i>Empty</i>';
+                                }
                                 ?></h3>
                         </div>
                         <div class="rental-rate">
-                            <h3>$150</h3>
+                            <h3><?php
+                                if (isset($_GET['submit'])) {
+                                    $mapper = new CarMapper();
+                                    $car = $mapper->getCarById($_GET['car-select']);
+                                    echo '$' . $car['rental_rate'];
+                                } else {
+                                    echo 'Null';
+                                }
+                                ?>
+                            </h3>
                         </div>
                     </div>
                     <div class="car-img">
@@ -146,10 +185,25 @@
                     </div>
                     <div class="car-stats">
                         <ul class="car-specs">
-                            <li class="car-specs-info">2018</li>
+                            <?php
+                            if (isset($_GET['submit'])) {
+                                $mapper = new CarMapper();
+                                $car = $mapper->getCarById($_GET['car-select']);
+                                echo '<li class="car-specs-info">' . $car['production_year'] . '</li>';
+                                echo '<li class="car-specs-info">' . $car['transmission'] . '</li>';
+                                echo '<li class="car-specs-info">' . $car['capacity'] . '</li>';
+                                echo '<li class="car-specs-info">' . $car['category'] . '</li>';
+                            } else {
+                                echo '<li class="car-specs-info">Null</li>';
+                                echo '<li class="car-specs-info">Null</li>';
+                                echo '<li class="car-specs-info">Null</li>';
+                                echo '<li class="car-specs-info">Null</li>';
+                            }
+                            ?>
+                            <!-- <li class="car-specs-info">2018</li>
                             <li class="car-specs-info">Auto</li>
                             <li class="car-specs-info">4 Seats</li>
-                            <li class="car-specs-info">Coupe</li>
+                            <li class="car-specs-info">Coupe</li> -->
                         </ul>
                     </div>
                 </div>

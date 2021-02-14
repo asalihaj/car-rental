@@ -26,14 +26,15 @@
                     <div class="select-car">
                         <select name="car-select" id="car-select" required>
                             <option value="">Select your car type</option>
-                            <option value="Audi A7">Audi A7</option>
-                            <option value="Mercedes S550">Mercedes S550</option>
-                            <option value="Audi A4">Audi A4</option>
-                            <option value="Golf 7">VW Golf 7</option>
-                            <option value="BMW M5">BMW M5</option>
-                            <option value="Mercedes C300">Mercedes C300</option>
-                            <option value="Audi Q8">Audi Q8</option>
-                            <option value="VW Golf 6">VW Golf 6</option>
+                            <?php
+                            include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
+                            $mapper = new CarMapper();
+                            $cars = $mapper->getAllCars();
+                            for ($i = 0; $i < count($cars); $i++) {
+                                $carName = ucfirst($cars[$i]['manufacturer']) . ' ' . ucfirst($cars[$i]['model']);
+                                echo '<option value="' . $cars[$i]['car_id'] . '">' . $carName . '</option>';
+                            }
+                            ?>
                         </select>
                         <span><a href="../car_models/models.php">View all models</a></span>
                     </div>
@@ -74,11 +75,12 @@
                     </div>
 
                     <div class="reservation-button">
-                        <input type="submit" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
+                        <input type="submit" name="submit" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
                     </div>
+                </form>
             </div>
 
-            </form>
+
 
             <div class="cover-img">
                 <span class="slider-car-name">

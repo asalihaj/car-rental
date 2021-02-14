@@ -21,7 +21,7 @@
         ?>
     </header>
     <main>
-        <form class="register-form" action="../database/login/loginValidation.php" method="post">
+        <form class="register-form" action="../database/loginValidation.php" method="post">
             <div class="panel">
                 <div class="user-data">
                     <label class="register-label">Sign Up</label>

@@ -9,6 +9,7 @@
     include_once("../database/mappers/userMapper.php");
     ?>
     <link rel="stylesheet" href="dashboard.css?s">
+    <link rel="stylesheet" href="editors/editor.css?s">
     <title>Dashboard</title>
 </head>
 
@@ -32,7 +33,6 @@
                             <option value="cars">Cars</option>
                             <option value="rental">Rental</option>
                             <option value="service">Service</option>
-                            <option value="policy">Policy</option>
                             <option value="contact">Contact</option>
                         </select>
                     </div>
@@ -49,6 +49,7 @@
                                 <?php
                                 if (isset($_POST['data'])) {
                                     echo ucfirst($_POST['data']) . ' Table';
+                                    $_SESSION['currentTable'] = $_POST['data'];
                                 }
                                 ?>
                             </h3>
@@ -68,29 +69,38 @@
                             <thead>
                                 <tr class="data-header">
                                     <?php
-                                    $mapper = new UserMapper();
-                                    $users = $mapper->getAllUsers();
-                                    for ($i = 0; $i < 1; $i++) {
-                                        foreach ($users[$i] as $user => $user_d) {
-                                            if (!strcmp($user, 'password') == 0) {
-                                                $result = str_replace('_', ' ', $user);
-                                                echo '<th>' . ucfirst($result)  . '</th>';
-                                            }
-                                        }
+                                    $table = $_SESSION['currentTable'];
+                                    switch ($table) {
+                                        case "users":
+                                            include('rows/userRows.php');
+                                            break;
+                                        case "cars":
+                                            include('rows/carRows.php');
+                                            break;
+                                        case "rental":
+                                            include('rows/rentalRows.php');
+                                            break;
+                                        case "service":
+                                            include('rows/serviceRows.php');
+                                            break;
+                                        case "contact":
+                                            include('rows/contactRows.php');
+                                            break;
                                     }
-                                    echo '<th>Action</th>'
                                     ?>
-
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                while (true)
-                                    echo '<tr class="data-row">';
+                                if (isset($_SESSION['currentTable'])) {
+                                    include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/tableMapper.php');
+                                    $table = new TableQuery($_SESSION['currentTable']);
+                                    $table->getData();
+                                }
 
-                                echo '</tr>';
                                 ?>
-                                <tr class="data-row">
+                                <!-- <tr class="data-row">
                                     <td>riick</td>
                                     <td>Rick</td>
                                     <td>20</td>
@@ -119,7 +129,7 @@
                                     <td>Rick</td>
                                     <td>20</td>
                                     <td>20</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -140,7 +150,38 @@
                 </div>
             </section>
         </section>
+
     </main>
+    <div class="container">
+        <form class="editor" action="">
+            <?php
+            if (isset($_POST['data'])) {
+                $data = $_POST['data'];
+                switch ($data) {
+                    case "users":
+                        include("editors/userEditor.php");
+                        break;
+                    case "cars":
+                        include("editors/carEditor.php");
+                        break;
+                    case "rental":
+                        include("editors/rentalEditor.php");
+                        break;
+                    case "service":
+                        include("editors/serviceEditor.php");
+                        break;
+                    case "policy":
+                        include("editors/policyEditor.php");
+                        break;
+                    case "contact":
+                        include("editors/contactEditor.php");
+                        break;
+                }
+            }
+            ?>
+            <input type="submit" class="edit-submit" name="<?php echo $data ?>-save">
+        </form>
+    </div>
 </body>
 
 </html>

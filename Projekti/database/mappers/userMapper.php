@@ -1,5 +1,5 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/databaseConnection.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/databaseConnection.php');
 
 class UserMapper extends DatabasePDOConfiguration
 {
@@ -76,7 +76,7 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function deleteUser($userId)
     {
-        $query = "DELETE FROM user WHERE userid = :id";
+        $query = "DELETE FROM user WHERE user_id = :id";
         $statement = $this->connection->prepare($query);
         $statement->bindParam(":id", $userId);
         $statement->execute();

@@ -1,7 +1,7 @@
 <?php
 include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/databaseConnection.php');
 
-class ContactMapper extends DatabasePDOConfiguration
+class ServiceMapper extends DatabasePDOConfiguration
 {
     private $connection;
 
@@ -10,20 +10,22 @@ class ContactMapper extends DatabasePDOConfiguration
         $this->connection = $this->getConnection();
     }
 
-    public function getContactById($contactId)
+    public function getServiceById($serviceId)
     {
-        $query = "SELECT * FROM contact WHERE contact_id=:id";
+        $query = "SELECT * FROM service WHERE service_id = :id";
+
         $statement = $this->connection->prepare($query);
-        $statement->bindParam(":id", $contactId);
+        $statement->bindParam(":service_id", $serviceId);
         $statement->execute();
         $result = $statement->fetch(PDO::FETCH_ASSOC);
 
         return $result;
     }
 
-    public function getContactByTitle($title)
+    public function getServiceByTitle($title)
     {
-        $query = "SELECT * FROM contact WHERE LOWER(title) like '%:title%'";
+        $query = "SELECT * FROM service WHERE title LIKE '%:title%'";
+
         $statement = $this->connection->prepare($query);
         $statement->bindParam(":title", $title);
         $statement->execute();
@@ -32,10 +34,9 @@ class ContactMapper extends DatabasePDOConfiguration
         return $result;
     }
 
-    public function getAllContacts()
+    public function getAllServices()
     {
-        $query = "SELECT * FROM contact";
-
+        $query = "SELECT * FROM service";
         $statement = $this->connection->prepare($query);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -43,26 +44,26 @@ class ContactMapper extends DatabasePDOConfiguration
         return $result;
     }
 
-    public function insertContactForm($contactForm)
+    public function insertService($service)
     {
-        $query = "INSERT INTO contact(name, email, message) VALUES (:name, :email, :message)";
+        $query = "INSERT INTO service (title, description) VALUSE 
+            (:title, :description)";
 
-        $name = $contactForm->getName();
-        $email = $contactForm->getEmail();
-        $message = $contactForm->getMessage();
+        $title = $service->getTitle();
+        $description = $service->getDescription();
 
         $statement = $this->connection->prepare($query);
-        $statement->bindParam(":name", $name);
-        $statement->bindParam(":email", $email);
-        $statement->bindParam(":message", $message);
+        $statement->bindParam(":title", $title);
+        $statement->bindParam(":description", $description);
         $statement->execute();
     }
 
-    public function deleteContactForm($contactId)
+
+    public function deleteService($serviceId)
     {
-        $query = "DELETE FROM cotact WHERE contact_id = :id";
+        $query = "DELETE FROM service WHERE service_id = :id";
         $statement = $this->connection->prepare($query);
-        $statement->bindParam(":id", $contactId);
+        $statement->bindParam(":id", $serviceId);
         $statement->execute();
         $result = $statement->fetch(PDO::FETCH_ASSOC);
 

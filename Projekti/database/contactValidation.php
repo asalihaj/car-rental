@@ -1,7 +1,7 @@
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/contactMapper.php');
 include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/classes/contact/contact.php');
-
+session_start();
 if (isset($_POST['contact-submit'])) {
     $contact = new ContactValidation($_POST);
     $contact->verify();

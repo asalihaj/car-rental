@@ -98,7 +98,7 @@ class RegisterValidation
                         strcmp($users[$i]['email'], $this->email) == 0
                         || strcmp($users[$i]['username'], $this->username) == 0
                     ) {
-                        return -2;
+                        header("Location:../register/register.php");
                     }
                 }
                 $mapper->insertUser($user);
