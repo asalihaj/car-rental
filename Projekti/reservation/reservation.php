@@ -16,7 +16,7 @@
         <?php
         include('../header/header.php');
         include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
-        if (!isset($_SESSION['userId'])) {
+        if (!isset($_SESSION['userId']) || !isset($_GET['submit'])) {
             header('Location:../login/login.php');
         }
         ?>

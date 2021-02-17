@@ -93,7 +93,10 @@
     </ul>
 </nav>
 <?php
-if (isset($_SESSION['role']) && $_SESSION['role'] == 0) {
+if (
+    isset($_SESSION['role']) && $_SESSION['role'] == 0
+    && strcmp('dashboard.php', basename($_SERVER['PHP_SELF'])) != 0
+) {
 ?>
     <div class="cpanel-container">
         <a class="cpanel" href="../dashboard/dashboard.php">cPanel</a>

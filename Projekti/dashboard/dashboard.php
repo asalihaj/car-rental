@@ -8,8 +8,8 @@
     include("../styles/styles.php");
     include_once("../database/mappers/userMapper.php");
     ?>
-    <link rel="stylesheet" href="dashboard.css?s">
-    <link rel="stylesheet" href="editors/editor.css?s">
+    <link rel="stylesheet" href="dashboard.css?sd">
+    <link rel="stylesheet" href="editors/editor.css?">
     <title>Dashboard</title>
 </head>
 
@@ -29,6 +29,7 @@
                     <div class="table-info">
                         <label for="data">Select table</label>
                         <select class="table-value" name="data" id="data">
+                            <option value="">Choose</option>
                             <option value="users">Users</option>
                             <option value="cars">Cars</option>
                             <option value="rental">Rental</option>
@@ -69,8 +70,11 @@
                             <thead>
                                 <tr class="data-header">
                                     <?php
-                                    $table = $_SESSION['currentTable'];
+                                    $table = isset($_SESSION['currentTable']) ? $_SESSION['currentTable'] : 'users';
                                     switch ($table) {
+                                        case "":
+                                            echo '';
+                                            break;
                                         case "users":
                                             include('rows/userRows.php');
                                             break;
@@ -98,90 +102,44 @@
                                     $table = new TableQuery($_SESSION['currentTable']);
                                     $table->getData();
                                 }
-
                                 ?>
-                                <!-- <tr class="data-row">
-                                    <td>riick</td>
-                                    <td>Rick</td>
-                                    <td>20</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>riick</td>
-                                    <td>Rick</td>
-                                    <td>20</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>riick</td>
-                                    <td>Rick</td>
-                                    <td>20</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>riick</td>
-                                    <td>Rick</td>
-                                    <td>20</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>riick</td>
-                                    <td>Rick</td>
-                                    <td>20</td>
-                                    <td>20</td>
-                                </tr> -->
                             </tbody>
                         </table>
                     </div>
                     <div class="table-footer flex-center">
                         <div class="table-pages">
-                            <span class="previous-arrow">&#129120;</span>
-                            <div class="page-numbers">
-                                <h4>1</h4>
-                                <h4>2</h4>
-                                <h4>3</h4>
-                                <h4>4</h4>
-                                <h4>5</h4>
-                                <h4>...</h4>
-                            </div>
-                            <span class="next-arrow">&#129122;</span>
+                            <img class="add" src="../icons/add.png" alt="">
                         </div>
                     </div>
                 </div>
             </section>
         </section>
-
     </main>
-    <div class="container">
-        <form class="editor" action="">
-            <?php
-            if (isset($_POST['data'])) {
-                $data = $_POST['data'];
-                switch ($data) {
-                    case "users":
-                        include("editors/userEditor.php");
-                        break;
-                    case "cars":
-                        include("editors/carEditor.php");
-                        break;
-                    case "rental":
-                        include("editors/rentalEditor.php");
-                        break;
-                    case "service":
-                        include("editors/serviceEditor.php");
-                        break;
-                    case "policy":
-                        include("editors/policyEditor.php");
-                        break;
-                    case "contact":
-                        include("editors/contactEditor.php");
-                        break;
-                }
+    <div class="container hidden">
+
+        <?php
+        if (isset($_POST['data'])) {
+            $_SESSION['changeSource'] = 'add';
+            $data = $_POST['data'];
+            switch ($data) {
+                case "cars":
+                    include("editors/carEditor.php");
+                    break;
+                case "service":
+                    include("editors/serviceEditor.php");
+                    break;
+                case "users":
+                    include("editors/userEditor.php");
+                    break;
+                case "rental":
+                    include("editors/rentalEditor.php");
+                    break;
             }
-            ?>
-            <input type="submit" class="edit-submit" name="<?php echo $data ?>-save">
-        </form>
+        }
+        ?>
+
     </div>
+    <script src="dashboard.js?a"></script>
 </body>
 
 </html>

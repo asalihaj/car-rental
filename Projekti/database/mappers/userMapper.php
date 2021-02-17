@@ -84,4 +84,9 @@ class UserMapper extends DatabasePDOConfiguration
 
         return $result;
     }
+
+    public function updatePassowrd($password)
+    {
+        $query = "UPDATE";
+    }
 }

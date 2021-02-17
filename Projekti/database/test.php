@@ -18,8 +18,8 @@ session_start();
 // }
 // $contact = new Contact('Rick Adams', 'rickadams@asdas.asd', 'Helloo');
 // Use comparison operator to  
-include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/policyMapper.php');
-$policies = $mapper->getAllPolicies();
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/userMapper.php');
+
 // for ($i = 0; $i < count($policies); $i++) {
 //     echo $policies[$i]['policy_id'] . '<br>';
 //     echo $policies[$i]['title'] . '<br>';
@@ -27,5 +27,3 @@ $policies = $mapper->getAllPolicies();
 //     echo $policies[$i]['last_update'] . '<br>';
 //     echo $policies[$i]['updated_by_user'] . '<br>';
 // }
-
-echo json_encode($policies);

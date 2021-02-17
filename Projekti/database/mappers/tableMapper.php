@@ -41,7 +41,7 @@ class TableQuery
         $cars = $mapper->getAllCars();
         for ($i = 0; $i < count($cars); $i++) {
             echo '<tr class="data-row">';
-            echo '<td>' . $cars[$i]['car_id'] . '</td>';
+            echo '<td class="row-id">' . ($i + 1) . '</td>';
             echo '<td>' . $cars[$i]['manufacturer'] . '</td>';
             echo '<td>' . $cars[$i]['model'] . '</td>';
             echo '<td>' . $cars[$i]['color'] . '</td>';
@@ -53,7 +53,10 @@ class TableQuery
             echo '<td>' . $cars[$i]['capacity'] . '</td>';
             echo '<td>' . $cars[$i]['last_update'] . '</td>';
             echo '<td>' . $cars[$i]['updated_by_user'] . '</td>';
-            echo '<td>' . '[Action]' . '</td>';
+            echo '<td class="action">';
+            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
+            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            echo '</td>';
             echo '</tr>';
         }
     }
@@ -64,11 +67,15 @@ class TableQuery
         $users = $mapper->getAllUsers();
         for ($i = 0; $i < count($users); $i++) {
             echo '<tr class="data-row">';
-            echo '<td>' . $users[$i]['user_id'] . '</td>';
+            echo '<td class="row-id">' . $users[$i]['user_id'] . '</td>';
             echo '<td>' . $users[$i]['username'] . '</td>';
             echo '<td>' . $users[$i]['email'] . '</td>';
             echo '<td>' . $users[$i]['role'] . '</td>';
-            echo '<td>' . '[Action]' . '</td>';
+            echo '<td>' . $users[$i]['last_update'] . '</td>';
+            echo '<td class="action">';
+            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
+            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            echo '</td>';
             echo '</tr>';
         }
     }
@@ -79,12 +86,15 @@ class TableQuery
         $contacts = $mapper->getAllContacts();
         for ($i = 0; $i < count($contacts); $i++) {
             echo '<tr class="data-row">';
-            echo '<td>' . $contacts[$i]['contact_id'] . '</td>';
+            echo '<td class="row-id">' . $contacts[$i]['contact_id'] . '</td>';
             echo '<td>' . $contacts[$i]['name'] . '</td>';
             echo '<td>' . $contacts[$i]['email'] . '</td>';
             echo '<td>' . $contacts[$i]['message'] . '</td>';
             echo '<td>' . $contacts[$i]['last_update'] . '</td>';
-            echo '<td>' . '[Action]' . '</td>';
+            echo '<td class="action">';
+            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
+            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            echo '</td>';
             echo '</tr>';
         }
     }
@@ -95,7 +105,7 @@ class TableQuery
         $rentals = $mapper->getAllRentals();
         for ($i = 0; $i < count($rentals); $i++) {
             echo '<tr class="data-row">';
-            echo '<td>' . $rentals[$i]['rental_id'] . '</td>';
+            echo '<td class="row-id">' . $rentals[$i]['rental_id'] . '</td>';
             echo '<td>' . $rentals[$i]['rental_date'] . '</td>';
             echo '<td>' . $rentals[$i]['return_date'] . '</td>';
             echo '<td>' . $rentals[$i]['pick_up_location'] . '</td>';
@@ -104,7 +114,10 @@ class TableQuery
             echo '<td>' . $rentals[$i]['car_id'] . '</td>';
             echo '<td>' . $rentals[$i]['total'] . '</td>';
             echo '<td>' . $rentals[$i]['last_update'] . '</td>';
-            echo '<td>' . '[Action]' . '</td>';
+            echo '<td class="action">';
+            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
+            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            echo '</td>';
             echo '</tr>';
         }
     }
@@ -115,12 +128,15 @@ class TableQuery
         $services = $mapper->getAllServices();
         for ($i = 0; $i < count($services); $i++) {
             echo '<tr class="data-row">';
-            echo '<td>' . $services[$i]['service_id'] . '</td>';
+            echo '<td class="row-id">' . $services[$i]['service_id'] . '</td>';
             echo '<td>' . $services[$i]['title'] . '</td>';
             echo '<td>' . $services[$i]['description'] . '</td>';
             echo '<td>' . $services[$i]['last_update'] . '</td>';
             echo '<td>' . $services[$i]['updated_by_user'] . '</td>';
-            echo '<td>' . '[Action]' . '</td>';
+            echo '<td class="action">';
+            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
+            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            echo '</td>';
             echo '</tr>';
         }
     }

@@ -43,7 +43,7 @@
                                                                                 $username = $mapper->getUserByID($_SESSION['userId'])['username'];
                                                                             }
                                                                             echo $username;
-                                                                            ?>">
+                                                                            ?>" readonly>
 
                 </div>
 
@@ -56,7 +56,7 @@
                                                                             $email = $mapper->getUserByID($_SESSION['userId'])['email'];
                                                                         }
                                                                         echo $email;
-                                                                        ?>">
+                                                                        ?>" readonly>
                 </div>
                 <div class="textarea-container">
                     <label> Password <span>*</span></label>

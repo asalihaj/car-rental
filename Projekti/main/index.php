@@ -107,7 +107,7 @@
         ?>
     </footer>
     <script src="main.js?a"></script>
-    <script src="slider.js?a"></script>
+    <script src="slider.js?"></script>
 </body>
 
 </html>

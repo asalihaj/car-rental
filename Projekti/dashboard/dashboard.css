@@ -234,7 +234,8 @@ main {
     width: 100%;
     border-collapse: collapse;
     color: #ffffff;
-    letter-spacing: 1px;
+    font-size: 12px;
+
 }
 
 .data, td, th {
@@ -270,15 +271,20 @@ main {
 .table-footer {
     width: 100%;
     background-color: #c1c1c1;
+    flex-direction: row;
 }
 
 .table-pages {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 9rem;
-    padding: 5px 0;
     color: #013a63;
+}
+
+.add {
+    width: 20px;
+    background-color: black;
+    cursor: pointer;
 }
 
 
@@ -299,7 +305,20 @@ main {
 }
 
 @media only screen
+    and (max-width: 715px) {
+        .data {
+            display: block;
+            overflow: scroll;
+        }
+    }
+
+@media only screen
     and (max-device-width: 414px) {
+
+        .body {
+            height: inherit;
+        }
+
         .data-info h3:nth-of-type(1){
             display: none;
         }

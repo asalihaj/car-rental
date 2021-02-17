@@ -1,16 +1,20 @@
 .container {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
+    z-index: 10;
+
 }
 
 .editor {
-    width: 450px;
-    height: 600px;
+    position: relative;
+    /* width: 450px; */
+    /* height: 700px; */
     display: flex;
+    padding: 40px 70px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -26,10 +30,22 @@
     align-items: center;
 }
 
+.editor-content input {
+    height: 30px;
+    font-size: 14px;
+}
+
 .editor-data {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: flex-start;
+}
+
+.editor-data-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -39,7 +55,30 @@
     height: 30px;
 }
 
-.data-value {
-    height: 30px;
-    font-size: 14px;
+.editor-close {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.action {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.action-icon {
+    width: 15px;
+    cursor: pointer;
+}
+
+.car-editor {
+
 }
