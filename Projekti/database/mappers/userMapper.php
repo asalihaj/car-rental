@@ -89,4 +89,9 @@ class UserMapper extends DatabasePDOConfiguration
     {
         $query = "UPDATE";
     }
+
+    public function updateUser($user)
+    {
+        $query = "";
+    }
 }

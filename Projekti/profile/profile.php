@@ -23,9 +23,6 @@
         ?>
     </header>
     <main>
-        <div class="title">
-            <h1>User's Profile</h1>
-        </div>
         <div class="type">
             <div class="account-label">
                 <h1>Account</h1>

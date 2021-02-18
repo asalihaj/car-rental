@@ -3,7 +3,7 @@
             <div class="editor-content">
                 <div class="editor-content" hidden>
                     <label>Service ID</label>
-                    <input name="service-id" type="text" hidden>
+                    <input name="service-id" type="text">
                 </div>
                 <div class="editor-content">
                     <label>Title</label>
@@ -11,15 +11,7 @@
                 </div>
                 <div class="editor-content">
                     <label>Description</label>
-                    <input name="service-desc" type="text">
-                </div>
-                <div class="editor-content">
-                    <label>Last Update</label>
-                    <input name="service-update" type="text">
-                </div>
-                <div class="editor-content">
-                    <label>Updated By User</label>
-                    <input name="service-user" type="text">
+                    <textarea name="service-desc" type="text" rows="10" cols="22"></textarea>
                 </div>
             </div>
             <input type="submit" class="edit-submit" name="service-add">

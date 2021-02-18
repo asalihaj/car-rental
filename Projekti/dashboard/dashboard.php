@@ -8,8 +8,8 @@
     include("../styles/styles.php");
     include_once("../database/mappers/userMapper.php");
     ?>
-    <link rel="stylesheet" href="dashboard.css?sd">
-    <link rel="stylesheet" href="editors/editor.css?">
+    <link rel="stylesheet" href="dashboard.css?">
+    <link rel="stylesheet" href="editors/editor.css?s">
     <title>Dashboard</title>
 </head>
 
@@ -29,12 +29,27 @@
                     <div class="table-info">
                         <label for="data">Select table</label>
                         <select class="table-value" name="data" id="data">
-                            <option value="">Choose</option>
-                            <option value="users">Users</option>
-                            <option value="cars">Cars</option>
-                            <option value="rental">Rental</option>
-                            <option value="service">Service</option>
-                            <option value="contact">Contact</option>
+                            <?php
+                            $tables = array(
+                                "users" => "Users",
+                                "cars" => "Cars",
+                                "rental" => "Rental",
+                                "service" => "Service",
+                                "contact" => "Contact",
+                            );
+                            if (isset($_POST['data'])) {
+                                echo '<option value="' . $_POST['data'] . '">' . ucfirst($_POST['data']) . '</option>';
+                                foreach ($tables as $key => $value) {
+                                    if (!strcmp($key, $_POST['data']) == 0) {
+                                        echo '<option value="' . $key . '">' . $value . '</option>';
+                                    }
+                                }
+                            } else {
+                                foreach ($tables as $key => $value) {
+                                    echo '<option value="' . $key . '">' . $value . '</option>';
+                                }
+                            }
+                            ?>
                         </select>
                     </div>
                     <input class="data-search-btn" type="submit" value="Go">
@@ -72,9 +87,6 @@
                                     <?php
                                     $table = isset($_SESSION['currentTable']) ? $_SESSION['currentTable'] : 'users';
                                     switch ($table) {
-                                        case "":
-                                            echo '';
-                                            break;
                                         case "users":
                                             include('rows/userRows.php');
                                             break;
@@ -97,9 +109,13 @@
                             </thead>
                             <tbody>
                                 <?php
+                                include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/tableMapper.php');
                                 if (isset($_SESSION['currentTable'])) {
-                                    include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/tableMapper.php');
+
                                     $table = new TableQuery($_SESSION['currentTable']);
+                                    $table->getData();
+                                } else {
+                                    $table = new TableQuery('users');
                                     $table->getData();
                                 }
                                 ?>
@@ -108,7 +124,19 @@
                     </div>
                     <div class="table-footer flex-center">
                         <div class="table-pages">
-                            <img class="add" src="../icons/add.png" alt="">
+                            <img class="add" src="../icons/add.png" <?php
+                                                                    if (isset($_POST['data'])) {
+                                                                        if (
+                                                                            strcmp($_POST['data'], 'users') == 0 ||
+                                                                            strcmp($_POST['data'], 'rental') == 0 ||
+                                                                            strcmp($_POST['data'], 'contact') == 0
+                                                                        ) {
+                                                                            echo 'hidden';
+                                                                        }
+                                                                    } else {
+                                                                        echo 'hidden';
+                                                                    }
+                                                                    ?>>
                         </div>
                     </div>
                 </div>
@@ -134,12 +162,15 @@
                 case "rental":
                     include("editors/rentalEditor.php");
                     break;
+                case "contact":
+                    include("editors/contactEditor.php");
+                    break;
             }
         }
         ?>
 
     </div>
-    <script src="dashboard.js?a"></script>
+    <script src="dashboard.js?d"></script>
 </body>
 
 </html>

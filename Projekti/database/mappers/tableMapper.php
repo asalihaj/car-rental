@@ -35,109 +35,94 @@ class TableQuery
         }
     }
 
-    public function getCars()
+    private function getCars()
     {
         $mapper = new CarMapper();
         $cars = $mapper->getAllCars();
         for ($i = 0; $i < count($cars); $i++) {
-            echo '<tr class="data-row">';
-            echo '<td class="row-id">' . ($i + 1) . '</td>';
-            echo '<td>' . $cars[$i]['manufacturer'] . '</td>';
-            echo '<td>' . $cars[$i]['model'] . '</td>';
-            echo '<td>' . $cars[$i]['color'] . '</td>';
-            echo '<td>' . $cars[$i]['production_year'] . '</td>';
-            echo '<td>' . $cars[$i]['transmission'] . '</td>';
-            echo '<td>' . $cars[$i]['category'] . '</td>';
-            echo '<td>' . $cars[$i]['image'] . '</td>';
-            echo '<td>' . $cars[$i]['rental_rate'] . '</td>';
-            echo '<td>' . $cars[$i]['capacity'] . '</td>';
-            echo '<td>' . $cars[$i]['last_update'] . '</td>';
-            echo '<td>' . $cars[$i]['updated_by_user'] . '</td>';
+            echo '<tr class="data-row" title="' . $cars[$i]['car_id'] . '">';
+            foreach ($cars[$i] as $key => $value) {
+                echo '<td title="' . $value . '">' . $value . '</td>';
+            }
             echo '<td class="action">';
-            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
-            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            $this->addActions($cars[$i]['car_id']);
             echo '</td>';
             echo '</tr>';
         }
     }
 
-    public function getUsers()
+    private function getUsers()
     {
         $mapper = new UserMapper();
         $users = $mapper->getAllUsers();
+
         for ($i = 0; $i < count($users); $i++) {
-            echo '<tr class="data-row">';
-            echo '<td class="row-id">' . $users[$i]['user_id'] . '</td>';
-            echo '<td>' . $users[$i]['username'] . '</td>';
-            echo '<td>' . $users[$i]['email'] . '</td>';
-            echo '<td>' . $users[$i]['role'] . '</td>';
-            echo '<td>' . $users[$i]['last_update'] . '</td>';
+            echo '<tr class="data-row" title="' . $users[$i]['user_id'] . '">';
+            foreach ($users[$i] as $key => $value) {
+                if (!strcmp($key, 'password') == 0) {
+                    echo '<td title="' . $key . '">' . $value . '</td>';
+                }
+            }
             echo '<td class="action">';
-            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
-            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            $this->addActions($users[$i]['user_id']);
             echo '</td>';
             echo '</tr>';
         }
     }
 
-    public function getContacts()
+    private function getContacts()
     {
         $mapper = new ContactMapper();
         $contacts = $mapper->getAllContacts();
         for ($i = 0; $i < count($contacts); $i++) {
-            echo '<tr class="data-row">';
-            echo '<td class="row-id">' . $contacts[$i]['contact_id'] . '</td>';
-            echo '<td>' . $contacts[$i]['name'] . '</td>';
-            echo '<td>' . $contacts[$i]['email'] . '</td>';
-            echo '<td>' . $contacts[$i]['message'] . '</td>';
-            echo '<td>' . $contacts[$i]['last_update'] . '</td>';
+            echo '<tr class="data-row" title="' . $contacts[$i]['contact_id'] . '">';
+            foreach ($contacts[$i] as $key => $value) {
+                echo '<td title="' . $value . '">' . $value . '</td>';
+            }
             echo '<td class="action">';
-            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
-            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            $this->addActions($contacts[$i]['contact_id']);
             echo '</td>';
             echo '</tr>';
         }
     }
 
-    public function getRentals()
+    private function getRentals()
     {
         $mapper = new RentalMapper();
         $rentals = $mapper->getAllRentals();
         for ($i = 0; $i < count($rentals); $i++) {
-            echo '<tr class="data-row">';
-            echo '<td class="row-id">' . $rentals[$i]['rental_id'] . '</td>';
-            echo '<td>' . $rentals[$i]['rental_date'] . '</td>';
-            echo '<td>' . $rentals[$i]['return_date'] . '</td>';
-            echo '<td>' . $rentals[$i]['pick_up_location'] . '</td>';
-            echo '<td>' . $rentals[$i]['drop_off_location'] . '</td>';
-            echo '<td>' . $rentals[$i]['user_id'] . '</td>';
-            echo '<td>' . $rentals[$i]['car_id'] . '</td>';
-            echo '<td>' . $rentals[$i]['total'] . '</td>';
-            echo '<td>' . $rentals[$i]['last_update'] . '</td>';
+            echo '<tr class="data-row" title="' . $rentals[$i]['rental_id'] . '">';
+            foreach ($rentals[$i] as $key => $value) {
+                echo '<td title="' . $value . '">' . $value . '</td>';
+            }
             echo '<td class="action">';
-            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
-            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            $this->addActions($rentals[$i]['rental_id']);
             echo '</td>';
             echo '</tr>';
         }
     }
 
-    public function getServices()
+    private function getServices()
     {
         $mapper = new ServiceMapper();
         $services = $mapper->getAllServices();
         for ($i = 0; $i < count($services); $i++) {
-            echo '<tr class="data-row">';
-            echo '<td class="row-id">' . $services[$i]['service_id'] . '</td>';
-            echo '<td>' . $services[$i]['title'] . '</td>';
-            echo '<td>' . $services[$i]['description'] . '</td>';
-            echo '<td>' . $services[$i]['last_update'] . '</td>';
-            echo '<td>' . $services[$i]['updated_by_user'] . '</td>';
+            echo '<tr class="data-row" title="' . $services[$i]['service_id'] . '">';
+            foreach ($services[$i] as $key => $value) {
+                echo '<td title="' . $value . '">' . $value . '</td>';
+            }
             echo '<td class="action">';
-            echo '<img class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
-            echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+            $this->addActions($services[$i]['service_id']);
             echo '</td>';
             echo '</tr>';
         }
+    }
+
+    private function addActions($dataType)
+    {
+        echo '<div class="edit-elements">';
+        echo '<img title="' . $dataType . '" class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
+        echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+        echo '</div>';
     }
 }

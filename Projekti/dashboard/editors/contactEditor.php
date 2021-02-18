@@ -19,5 +19,5 @@
 
                 </div>
             </div>
-            <input type="submit" class="edit-submit" name="contact-add">
+            <input type="submit" class="edit-submit" name="contact-edit">
         </form>

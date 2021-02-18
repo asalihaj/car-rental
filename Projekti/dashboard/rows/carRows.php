@@ -1,3 +1,9 @@
+<?php
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
+$mapper = new CarMapper();
+$carHeader = $mapper->getAllCars();
+
+?>
 <th>ID</th>
 <th>Manufacturer</th>
 <th>Model</th>

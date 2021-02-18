@@ -11,14 +11,23 @@ add.addEventListener('click', () => {
 
 closeEditor.addEventListener('click', () => {
     editor.classList.add('hidden')
-})
+});
 
 for (let editIcon of editIcons) {
     editIcon.addEventListener('click', () => {
-        let rowData = editIcon.parentElement.parentElement;
-        rowData.querySelectorAll('td');
-        for (let data of rowData) {
-            console.log(data);
-        }
+        editForm.name = editForm.name.replace('-add', '-edit');
+        editor.classList.remove('hidden');
+        let data = document.querySelectorAll(`tr[title='${editIcon.title}'] td`);
+
     });
 }
+
+let users;
+const userData = document.querySelectorAll('.data-row');
+
+window.addEventListener('load', () => {
+    let table = document.querySelector('.data');
+    if (table.offsetHeight > 500) {
+        table.style.height = '500px';
+    }
+});

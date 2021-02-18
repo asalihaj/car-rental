@@ -18,5 +18,5 @@
                     <input type="number" min="0" max="1">
                 </div>
             </div>
-            <input type="submit" class="edit-submit" name="user-add">
+            <input type="submit" class="edit-submit" name="user-edit">
         </form>
