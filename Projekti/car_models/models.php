@@ -27,6 +27,17 @@
         <div class="title">
             <h1>OUR MODELS</h1>
         </div>
+        <?php
+        include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
+        include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/car_models/modelBox.php');
+        $mapper = new CarMapper();
+        $cars = $mapper->getAllCars();
+        $model = new BoxModel();
+        for ($i = 0; $i < count($cars); $i++) {
+            $model->addCar($cars[$i]);
+        }
+
+        ?>
         <div class="box-model">
             <div class="main-panel">
                 <div class="car-image flex-mid">
