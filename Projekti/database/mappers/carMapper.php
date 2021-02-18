@@ -65,8 +65,8 @@ class CarMapper extends DatabasePDOConfiguration
     public function insertCar($car)
     {
         $query = "INSERT INTO CAR(manufacturer, model, color, production_year, 
-            transmission, category, image, rental_rate, capacity) VALUES 
-            (:manufacturer, :model, :color, :production_year, :transmission, :category, :image, :rental_rate, :capacity)";
+            transmission, category, image, rental_rate, capacity, updated_by_user) VALUES 
+            (:manufacturer, :model, :color, :production_year, :transmission, :category, :image, :rental_rate, :capacity, :user)";
         $manufacturer = $car->getManufacturer();
         $model = $car->getModel();
         $color = $car->getColor();
@@ -87,6 +87,46 @@ class CarMapper extends DatabasePDOConfiguration
         $statement->bindParam(":image", $image);
         $statement->bindParam(":rental_rate", $rental_rate);
         $statement->bindParam(":capacity", $capacity);
+        $statement->bindParam(":user", $_SESSION['userId']);
+        $statement->execute();
+    }
+
+    public function updateCar($car, $carId)
+    {
+        $query = 'UPDATE car 
+                  SET manufacturer = :manufacturer
+                  SET model = :model
+                  SET color = :color
+                  SET production_year = :production_year
+                  SET transmission = :transmission
+                  SET category = :category
+                  SET image = :image
+                  SET rental_rate = :rental_rate
+                  SET capacity = :capacity
+                  SET updated_by_user = :user
+                  WHERE car_id = :id';
+        $manufacturer = $car->getManufacturer();
+        $model = $car->getModel();
+        $color = $car->getColor();
+        $production_year = $car->getProductionYear();
+        $transmission = $car->getTransmission();
+        $category = $car->getCategory();
+        $image = $car->getImage();
+        $rental_rate = $car->getRentalRate();
+        $capacity = $car->getCapacity();
+
+        $statement = $this->connection->prepare($query);
+        $statement->bindParam(":id", $carId);
+        $statement->bindParam(":manufacturer", $manufacturer);
+        $statement->bindParam(":model", $model);
+        $statement->bindParam(":color", $color);
+        $statement->bindParam(":production_year", $production_year);
+        $statement->bindParam(":transmission", $transmission);
+        $statement->bindParam(":category", $category);
+        $statement->bindParam(":image", $image);
+        $statement->bindParam(":rental_rate", $rental_rate);
+        $statement->bindParam(":capacity", $capacity);
+        $statement->bindParam(":user", $_SESSION['userId']);
         $statement->execute();
     }
 

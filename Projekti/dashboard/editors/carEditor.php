@@ -1,9 +1,9 @@
-        <form class="editor car-editor" action="../../database/carValidation.php">
+        <form class="editor car-editor" action="../../database/carValidation.php" method="post" enctype="multipart/form-data">
             <span class="editor-close">X</span>
             <div class="editor-content">
-                <div class="editor-data-info">
+                <div class="editor-data-info" hidden>
                     <label>Car ID</label>
-                    <input title="car-id" type="text">
+                    <input title="car-id" name='car-id' type="text">
                 </div>
                 <div class="editor-data-info">
                     <label>Manufacturer</label>
@@ -23,7 +23,10 @@
                 </div>
                 <div class="editor-data-info">
                     <label>Transmission</label>
-                    <input type="text" name="transmission">
+                    <select name="transmission">
+                        <option value="automatic">Automatic</option>
+                        <option value="manual">Manual</option>
+                    </select>
                 </div>
                 <div class="editor-data-info">
                     <label>Category</label>
