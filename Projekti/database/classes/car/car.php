@@ -20,7 +20,7 @@ class Car
         $category,
         $transmission,
         $productionYear,
-        $imgDir,
+        $image,
         $rentalRate,
         $capacity
     ) {
@@ -30,7 +30,7 @@ class Car
         $this->category = $category;
         $this->transmission = $transmission;
         $this->productionYear = $productionYear;
-        $this->imgDir = $imgDir;
+        $this->image = $image;
         $this->rentalRate = $rentalRate;
         $this->capacity = $capacity;
     }
