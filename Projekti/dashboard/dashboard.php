@@ -84,7 +84,7 @@
                             <thead>
                                 <tr class="data-header">
                                     <?php
-                                    $table = isset($_SESSION['currentTable']) ? $_SESSION['currentTable'] : 'users';
+                                    $table = isset($_GET['data']) ? $_GET['data'] : 'users';
                                     switch ($table) {
                                         case "users":
                                             include('rows/userRows.php');
@@ -109,9 +109,9 @@
                             <tbody>
                                 <?php
                                 include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/tableMapper.php');
-                                if (isset($_SESSION['currentTable'])) {
+                                if (isset($_GET['data'])) {
 
-                                    $table = new TableQuery($_SESSION['currentTable']);
+                                    $table = new TableQuery($_GET['data']);
                                     $table->getData();
                                 } else {
                                     $table = new TableQuery('users');
