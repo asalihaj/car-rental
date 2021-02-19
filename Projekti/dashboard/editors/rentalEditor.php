@@ -2,7 +2,7 @@
             <span class="editor-close">X</span>
             <div class="editor-content">
                 <label>Rental ID</label>
-                <input type="text" name="rental-id">
+                <input type="text" name="id">
             </div>
             <div class="editor-content">
                 <label>Rental Date</label>

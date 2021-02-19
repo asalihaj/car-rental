@@ -42,7 +42,7 @@ class TableQuery
         for ($i = 0; $i < count($cars); $i++) {
             echo '<tr class="data-row" title="' . $cars[$i]['car_id'] . '">';
             foreach ($cars[$i] as $key => $value) {
-                echo '<td title="' . $value . '">' . $value . '</td>';
+                echo '<td title="' . $key . '">' . $value . '</td>';
             }
             echo '<td class="action">';
             $this->addActions($cars[$i]['car_id']);
@@ -77,10 +77,13 @@ class TableQuery
         for ($i = 0; $i < count($contacts); $i++) {
             echo '<tr class="data-row" title="' . $contacts[$i]['contact_id'] . '">';
             foreach ($contacts[$i] as $key => $value) {
-                echo '<td title="' . $value . '">' . $value . '</td>';
+                echo '<td title="' . $key . '">' . $value . '</td>';
             }
             echo '<td class="action">';
-            $this->addActions($contacts[$i]['contact_id']);
+            echo '<div class="edit-elements">';
+            echo '<img title="' . $contacts[$i]['contact_id'] .
+                '" class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon" >';
+            echo '</div>';
             echo '</td>';
             echo '</tr>';
         }
@@ -93,7 +96,7 @@ class TableQuery
         for ($i = 0; $i < count($rentals); $i++) {
             echo '<tr class="data-row" title="' . $rentals[$i]['rental_id'] . '">';
             foreach ($rentals[$i] as $key => $value) {
-                echo '<td title="' . $value . '">' . $value . '</td>';
+                echo '<td title="' . $key . '">' . $value . '</td>';
             }
             echo '<td class="action">';
             $this->addActions($rentals[$i]['rental_id']);
@@ -109,7 +112,7 @@ class TableQuery
         for ($i = 0; $i < count($services); $i++) {
             echo '<tr class="data-row" title="' . $services[$i]['service_id'] . '">';
             foreach ($services[$i] as $key => $value) {
-                echo '<td title="' . $value . '">' . $value . '</td>';
+                echo '<td title="' . $key . '">' . $value . '</td>';
             }
             echo '<td class="action">';
             $this->addActions($services[$i]['service_id']);
@@ -122,7 +125,7 @@ class TableQuery
     {
         echo '<div class="edit-elements">';
         echo '<img title="' . $dataType . '" class="action-icon edit-icon" src="../icons/dashboard/edit.png" alt="Edit Icon">';
-        echo '<img class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon">';
+        echo '<img title="' . $dataType . '" class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon" >';
         echo '</div>';
     }
 }

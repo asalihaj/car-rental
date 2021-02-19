@@ -9,7 +9,7 @@
     include_once("../database/mappers/userMapper.php");
     ?>
     <link rel="stylesheet" href="dashboard.css?">
-    <link rel="stylesheet" href="editors/editor.css?s">
+    <link rel="stylesheet" href="editors/editor.css?sx">
     <title>Dashboard</title>
 </head>
 
@@ -170,7 +170,8 @@
         ?>
 
     </div>
-    <script src="dashboard.js?d"></script>
+    <script src="dashboard.js?"></script>
+    <script src="editors/editor.js"></script>
 </body>
 
 </html>

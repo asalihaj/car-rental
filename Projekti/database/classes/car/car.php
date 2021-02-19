@@ -9,7 +9,7 @@ class Car
     private $category;
     private $transmission;
     private $productionYear;
-    private $imgDir;
+    private $image;
     private $rentalRate;
     private $capacity;
 
@@ -65,9 +65,9 @@ class Car
         return $this->productionYear;
     }
 
-    public function getImgDir()
+    public function getImage()
     {
-        return $this->imgDir;
+        return $this->image;
     }
 
     public function getRentalRate()

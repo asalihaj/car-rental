@@ -1,6 +1,7 @@
 <?php
+session_start();
 include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/classes/car/car.php');
-include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
 
 if (isset($_POST['car-add'])) {
     $carValidation = new CarValidation($_POST);
@@ -9,6 +10,7 @@ if (isset($_POST['car-add'])) {
     }
 } else if (isset($_POST['car-edit'])) {
     $carValidation = new CarValidation($_POST);
+
     if ($carValidation->verify(1)) {
         header('Location:../dashboard/dashboard.php');
     }
@@ -32,40 +34,47 @@ class CarValidation
 
     public function __construct($data)
     {
-        $this->carId = isset($data['car-id']) ? $data['car-id'] : '';
+        $this->carId = isset($data['id']) ? $data['id'] : '';
         $this->manufacturer = $data['manufacturer'];
         $this->model = $data['model'];
         $this->color = $data['color'];
         $this->prodYear = $data['prod-year'];
         $this->transmission = $data['transmission'];
         $this->category = $data['category'];
-        $this->image = $data['car-image'];
-        $this->rental = $data['rental-date'];
+        $this->image = isset($_FILES['image']) ? $_FILES['image'] : "";
+        $this->rental = $data['rental-rate'];
         $this->capacity = $data['capacity'];
     }
 
     public function verify($action)
     {
+
         if (
-            $this->verifyImage() && $this->verifyRental()
+            $this->verifyImage($action) && $this->verifyRental()
             && $this->verifyCategory() && $this->verifyCapacity()
             && $this->verifyProdYear() && $this->verifyTransmission()
         ) {
+
             $car = new Car(
                 $this->manufacturer,
                 $this->model,
                 $this->color,
-                $this->category,
-                $this->transmission,
+                ucfirst($this->category),
+                ucfirst($this->transmission),
                 $this->prodYear,
                 $this->image,
                 $this->rental,
                 $this->capacity
             );
             $mapper = new CarMapper();
+
             if ($action == 0) {
                 $mapper->insertCar($car);
-            } else if ($action == 1 && strcmp($this->carId, '') == 0) {
+                return true;
+            } else if ($action == 1) {
+                if (strcmp($this->image['name'], '') == 0) {
+                    $this->image = $mapper->getCarById($this->carId)['image'];
+                }
                 $mapper->updateCar($car, $this->carId);
                 return true;
             } else {
@@ -86,6 +95,7 @@ class CarValidation
             $this->rental >= 0
             && $this->rental <= 20000
         ) {
+
             return true;
         } else {
             return false;
@@ -109,6 +119,7 @@ class CarValidation
             $this->prodYear <= date('Y')
             && $this->prodYear > 1950
         ) {
+
             return true;
         } else {
             return false;
@@ -117,7 +128,8 @@ class CarValidation
 
     private function verifyCapacity()
     {
-        if ($this->capacity < 11 || $this->capacity > 1) {
+        if ($this->capacity < 11 && $this->capacity > 1) {
+
             return true;
         } else {
             return false;
@@ -128,15 +140,24 @@ class CarValidation
     {
         $trx = array('automatic', 'manual');
         if (in_array($this->transmission, $trx)) {
+
             return true;
         } else {
             return false;
         }
     }
 
-    private function verifyImage()
+    private function verifyImage($action)
     {
-        if (isset($_POST['image'])) {
+
+        if ($action == 1) {
+            if (strcmp($this->image['name'], '') == 0) {
+                return true;
+            }
+        }
+
+        if (isset($_FILES['image'])) {
+
             $imgName =  $_FILES['image']['name'];
             $imgSize =  $_FILES['image']['size'];
             $tmpName =  $_FILES['image']['tmp_name'];
@@ -144,7 +165,9 @@ class CarValidation
 
             if ($error == 0) {
                 if ($imgSize > 20972000) {
+                    return false;
                 } else {
+
                     $imgExtension = strtolower(pathinfo($imgName, PATHINFO_EXTENSION));
                     $allowedExtensions = array('jpg', 'png', 'jpeg');
 
@@ -152,12 +175,17 @@ class CarValidation
                         $imgNewName = uniqid('MODEL-', true) . '.' . $imgExtension;
                         $uploadPath = $_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/imgs/models/' . $imgNewName;
                         move_uploaded_file($tmpName, $uploadPath);
+                        $this->image = $imgNewName;
+
+                        return true;
                     } else {
+
                         return false;
                     }
                 }
             }
         } else {
+
             return false;
         }
     }

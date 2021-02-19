@@ -1,9 +1,9 @@
-        <form class="editor car-editor" action="../../database/carValidation.php" method="post" enctype="multipart/form-data">
+        <form class="editor car-editor" action="../database/carValidation.php" method="post" enctype="multipart/form-data">
             <span class="editor-close">X</span>
             <div class="editor-content">
-                <div class="editor-data-info" hidden>
+                <div class="editor-data-info">
                     <label>Car ID</label>
-                    <input title="car-id" name='car-id' type="text">
+                    <input title="car-id" name='id' type="text">
                 </div>
                 <div class="editor-data-info">
                     <label>Manufacturer</label>
@@ -40,15 +40,15 @@
                 </div>
                 <div class="editor-data-info">
                     <label>Image</label>
-                    <input type="file" name="car-image" accept="image/*">
+                    <input type="file" name="image" accept="image/*">
                 </div>
                 <div class="editor-data-info">
                     <label>Rental Rate</label>
-                    <input type="text" name="rental-date">
+                    <input type="number" name="rental-rate" min="0" max="20000">
                 </div>
                 <div class="editor-data-info">
                     <label>Capacity</label>
-                    <input type="text" name="capacity">
+                    <input type="number" name="capacity" min="2" max="10">
                 </div>
             </div>
             <input type="submit" class="edit-submit" name="car-add">

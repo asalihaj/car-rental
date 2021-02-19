@@ -64,7 +64,7 @@ class CarMapper extends DatabasePDOConfiguration
 
     public function insertCar($car)
     {
-        $query = "INSERT INTO CAR(manufacturer, model, color, production_year, 
+        $query = "INSERT INTO car (manufacturer, model, color, production_year, 
             transmission, category, image, rental_rate, capacity, updated_by_user) VALUES 
             (:manufacturer, :model, :color, :production_year, :transmission, :category, :image, :rental_rate, :capacity, :user)";
         $manufacturer = $car->getManufacturer();
@@ -94,16 +94,16 @@ class CarMapper extends DatabasePDOConfiguration
     public function updateCar($car, $carId)
     {
         $query = 'UPDATE car 
-                  SET manufacturer = :manufacturer
-                  SET model = :model
-                  SET color = :color
-                  SET production_year = :production_year
-                  SET transmission = :transmission
-                  SET category = :category
-                  SET image = :image
-                  SET rental_rate = :rental_rate
-                  SET capacity = :capacity
-                  SET updated_by_user = :user
+                  SET manufacturer = :manufacturer,
+                  model = :model,
+                  color = :color,
+                  production_year = :production_year,
+                  transmission = :transmission,
+                  category = :category,
+                  image = :image,
+                  rental_rate = :rental_rate,
+                  capacity = :capacity,
+                  updated_by_user = :user
                   WHERE car_id = :id';
         $manufacturer = $car->getManufacturer();
         $model = $car->getModel();

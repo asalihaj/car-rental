@@ -4,6 +4,7 @@ class BoxModel
 {
 
     private $car;
+    private $index = 0;
 
     public function addCar($car)
     {
@@ -24,7 +25,7 @@ class BoxModel
         echo '<div class="main-panel">';
         echo '<div class="car-image flex-mid">';
         echo '<div class="car-info-shrink">';
-        echo '<img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(' . $this->car['car_id'] . ')">';
+        echo '<img class="car-info-icon" src="../icons/car-models/info.png" alt="Info" onclick="info(' . $this->index++ . ')">';
         echo '</div>';
         $this->addSpecsTab();
         $this->addInfo();
@@ -55,7 +56,8 @@ class BoxModel
 
     private function addImage()
     {
-        echo '<img id="audi-a7" class="flex-mid" src="' . $this->car['image'] . '" alt="' .
+        $imgSource = '../imgs/models/';
+        echo '<img id="audi-a7" class="flex-mid" src="' . $imgSource . $this->car['image'] . '" alt="' .
             $this->car['manufacturer'] . '-' . $this->car['model'] . '">';
     }
 
