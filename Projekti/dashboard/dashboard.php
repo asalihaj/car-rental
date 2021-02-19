@@ -25,7 +25,7 @@
     <main>
         <section class="dashboard-container flex-center">
             <div class="tables">
-                <form class="data-selection" action="dashboard.php" method="post">
+                <form class="data-selection" action="dashboard.php" method="get">
                     <div class="table-info">
                         <label for="data">Select table</label>
                         <select class="table-value" name="data" id="data">
@@ -37,10 +37,10 @@
                                 "service" => "Service",
                                 "contact" => "Contact",
                             );
-                            if (isset($_POST['data'])) {
-                                echo '<option value="' . $_POST['data'] . '">' . ucfirst($_POST['data']) . '</option>';
+                            if (isset($_GET['data'])) {
+                                echo '<option value="' . $_GET['data'] . '">' . ucfirst($_GET['data']) . '</option>';
                                 foreach ($tables as $key => $value) {
-                                    if (!strcmp($key, $_POST['data']) == 0) {
+                                    if (!strcmp($key, $_GET['data']) == 0) {
                                         echo '<option value="' . $key . '">' . $value . '</option>';
                                     }
                                 }
@@ -63,9 +63,8 @@
                         <div class="data-info">
                             <h3>
                                 <?php
-                                if (isset($_POST['data'])) {
-                                    echo ucfirst($_POST['data']) . ' Table';
-                                    $_SESSION['currentTable'] = $_POST['data'];
+                                if (isset($_GET['data'])) {
+                                    echo ucfirst($_GET['data']) . ' Table';
                                 }
                                 ?>
                             </h3>
@@ -125,11 +124,11 @@
                     <div class="table-footer flex-center">
                         <div class="table-pages">
                             <img class="add" src="../icons/add.png" <?php
-                                                                    if (isset($_POST['data'])) {
+                                                                    if (isset($_GET['data'])) {
                                                                         if (
-                                                                            strcmp($_POST['data'], 'users') == 0 ||
-                                                                            strcmp($_POST['data'], 'rental') == 0 ||
-                                                                            strcmp($_POST['data'], 'contact') == 0
+                                                                            strcmp($_GET['data'], 'users') == 0 ||
+                                                                            strcmp($_GET['data'], 'rental') == 0 ||
+                                                                            strcmp($_GET['data'], 'contact') == 0
                                                                         ) {
                                                                             echo 'hidden';
                                                                         }
@@ -146,9 +145,9 @@
     <div class="container hidden">
 
         <?php
-        if (isset($_POST['data'])) {
+        if (isset($_GET['data'])) {
             $_SESSION['changeSource'] = 'add';
-            $data = $_POST['data'];
+            $data = $_GET['data'];
             switch ($data) {
                 case "cars":
                     include("editors/carEditor.php");

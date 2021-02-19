@@ -18,7 +18,7 @@ session_start();
 // }
 // $contact = new Contact('Rick Adams', 'rickadams@asdas.asd', 'Helloo');
 // Use comparison operator to  
-include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/userMapper.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
 
 // for ($i = 0; $i < count($policies); $i++) {
 //     echo $policies[$i]['policy_id'] . '<br>';
@@ -27,3 +27,12 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mapper
 //     echo $policies[$i]['last_update'] . '<br>';
 //     echo $policies[$i]['updated_by_user'] . '<br>';
 // }
+if (isset($_POST['car-edit'])) {
+    if (empty($_POST['image'])) {
+        $mapper = new CarMapper();
+        $carId = isset($_POST['id']) ? $_POST['id'] : '';
+        $image = $mapper->getCarById($carId)['image'];
+        echo isset($_FILES['image']['name']) ? $_FILES['image']['name'] : 'd';
+        echo '<br>' . empty($_FILES['image']['name']) ? "Y" : "N";
+    }
+}

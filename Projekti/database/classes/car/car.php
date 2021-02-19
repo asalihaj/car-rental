@@ -70,6 +70,11 @@ class Car
         return $this->image;
     }
 
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
     public function getRentalRate()
     {
         return $this->rentalRate;

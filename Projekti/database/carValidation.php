@@ -6,13 +6,13 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mapper
 if (isset($_POST['car-add'])) {
     $carValidation = new CarValidation($_POST);
     if ($carValidation->verify(0)) {
-        header('Location:../dashboard/dashboard.php');
+        header('Location:../dashboard/dashboard.php?data=cars');
     }
 } else if (isset($_POST['car-edit'])) {
     $carValidation = new CarValidation($_POST);
 
     if ($carValidation->verify(1)) {
-        header('Location:../dashboard/dashboard.php');
+        header('Location:../dashboard/dashboard.php?data=cars');
     }
 } else {
     header('Location:../dashboard/dashboard.php');
@@ -41,7 +41,7 @@ class CarValidation
         $this->prodYear = $data['prod-year'];
         $this->transmission = $data['transmission'];
         $this->category = $data['category'];
-        $this->image = isset($_FILES['image']) ? $_FILES['image'] : "";
+        $this->image = empty($_FILES['image']['name']) ? '' : $_FILES['image']['name'];
         $this->rental = $data['rental-rate'];
         $this->capacity = $data['capacity'];
     }
@@ -72,9 +72,10 @@ class CarValidation
                 $mapper->insertCar($car);
                 return true;
             } else if ($action == 1) {
-                if (strcmp($this->image['name'], '') == 0) {
-                    $this->image = $mapper->getCarById($this->carId)['image'];
+                if (empty($this->image)) {
+                    $car->setImage($mapper->getCarById($this->carId)['image']);
                 }
+                echo $car->getImage();
                 $mapper->updateCar($car, $this->carId);
                 return true;
             } else {
@@ -151,7 +152,7 @@ class CarValidation
     {
 
         if ($action == 1) {
-            if (strcmp($this->image['name'], '') == 0) {
+            if (empty($this->image)) {
                 return true;
             }
         }
