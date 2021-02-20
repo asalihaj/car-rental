@@ -1,4 +1,4 @@
-        <form class="editor" action="../../database/serviceValidation.php">
+        <form class="editor" action="../database/serviceValidation.php" method="post">
             <span class="editor-close">X</span>
             <div class="editor-content">
                 <div class="editor-data-info" hidden>

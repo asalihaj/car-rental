@@ -1,34 +1,34 @@
         <form class="editor" title="edit-only" action="../../database/rentalValidation.php">
             <span class="editor-close">X</span>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>Rental ID</label>
                 <input type="text" name="id">
             </div>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>Rental Date</label>
                 <input type="text" name="rental-date">
             </div>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>Return Date</label>
                 <input type="text" name="return-date">
             </div>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>Pick up location</label>
                 <input type="text" name="pu-location">
             </div>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>Drop off location</label>
                 <input type="text" name="do-location">
             </div>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>User ID</label>
                 <input type="text" name="user">
             </div>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>Car ID</label>
                 <input type="text" name="car">
             </div>
-            <div class="editor-content">
+            <div class="editor-data-info">
                 <label>Total</label>
                 <input type="text" name="total">
             </div>

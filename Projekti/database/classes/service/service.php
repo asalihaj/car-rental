@@ -20,4 +20,12 @@ class Service
     {
         return $this->description;
     }
+
+    public function verify()
+    {
+        if (empty($this->title) || empty($this->description)) {
+            return false;
+        }
+        return true;
+    }
 }

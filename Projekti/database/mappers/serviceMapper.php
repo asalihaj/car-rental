@@ -46,8 +46,8 @@ class ServiceMapper extends DatabasePDOConfiguration
 
     public function insertService($service)
     {
-        $query = "INSERT INTO service (title, description) VALUSE 
-            (:title, :description)";
+        $query = "INSERT INTO service (title, description, updated_by_user) VALUSE 
+            (:title, :description, :user)";
 
         $title = $service->getTitle();
         $description = $service->getDescription();
@@ -55,6 +55,26 @@ class ServiceMapper extends DatabasePDOConfiguration
         $statement = $this->connection->prepare($query);
         $statement->bindParam(":title", $title);
         $statement->bindParam(":description", $description);
+        $statement->bindParam(":user", $_SESSION['userId']);
+        $statement->execute();
+    }
+
+    public function updateService($service, $serviceId)
+    {
+        $query = "UPDATE service
+                  SET title = :title,
+                  description = :desc,
+                  updated_by_user = :user
+                  WHERE service_id = :id";
+
+        $title = $service->getTitle();
+        $description = $service->getDescription();
+
+        $statement = $this->connection->prepare($query);
+        $statement->bindParam(":id", $serviceId);
+        $statement->bindParam(":title", $title);
+        $statement->bindParam(":desc", $description);
+        $statement->bindParam(":user", $_SESSION['userId']);
         $statement->execute();
     }
 

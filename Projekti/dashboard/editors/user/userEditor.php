@@ -1,4 +1,4 @@
-        <form class="editor" action="">
+        <form class="editor" action="editors/user/userUpdate.php" method="post">
             <span class="editor-close">X</span>
             <div class="editor-content">
                 <div class="editor-data-info">

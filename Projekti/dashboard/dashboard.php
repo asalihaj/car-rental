@@ -150,19 +150,19 @@
             $data = $_GET['data'];
             switch ($data) {
                 case "cars":
-                    include("editors/carEditor.php");
+                    include("editors/car/carEditor.php");
                     break;
                 case "service":
-                    include("editors/serviceEditor.php");
+                    include("editors/service/serviceEditor.php");
                     break;
                 case "users":
-                    include("editors/userEditor.php");
+                    include("editors/user/userEditor.php");
                     break;
                 case "rental":
-                    include("editors/rentalEditor.php");
+                    include("editors/rental/rentalEditor.php");
                     break;
                 case "contact":
-                    include("editors/contactEditor.php");
+                    include("editors/contact/contactEditor.php");
                     break;
             }
         }

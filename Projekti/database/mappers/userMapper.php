@@ -85,13 +85,28 @@ class UserMapper extends DatabasePDOConfiguration
         return $result;
     }
 
-    public function updatePassowrd($password)
+    public function updatePassowrd($userId, $password)
     {
-        $query = "UPDATE";
+        $query = "UPDATE user
+                  SET password = :password
+                  WHERE user_id = :id";
+
+        $newPassword = password_hash($password, PASSWORD_BCRYPT);;
+        $statement = $this->connection->prepare($query);
+        $statement->bindParam(":id", $userId);
+        $statement->bindParam(":password", $newPassword);
+        $statement->execute();
     }
 
-    public function updateUser($user)
+    public function updateUser($userId, $role)
     {
-        $query = "";
+        $query = "UPDATE user
+                  SET role = :role
+                  WHERE user_id = :id";
+
+        $statement = $this->connection->prepare($query);
+        $statement->bindParam(":id", $userId);
+        $statement->bindParam(":role", $role);
+        $statement->execute();
     }
 }

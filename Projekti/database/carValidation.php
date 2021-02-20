@@ -150,7 +150,6 @@ class CarValidation
 
     private function verifyImage($action)
     {
-
         if ($action == 1) {
             if (empty($this->image)) {
                 return true;
