@@ -12,16 +12,18 @@ if (isset($_POST['checkout'])) {
 class RentalValidation
 {
 
-    private $pickUpLocation = "";
-    private $dropOffLoc = "";
-    private $rentalDate = "";
-    private $returnDate = "";
-    private $carId = "";
-    private $userId = "";
-    private $total = "";
+    private $rentalId;
+    private $pickUpLoc;
+    private $dropOffLoc;
+    private $rentalDate;
+    private $returnDate;
+    private $carId;
+    private $userId;
+    private $total;
 
     public function __construct()
     {
+        $this->rentalId = isset($_POST['id']) ? $_POST['id'] : "";
         $this->pickUpLoc = $_SESSION['puLocation'];
         $this->dropOffLoc = $_SESSION['doLocation'];
         $this->rentalDate = $_SESSION['puDate'] . ' ' . $_SESSION['puTime'] . ':00';

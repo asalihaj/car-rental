@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/classes/car/car.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/classes/car/car.php');
 include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
 
 if (isset($_POST['car-add'])) {

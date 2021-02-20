@@ -99,7 +99,10 @@ class TableQuery
                 echo '<td title="' . $key . '">' . $value . '</td>';
             }
             echo '<td class="action">';
-            $this->addActions($rentals[$i]['rental_id']);
+            echo '<div class="edit-elements">';
+            echo '<img title="' . $rentals[$i]['rental_id']
+                . '" class="action-icon delete-icon" src="../icons/dashboard/trash.png" alt="Trash Icon" >';
+            echo '</div>';
             echo '</td>';
             echo '</tr>';
         }

@@ -46,7 +46,7 @@ class ServiceMapper extends DatabasePDOConfiguration
 
     public function insertService($service)
     {
-        $query = "INSERT INTO service (title, description, updated_by_user) VALUSE 
+        $query = "INSERT INTO service (title, description, updated_by_user) VALUES 
             (:title, :description, :user)";
 
         $title = $service->getTitle();

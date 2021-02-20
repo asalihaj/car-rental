@@ -20,6 +20,16 @@
     <main>
         <h1 class="services-heading">Customer Services</h1>
         <section class="services-container">
+            <?php
+            include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/serviceMapper.php');
+            include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/services/servicesBox.php');
+            $mapper = new ServiceMapper();
+            $services = $mapper->getAllServices();
+            $model = new ServiceBox();
+            for ($i = 0; $i < count($services); $i++) {
+                $model->addService($services[$i]);
+            }
+            ?>
             <article class="services-box">
                 <div class="box-header">
                     <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">

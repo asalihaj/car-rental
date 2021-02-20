@@ -7,11 +7,11 @@
                 </div>
                 <div class="editor-data-info">
                     <label>Title</label>
-                    <input name="service-title" type="text">
+                    <input name="service-title" type="text" required>
                 </div>
                 <div class="editor-data-info">
                     <label>Description</label>
-                    <textarea name="service-desc" type="text" rows="10" cols="22"></textarea>
+                    <textarea name="service-desc" type="text" rows="10" cols="22" required></textarea>
                 </div>
             </div>
             <input type="submit" class="edit-submit" name="service-add">

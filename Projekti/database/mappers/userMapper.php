@@ -82,7 +82,7 @@ class UserMapper extends DatabasePDOConfiguration
         $statement->execute();
         $result = $statement->fetch(PDO::FETCH_ASSOC);
 
-        return $result;
+        // return $result;
     }
 
     public function updatePassowrd($userId, $password)

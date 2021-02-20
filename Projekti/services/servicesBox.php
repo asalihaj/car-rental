@@ -5,8 +5,10 @@ class ServiceBox
 
     private $service;
 
-    public function addService()
+    public function addService($service)
     {
+        $this->service = $service;
+        $this->addBox();
     }
 
     private function addBox()
@@ -47,17 +49,3 @@ class ServiceBox
         echo '<p>' . $this->service['description'] . '</p>';
     }
 }
-?>
-<article class="services-box">
-    <div class="box-header">
-        <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
-        <h2 class="services-title">One Way Car Rentals</h2>
-    </div>
-    <div class="box-text">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni,
-            provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid.
-            Aspernatur, voluptas.
-        </p>
-    </div>
-</article>
