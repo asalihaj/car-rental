@@ -24,7 +24,7 @@
             <div class="inside">
                 <form class="reservation-form" action="../reservation/reservation.php" name="car-select-form" id="car-select" method="get">
                     <div class="select-car">
-                        <select name="car-select" id="car-select" required>
+                        <select name="car-select" required>
                             <option value="">Select your car type</option>
                             <?php
                             include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
@@ -88,14 +88,24 @@
                 </span>
                 <span class="slider-back"><img src=" icons/arrow-left.png" alt="Left Arrow"></span>
                 <div class="slider-imgs">
-                    <img src="../imgs/models/audi_a7_white.png" class="slider-img" alt="Audi A7">
+                    <?php
+                    include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
+                    $mapper = new CarMapper();
+                    $cars = $mapper->getAllCars();
+                    for ($i = 0; $i < count($cars); $i++) {
+                        $carName = ucfirst($cars[$i]['manufacturer']) . ' ' . ucfirst($cars[$i]['model']);
+                        $hidden = $i == 0 ? '' : 'hidden';
+                        echo '<img src="../imgs/models/' . $cars[$i]['image'] . '" class="slider-img ' . $hidden . '" alt="' . $carName . '"';
+                    }
+                    ?>
+                    <!-- <img src="../imgs/models/audi_a7_white.png" class="slider-img" alt="Audi A7">
                     <img src="../imgs/models/audi_a4_2019_navy.png" class="slider-img hidden" alt="Audi A4">
                     <img src="../imgs/models/audi_q8_white.png" class="slider-img hidden" alt="Audi Q8">
                     <img src="../imgs/models/bmw_m5_white.png" class="slider-img hidden" alt="BMW M5">
                     <img src="../imgs/models/golf_6_dark_grey.png" class="slider-img hidden" alt="Golf 6">
                     <img src="../imgs/models/golf_7_white.png" class="slider-img hidden" alt="Golf 7">
                     <img src="../imgs/models/mercedes_c300_gray.png" class="slider-img hidden" alt="Mercedes C300">
-                    <img src="../imgs/models/mercedes_s550_black.png" class="slider-img hidden" alt="Mercedes S550">
+                    <img src="../imgs/models/mercedes_s550_black.png" class="slider-img hidden" alt="Mercedes S550"> -->
                 </div>
                 <span class="slider-next"><img src="icons/arrow-right.png" alt="Right Arrow"></span>
             </div>
