@@ -9,7 +9,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="profile.css?s">
+    <link rel="stylesheet" href="profile.css?sd">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                 <h1>Account</h1>
             </div>
         </div>
-        <form class="user-data">
+        <div class="user-data">
 
             <div class="top">
                 <div class="textarea-container">
@@ -61,7 +61,7 @@
                     <span class="pw-change">Change</span>
                 </div>
             </div>
-            <div class="bottom hidden">
+            <form class="user-change hidden" action="../database/password_change/changePw.php" method="post">
                 <h3>Change Password</h3>
                 <div class="current">
                     <label>Current password <span>*</span></label>
@@ -77,13 +77,14 @@
                         <input type="password" name="confirm-pw" id="confirm-pw">
                     </div>
                 </div>
-            </div>
-            <div class="button-div">
-                <button class="button">Save changes</button>
-            </div>
-        </form>
+                <div class="button-div">
+                    <input type="submit" name="change-pw-submit" class="button" value="Save changes">
+                </div>
+            </form>
+
+        </div>
     </main>
-    <script src="profile.js?"></script>
+    <script src="profile.js?s"></script>
 </body>
 
 </html>

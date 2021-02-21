@@ -9,7 +9,7 @@ const bookNow = document.querySelectorAll('.book-now input[type="button"');
 for (let i = 0; i < bookNow.length; i++) {
     bookNow[i].addEventListener('click', () => {
         document.querySelector('.reservation-tab').style.display = 'flex';
-        document.querySelector('select[name="car-select"]').value = document.querySelectorAll('.car-name h2')[i].innerText;
+        document.querySelector('.reservation-tab select[name="car-select"]').value = document.querySelectorAll('.box-model')[i].title;
     });
 }
 

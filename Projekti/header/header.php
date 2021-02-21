@@ -99,7 +99,7 @@ if (
 ) {
 ?>
     <div class="cpanel-container">
-        <a class="cpanel" href="../dashboard/dashboard.php">cPanel</a>
+        <a class="cpanel" href="../dashboard/dashboard.php?data=users">cPanel</a>
     </div>
 <?php
 }

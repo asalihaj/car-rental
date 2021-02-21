@@ -14,7 +14,7 @@ class BoxModel
 
     public function box()
     {
-        echo '<div class="box-model">';
+        echo '<div class="box-model" title="' . $this->car['car_id'] . '">';
         $this->mainPanel();
         $this->sidePanel();
         echo '</div>';

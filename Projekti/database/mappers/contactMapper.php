@@ -60,7 +60,7 @@ class ContactMapper extends DatabasePDOConfiguration
 
     public function deleteContactForm($contactId)
     {
-        $query = "DELETE FROM cotact WHERE contact_id = :id";
+        $query = "DELETE FROM contact WHERE contact_id = :id";
         $statement = $this->connection->prepare($query);
         $statement->bindParam(":id", $contactId);
         $statement->execute();

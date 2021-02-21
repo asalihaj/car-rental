@@ -4,8 +4,15 @@
             <span class="close-tab">×</span>
             <div class="select-car select-car-tab">
                 <select name="car-select" required>
-                    <option value="Audi A7">Audi A7</option>
-                    <option value="Audi Q8">Audi Q8</option>
+                    <?php
+                    include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/carMapper.php');
+                    $mapper = new CarMapper();
+                    $cars = $mapper->getAllCars();
+                    for ($i = 0; $i < count($cars); $i++) {
+                        $carName = ucfirst($cars[$i]['manufacturer']) . ' ' . ucfirst($cars[$i]['model']);
+                        echo '<option value="' . $cars[$i]['car_id'] . '">' . $carName . '</option>';
+                    }
+                    ?>
                 </select>
             </div>
             <div class="pu-location">
@@ -42,9 +49,8 @@
             </div>
 
             <div class="reservation-button">
-                <input type="submit" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
+                <input type="submit" id="submit" name="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
             </div>
         </form>
     </div>
 </div>
-<script src="../main/main.js"></script>

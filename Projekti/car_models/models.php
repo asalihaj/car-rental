@@ -556,7 +556,7 @@
         ?>
     </footer>
     <script src="carinfo.js"></script>
-    <script src="bookingtab.js?s"></script>
+    <script src="bookingtab.js?ss"></script>
 </body>
 
 </html>

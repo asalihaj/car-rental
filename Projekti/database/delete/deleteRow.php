@@ -7,11 +7,11 @@ include($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mappers/ser
 
 if (isset($_GET['id']) && isset($_GET['table'])) {
     switch ($_GET['table']) {
-        case 'user':
+        case 'users':
             $mapper = new UserMapper();
             $mapper->deleteUser($_GET['id']);
             break;
-        case 'car':
+        case 'cars':
             $mapper = new CarMapper();
             $mapper->deleteCar($_GET['id']);
             break;

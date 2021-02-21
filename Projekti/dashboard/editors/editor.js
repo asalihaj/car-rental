@@ -161,25 +161,7 @@ const deleteIcons = document.querySelectorAll(".delete-icon");
 for (let deleteIcon of deleteIcons) {
     deleteIcon.addEventListener('click', () => {
         if (confirm("Are you sure you want to delete row?")) {
-            let data = document.querySelector('#data');
-            let table;
-            switch (data.value) {
-                case 'users':
-                    table = 'user';
-                    break;
-                case 'cars':
-                    table = 'car';
-                    break;
-                case 'rental':
-                    table = 'rental';
-                    break;
-                case 'service':
-                    table = 'service';
-                    break;
-                case 'contact':
-                    table = 'contact';
-                    break;
-            }
+            let table = document.querySelector('#data').value;
             window.location = `../database/delete/deleteRow.php?id=${deleteIcon.title}&table=${table}`;
         }
     });

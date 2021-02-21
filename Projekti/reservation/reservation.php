@@ -181,7 +181,11 @@
                         </div>
                     </div>
                     <div class="car-img">
-                        <img src="../imgs/models/audi_a7_white.png" alt="Car">
+                        <img src="../imgs/models/<?php
+                                                    $mapper = new CarMapper();
+                                                    $car = $mapper->getCarById($_GET['car-select']);
+                                                    echo $car['image'];
+                                                    ?>" alt="Car">
                     </div>
                     <div class="car-stats">
                         <ul class="car-specs">
@@ -200,10 +204,6 @@
                                 echo '<li class="car-specs-info">Null</li>';
                             }
                             ?>
-                            <!-- <li class="car-specs-info">2018</li>
-                            <li class="car-specs-info">Auto</li>
-                            <li class="car-specs-info">4 Seats</li>
-                            <li class="car-specs-info">Coupe</li> -->
                         </ul>
                     </div>
                 </div>

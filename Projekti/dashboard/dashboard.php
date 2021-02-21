@@ -170,7 +170,7 @@
 
     </div>
     <script src="dashboard.js?"></script>
-    <script src="editors/editor.js?a"></script>
+    <script src="editors/editor.js?ad"></script>
 </body>
 
 </html>
