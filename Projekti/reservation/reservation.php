@@ -105,9 +105,12 @@
                         <tr class="pricing-data">
                             <th>Car rental duration:</th>
                             <td><?php
-                                $rental_date = explode('-', isset($_GET['pu-date']) ? $_GET['pu-date'] : '-1');
-                                $return_date = explode('-', isset($_GET['do-date']) ? $_GET['do-date'] : '-1');
-                                $totalDays = isset($return_date[2]) && isset($rental_date[2]) ? $return_date[2] - $rental_date[2] : '-1';
+                                $rental_date = isset($_GET['pu-date']) ? $_GET['pu-date'] : '-1';
+                                $return_date = isset($_GET['do-date']) ? $_GET['do-date'] : '-1';
+                                $rentalTotal = strtotime($rental_date);
+                                $returnTotal = strtotime($return_date);
+                                $round = round(($returnTotal - $rentalTotal) / (60 * 60 * 24));
+                                $totalDays = $round > 0 ? $round : '-1';
                                 echo $totalDays;
                                 $_SESSION['totalDays'] = $totalDays;
                                 ?></td>
@@ -129,7 +132,7 @@
                             <td><?php
                                 $mapper = new CarMapper();
                                 $car = $mapper->getCarById($_GET['car-select']);
-                                $subTotal = $_SESSION['totalDays'] * $car['rental_rate'];
+                                $subTotal = $_SESSION['totalDays'] * $car['rental_rate'] < 0 ? '-1' : $_SESSION['totalDays'] * $car['rental_rate'];
                                 echo '$' . $subTotal;
                                 $_SESSION['subTotal'] = $subTotal;
                                 ?></td>
@@ -139,7 +142,6 @@
                 <div class="booking-confirm">
                     <div class="pricing-container">
                         <h3><?php
-                            // echo 'Tax: ' . $_SESSION['subTotal'] * 0.1;
                             echo 'Tax: --';
                             ?></h3>
                         <h3><?php

@@ -49,8 +49,9 @@
             </div>
 
             <div class="reservation-button">
-                <input type="submit" id="submit" name="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
+                <input type="submit" id="submit" name="submit" class="submit" value="CONTINUE CAR RESERVATION">
             </div>
         </form>
     </div>
 </div>
+<script src="../main/main.js"></script>

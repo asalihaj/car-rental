@@ -43,10 +43,16 @@ class TableQuery
             echo '<tr class="data-row" title="' . $cars[$i]['car_id'] . '">';
             foreach ($cars[$i] as $key => $value) {
                 echo '<td title="' . $key . '">' . $value . '</td>';
+                // if (strcmp($key, 'image') == 0) {
+                //     echo '<div class="car-img-holder">';
+                //     echo '<img src="../imgs/models/' . $value . '" class="car-db-image hidden-car" alt="Car Image"';
+                //     echo '</div>';
+                // }
             }
             echo '<td class="action">';
             $this->addActions($cars[$i]['car_id']);
             echo '</td>';
+
             echo '</tr>';
         }
     }

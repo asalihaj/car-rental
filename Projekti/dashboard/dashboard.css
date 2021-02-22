@@ -192,6 +192,14 @@ main {
     align-items: center;
 }
 
+.hidden-car {
+    display: none;
+}
+
+.car-db-image {
+    display: fixed;
+}
+
 .data-display {
     width: 98%;
     /* height: 100%; */

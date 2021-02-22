@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="reservation-button">
-                        <input type="submit" name="submit" id="submit" onclick="myfunction()" class="submit" value="CONTINUE CAR RESERVATION">
+                        <input type="submit" name="submit" id="submit" class="submit" value="CONTINUE CAR RESERVATION">
                     </div>
                 </form>
             </div>
@@ -94,18 +94,11 @@
                     $cars = $mapper->getAllCars();
                     for ($i = 0; $i < count($cars); $i++) {
                         $carName = ucfirst($cars[$i]['manufacturer']) . ' ' . ucfirst($cars[$i]['model']);
-                        $hidden = $i == 0 ? '' : 'hidden';
-                        echo '<img src="../imgs/models/' . $cars[$i]['image'] . '" class="slider-img ' . $hidden . '" alt="' . $carName . '"';
+                        $hidden = $i == 0 ? '' : ' hidden';
+                        echo '<img src="../imgs/models/' . $cars[$i]['image'] . '" class="slider-img' . $hidden . '" alt="' . $carName . '">';
                     }
                     ?>
-                    <!-- <img src="../imgs/models/audi_a7_white.png" class="slider-img" alt="Audi A7">
-                    <img src="../imgs/models/audi_a4_2019_navy.png" class="slider-img hidden" alt="Audi A4">
-                    <img src="../imgs/models/audi_q8_white.png" class="slider-img hidden" alt="Audi Q8">
-                    <img src="../imgs/models/bmw_m5_white.png" class="slider-img hidden" alt="BMW M5">
-                    <img src="../imgs/models/golf_6_dark_grey.png" class="slider-img hidden" alt="Golf 6">
-                    <img src="../imgs/models/golf_7_white.png" class="slider-img hidden" alt="Golf 7">
-                    <img src="../imgs/models/mercedes_c300_gray.png" class="slider-img hidden" alt="Mercedes C300">
-                    <img src="../imgs/models/mercedes_s550_black.png" class="slider-img hidden" alt="Mercedes S550"> -->
+
                 </div>
                 <span class="slider-next"><img src="icons/arrow-right.png" alt="Right Arrow"></span>
             </div>
