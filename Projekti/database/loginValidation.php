@@ -95,8 +95,8 @@ class RegisterValidation
                 $users = $mapper->getAllUsers();
                 for ($i = 0; $i < count($users); $i++) {
                     if (
-                        strcmp($users[$i]['email'], $this->email) == 0
-                        || strcmp($users[$i]['username'], $this->username) == 0
+                        (strcmp($users[$i]['email'], $this->email) == 0)
+                        || (strcmp($users[$i]['username'], $this->username) == 0)
                     ) {
                         header("Location:../register/register.php");
                     }

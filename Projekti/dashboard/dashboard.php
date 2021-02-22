@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css?">
+    <link rel="stylesheet" href="editors/editor.css?x">
     <?php
     include("../styles/styles.php");
     include_once("../database/mappers/userMapper.php");
     ?>
-    <link rel="stylesheet" href="dashboard.css?">
-    <link rel="stylesheet" href="editors/editor.css?x">
+
+
     <title>Dashboard</title>
 </head>
 
@@ -69,12 +71,7 @@
                                 ?>
                             </h3>
                         </div>
-                        <div class="data-search">
-                            <input class="search-bar" type="text" placeholder="Search">
-                            <button class="search-button">
-                                <div class="search-icon">&#9906;</div>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
                 <div class="table-statistics">

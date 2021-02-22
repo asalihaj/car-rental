@@ -211,6 +211,8 @@ header {
 
 .nav-font {
     font-size: 25px;
+    color: white;
+    text-decoration: none;
     border-left: 2px solid white;
     padding-left: 5px;
     margin-bottom: 3px;

@@ -30,58 +30,6 @@
                 $model->addService($services[$i]);
             }
             ?>
-            <article class="services-box">
-                <div class="box-header">
-                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
-                    <h2 class="services-title">Special rates on car booking</h2>
-                </div>
-                <div class="box-text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni,
-                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid.
-                        Aspernatur, voluptas.
-                    </p>
-                </div>
-            </article>
-            <article class="services-box">
-                <div class="box-header">
-                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
-                    <h2 class="services-title">Mobile Phone Reservation</h2>
-                </div>
-                <div class="box-text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni,
-                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid.
-                        Aspernatur, voluptas.
-                    </p>
-                </div>
-            </article>
-            <article class="services-box">
-                <div class="box-header">
-                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
-                    <h2 class="services-title">Unlimited Miles Car Rental</h2>
-                </div>
-                <div class="box-text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni,
-                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid.
-                        Aspernatur, voluptas.
-                    </p>
-                </div>
-            </article>
-            <article class="services-box">
-                <div class="box-header">
-                    <img class="services-icon" src="../icons/reservation_tab/plus.png" alt="Plus Icon">
-                    <h2 class="services-title">One Way Car Rentals</h2>
-                </div>
-                <div class="box-text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis dolorum ea quisquam magni,
-                        provident minima consequuntur. Cum fugit aut explicabo dolorem sequi quos hic, quod quidem aliquid.
-                        Aspernatur, voluptas.
-                    </p>
-                </div>
-            </article>
         </section>
     </main>
     <footer>

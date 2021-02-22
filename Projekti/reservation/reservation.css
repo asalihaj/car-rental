@@ -284,6 +284,7 @@ main {
     height: 80%;
     border-top: none;
     border-bottom: none;
+    margin: 10px 0 ;
 }
 
 .car-img img {
