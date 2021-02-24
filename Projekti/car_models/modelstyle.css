@@ -4,7 +4,6 @@ main {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    z-index: 1;
 }
 
 a {
@@ -253,6 +252,7 @@ a {
     background-color: #126782;
     color: #edf2fb;
     font-size: 25px;
+	cursor: pointer;
 }
 
 
@@ -347,6 +347,10 @@ a {
             justify-content: space-between;
         }
 
+        .inside {
+            transform: scale(0.9);
+        }
+
         .side-panel {
             overflow: hidden;
         }
@@ -355,6 +359,14 @@ a {
             display: inline;
         }
 }
+
+@media only screen
+    and (max-device-width: 320px)
+    and (max-device-height: 480px) {
+        .info {
+            height: 22%;
+        }
+    }
 
 .hidden {
     display: none;

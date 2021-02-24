@@ -8,7 +8,7 @@
     include("../styles/styles.php");
     ?>
     <link rel="stylesheet" href="../main/style.css">
-    <link rel="stylesheet" href="modelstyle.css?">
+    <link rel="stylesheet" href="modelstyle.css?s">
 
     <title>Models</title>
 </head>
@@ -44,8 +44,9 @@
         include("../footer/footer.php");
         ?>
     </footer>
-    <script src="carinfo.js"></script>
-    <script src="bookingtab.js?ss"></script>
+    <script src="carinfo.js?s"></script>
+    <script src="bookingtab.js?a"></script>
+    <script src="../main/main.js?s"></script>
 </body>
 
 </html>

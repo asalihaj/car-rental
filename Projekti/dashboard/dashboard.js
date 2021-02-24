@@ -24,15 +24,6 @@ for (let editIcon of editIcons) {
     });
 }
 
-let users;
-
-window.addEventListener('load', () => {
-    let table = document.querySelector('.data');
-    if (table.offsetHeight > 500) {
-        table.style.height = '500px';
-    }
-});
-
 const clear = () => {
     const dataInput = document.querySelectorAll('.editor-content input');
     const dataSelect = document.querySelectorAll('.editor-content select');

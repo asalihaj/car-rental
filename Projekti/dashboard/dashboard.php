@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css?">
-    <link rel="stylesheet" href="editors/editor.css?x">
+    <link rel="stylesheet" href="dashboard.css?d">
+    <link rel="stylesheet" href="editors/editor.css?">
     <?php
     include("../styles/styles.php");
     include_once("../database/mappers/userMapper.php");
@@ -166,8 +166,8 @@
         ?>
 
     </div>
-    <script src="dashboard.js?"></script>
-    <script src="editors/editor.js?ad"></script>
+    <script src="dashboard.js?a"></script>
+    <script src="editors/editor.js?d"></script>
 </body>
 
 </html>

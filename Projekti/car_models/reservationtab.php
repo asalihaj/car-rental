@@ -54,4 +54,3 @@
         </form>
     </div>
 </div>
-<script src="../main/main.js"></script>

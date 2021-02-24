@@ -7,7 +7,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="loginstyle.css?ad">
+    <link rel="stylesheet" href="loginstyle.css?a">
     <title>Login</title>
 </head>
 

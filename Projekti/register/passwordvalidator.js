@@ -112,7 +112,7 @@ function hasNumber(password) {
 }
 
 function hasSpecialChar(password) {
-    return /[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(password);
+    return /[~`!#$%\^&*+=\-\[\]\\';,./{}|\\":<>\?]/g.test(password);
 }
 
 function checkLength(password) {

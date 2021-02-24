@@ -62,4 +62,17 @@ class Rental
     {
         return $this->total;
     }
+
+    public function verify()
+    {
+        $currentDate = date('Y-m-d');
+        if (
+            $currentDate <= $this->rentalDate
+            && $this->rentalDate < $this->returnDate
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

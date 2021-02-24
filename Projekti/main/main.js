@@ -1,14 +1,8 @@
-const carReservationButton = document.getElementById("submit");
-
-// carReservationButton.addEventListener('click', pickCar);
-
-function pickCar() {
-     carReservationButton.style.cursor = "wait";
-     window.location.href = "../car_models/models.html";
-}
-
 function updateDate() {
      let firstDate = document.querySelector('#check-in').value;
-     let secondDate = firstDate.split('-')[0] + '-' + firstDate.split('-')[1] + '-' + (parseInt(firstDate.split('-')[2]) + 1);
+     let day = parseInt(firstDate.split('-')[2]) + 1;
+     let month = firstDate.split('-')[1];
+     let year = firstDate.split('-')[0];
+     let secondDate = year + '-' + month + '-' + (day < 10 ? "0" + day : day);
      document.querySelector('#check-out').setAttribute('min', secondDate);
 }

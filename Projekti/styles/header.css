@@ -6,7 +6,6 @@ header {
     background-color: #013a63;
     margin: 0 auto;
     height: 4.5rem;
-    z-index: 2;
 }
 
 .header-items {
@@ -93,7 +92,7 @@ header {
 
 .collapsed-navbar {
     position: absolute;
-    /* top: 4.2rem; */
+    z-index: 9;
     width: 100vw;
     height: 0;
     background-color: #013a63;
@@ -171,6 +170,7 @@ header {
     width: 120px;
     height: 100px;
     border-radius: 5px;
+	z-index: 10;
 }
 
 .profile-info ul {
@@ -273,6 +273,7 @@ header {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 10;
 }
 
 .cpanel {

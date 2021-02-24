@@ -5,17 +5,14 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/projekti-web/Projekti/database/mapper
 
 if (isset($_POST['car-add'])) {
     $carValidation = new CarValidation($_POST);
-    if ($carValidation->verify(0)) {
-        header('Location:../dashboard/dashboard.php?data=cars');
-    }
+    $carValidation->verify(0);
+    header('Location:../dashboard/dashboard.php?data=cars');
 } else if (isset($_POST['car-edit'])) {
     $carValidation = new CarValidation($_POST);
-
-    if ($carValidation->verify(1)) {
-        header('Location:../dashboard/dashboard.php?data=cars');
-    }
+    $carValidation->verify(1);
+    header('Location:../dashboard/dashboard.php?data=cars');
 } else {
-    header('Location:../dashboard/dashboard.php');
+    header('Location:../dashboard/dashboard.php?data=cars');
 }
 
 class CarValidation
@@ -86,17 +83,28 @@ class CarValidation
         }
     }
 
-    public function update()
-    {
-    }
-
     private function verifyRental()
     {
         if (
             $this->rental >= 0
             && $this->rental <= 20000
         ) {
+            if ($this->emptyCols()) {
+                return false;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    private function emptyCols()
+    {
+        if (
+            empty($this->manufacturer) || empty($this->model) || empty($this->color)
+            || ctype_space($this->manufacturer) || ctype_space($this->model)
+            || ctype_space($this->color)
+        ) {
             return true;
         } else {
             return false;
@@ -120,7 +128,6 @@ class CarValidation
             $this->prodYear <= date('Y')
             && $this->prodYear > 1950
         ) {
-
             return true;
         } else {
             return false;
@@ -130,7 +137,6 @@ class CarValidation
     private function verifyCapacity()
     {
         if ($this->capacity < 11 && $this->capacity > 1) {
-
             return true;
         } else {
             return false;

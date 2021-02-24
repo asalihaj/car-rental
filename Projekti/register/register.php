@@ -85,7 +85,7 @@
     </footer>
     <script src="usernamevalidator.js?"></script>
     <script src="emailvalidator.js?d"></script>
-    <script src="passwordvalidator.js?v"></script>
+    <script src="passwordvalidator.js?d"></script>
     <script src="registervalidator.js?s"></script>
     <script src="personalinfo.js"></script>
 </body>

@@ -11,3 +11,7 @@ header/footer:
 
 Të gjithë folderet tjerë, përmbajn file specifike për faqen në fjalë.
 Në folderin main gjendet faqja kryesore e website-it(Home page).
+
+Folderi "database" përmban .php file-të që janë përdorur për insertimin dhe verifikimin e të dhënave.
+
+Folderi "DB_Schema_and_Data" përmban nje file .sql ne te cilin gjenden tabelat dhe të dhënat e përdorura në projekt(MySQL).

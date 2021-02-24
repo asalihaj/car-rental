@@ -8,7 +8,7 @@
     <?php
     include("../styles/styles.php");
     ?>
-    <link rel="stylesheet" href="style.css?a">
+    <link rel="stylesheet" href="style.css?d">
     <link rel="stylesheet" href="sliderstyle.css">
 </head>
 
@@ -109,7 +109,7 @@
         include("../footer/footer.php");
         ?>
     </footer>
-    <script src="main.js?a"></script>
+    <script src="main.js?d"></script>
     <script src="slider.js?"></script>
 </body>
 

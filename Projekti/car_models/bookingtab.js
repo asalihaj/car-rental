@@ -12,9 +12,3 @@ for (let i = 0; i < bookNow.length; i++) {
         document.querySelector('.reservation-tab select[name="car-select"]').value = document.querySelectorAll('.box-model')[i].title;
     });
 }
-
-function updateDate() {
-    let firstDate = document.querySelector('#check-in').value;
-    let secondDate = firstDate.split('-')[0] + '-' + firstDate.split('-')[1] + '-' + (parseInt(firstDate.split('-')[2]) + 1);
-    document.querySelector('#check-out').setAttribute('min', secondDate);
-}
